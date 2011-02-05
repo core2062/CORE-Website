@@ -38,7 +38,7 @@
 <?php endif; ?>
         </ul>
     </div><!-- End postbox -->
-<a href="?page_id=45" class="archivelink">More posts --></a>
+<a href="archives" class="archivelink">More posts --></a>
 
 
 
