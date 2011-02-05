@@ -39,48 +39,7 @@
         </ul>
     </div><!-- End postbox -->
 <a href="?page_id=45" class="archivelink">More posts --></a>
-<div class="databox">
 
-    	<div class="titleblock" title="This is our personal favorite selection of content on our site."><h3>Featured Content</h3></div>
-
-        <ul>
-        
-        	<li><a href="http://core2062.com/about/site/" title="Click here to read more">About This Site</a></li>
-
-        	<li><a href="http://core2062.com/about/outreach/" title="Click here to read more">Outreach</a></li>
-
-            <li><a href="http://core2062.com/waukesha-vex-league/" title="Click here to read more">Waukesha VEX League</a></li>
-
-            <li><a href="http://core2062.com/about-first/" title="Click here to read more">About FIRST</a></li>
-
-            <li><a href="http://core2062.com/about/" title="Click here to read more">About C.O.R.E.</a></li>
-
-        </ul>
-
-    </div><!-- End databox --> <!--
-
-    <div class="databox">
-
-    	<div class="titleblock" title="New content is constantly added to this site. Here is the newest for your convenience."><h3>New Content</h3></div>
-
-        <ul><?php $args = array(
-
-	'sort_column'  => 'post_date',
-
-	'number'       => '4',
-
-	'sort_order'   => 'DESC',
-
-	'title_li'     => '',
-
-	'depth'        => '-1'
-
-	); ?> 
-
-    <?php wp_list_pages( $args ); ?></ul>
-
-    </div><!-- End databox -->
--->
 
 
 </div><!-- End main-content -->

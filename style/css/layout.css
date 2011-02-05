@@ -558,6 +558,8 @@ div.text p{
 .archivelink{
 	display:block;
 	float:right;
+	padding-bottom:10px;
+	clear:left;
 }
 .archivelink:hover{
 	color: #080808;
