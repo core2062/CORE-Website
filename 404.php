@@ -12,39 +12,6 @@
 		</div><!-- End alert -->
 	
 
-	<div class="databox">
-    	<div class="titleblock" title="This is our personal favorite selection of content on our site."><h3>Featured Content</h3></div>
-        <ul>
-        	<li><a href="#" title="Click here to read more">Kickoff preparations...an update</a></li>
-            <li><a href="#" title="Click here to read more">Safety Corner: Operatin the Bandsawe</a></li>
-            <li><a href="#" title="Click here to read more">Mr. Skurulsky's Corner: What concensus truly is</a></li>
-            <li><a href="#" title="Click here to read more">About Us...Our Team History</a></li>
-            <li><a href="#" title="Click here to read more">Resource Corner: New Sponsorship Template Document</a></li>
-        </ul>
-    </div><!-- End databox -->
-    <div class="databox">
-    	<div class="titleblock" title="New content is constantly added to this site. Here is the newest for your convenience."><h3>New Content</h3></div>
-        <ul><?php $args = array(
-	'sort_column'  => 'post_date',
-	'number'       => '4',
-	'sort_order'   => 'DESC',
-	'title_li'     => '',
-	'depth'        => '-1'
-	); ?> 
-    <?php wp_list_pages( $args ); ?></ul>
-    </div><!-- End databox -->
-    <div class="databox">
-    	<div class="titleblock" title="In order to encourage exploration, we have selected some articles randomly for you."><h3>Random Content</h3></div>
-       <ul><?php $args = array(
-	'sort_column'  => 'post_date',
-	'number'       => '4',
-	'sort_order'   => 'DESC',
-	'order_br'     => 'rand',
-	'title_li'     => '',
-	'depth'        => '-1'
-	); ?> 
-    <?php wp_list_pages( $args ); ?></ul>
-    </div><!-- End databox -->
       
    
 
