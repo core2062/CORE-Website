@@ -28,7 +28,7 @@
 
     <p>We are part of <span>FIRST</span>, which stands for For Inspiration and Recognition of Science and Technology. <span>FIRST</span> is a non-profit organization dedicated to inspiring young people to pursue an education in Science &amp; Technology, while building confidence, knowledge, and life-skills. You can read more about <span>FIRST</span> at their site, or read more in our <span>FIRST</span> section.</p>
 
-    <a href="http://usfirst.org" class="button blue">FIRST Website</a> <a href="<?php bloginfo('url'); ?>/about-first" class="button">Read More</a> 
+    <a href="http://usfirst.org" target="_BLANK" class="button blue">FIRST Website</a> <a href="<?php bloginfo('url'); ?>/first" class="button">Read More</a> 
 
     </div><!-- End box-->
 
