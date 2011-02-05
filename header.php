@@ -54,20 +54,9 @@
 
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>	
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/js.js"></script>	
 
   
-        <script type="text/javascript">
-        jQuery(document).ready(function() {
-        jQuery("#dropmenu ul").css({display: "none"}); // Opera Fix
-        jQuery("#dropmenu li").hover(function(){
-                jQuery(this).find('ul:first').css({visibility: "visible",display: "none"}).show(268);
-                },function(){
-                jQuery(this).find('ul:first').css({visibility: "hidden"});
-                });
-        });
-        </script>
+
 
         <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swfobject/swfobject.js"></script>
 
@@ -99,7 +88,17 @@
 
 		<?php wp_head(); ?>
 
-
+		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/js.js"></script>	
+		        <script type="text/javascript">
+				jQuery(document).ready(function() {
+				jQuery("#dropmenu ul").css({display: "none"}); // Opera Fix
+				jQuery("#dropmenu li").hover(function(){
+				jQuery(this).find('ul:first').css({visibility: "visible",display: "none"}).show(268);
+				},function(){
+				jQuery(this).find('ul:first').css({visibility: "hidden"});
+				});
+        });
+        </script>
 
 	</head>
 
