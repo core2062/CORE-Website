@@ -3,6 +3,6 @@
 Template Name: Sponsors
 */
 
-   header(php bloginfo('url') . 'sponsors-2' ) ;
+header( 'Location: ' . bloginfo('url') . '/sponsors-2' ) ;
 
 ?>
