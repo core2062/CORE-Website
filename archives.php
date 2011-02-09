@@ -13,7 +13,7 @@ Template Name: Archives
 <div class="main-content">
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<div class="databoxpage">
-				<div class="titleblock"><h3>Posts By Season</div>
+				<div class="titleblock"><h3>Posts By Tag</div>
 				<div class="text">
 					<?php wp_list_categories(); ?>
 				</div><!-- End text -->
