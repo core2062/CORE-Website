@@ -28,10 +28,13 @@ color: #1f1f1f;
 margin-bottom: 10px;
 }
 
-p, .wp-caption, .wp-caption-dd, .databoxpage{
+p, .wp-caption, .wp-caption-dd, .databoxpage, .post-content{
 	font-family: "Calibri",Arial,Verdana,sans-serif;
-	font-size: .9em;	
-	line-height: 1.4em;
+	font-size: 15px;	
+	line-height: 21px;
+}
+.post-content{
+	line-height: 18px;
 }
 a{
 	color: #ff731c;
