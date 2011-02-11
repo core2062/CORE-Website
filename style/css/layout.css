@@ -745,7 +745,7 @@ span.collapse{
 span.expand, span.expanded{
 	position: absolute;
 	top: 712px;
-	dislay: block;
+	display: block;
 	width: 100%;
 	text-align: center;
 	border-top: 1px solid #999;
