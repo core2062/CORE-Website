@@ -59,9 +59,6 @@
        		<url>http://core2062.com/wp-content/themes/c0re/images/slide_3.jpg</url>
         </slide>
         <!-- transitions properties defined in transitions template -->
-		<slide>
-       		<url>http://core2062.com/wp-content/themes/c0re/images/slide_4.jpg</url>
-        </slide>
 		<transition num="6" slicing="vertical" direction="up" shader="flat" delay="0.05" z_multiplier="4" />
         <slide>
 			<link>http://twitter.com/core2062</link>
