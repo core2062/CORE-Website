@@ -5,12 +5,6 @@ $(function(){
 var browser=navigator.appName;
 var b_version=navigator.appVersion;
 var version=parseFloat(b_version);
-if (browser!=="Microsoft Internet Explorer")
-  {
-  		readMore = '<span class="expand">Expand</span>';
-		$(".databoxpage").append(readMore);
-  }
-
 
 
 $("#dropmenu li:has(ul)").children('a').addClass('fatherli');
