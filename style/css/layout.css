@@ -836,6 +836,9 @@ div.text ul, div.text li{
 	list-style: square;
 	margin-left: 10px;
 }
+div.text li{
+	list-style: inherit;
+}
 .subnav ul li a{
 	display: block;
 	width: 100%;
