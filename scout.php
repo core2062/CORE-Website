@@ -3,6 +3,6 @@
 Template Name: Robot specs sheet redirect
 */
 
-header( 'Location: ' . bloginfo('url') ) ;
+header( 'Location: ' . bloginfo('url') . '/' ) ;
 
 ?>
