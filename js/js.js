@@ -36,8 +36,7 @@ function js(){
 var browser=navigator.appName;
 var b_version=navigator.appVersion;
 var version=parseFloat(b_version);
-if ((browser=="Microsoft Internet Explorer")
-  && (version<=7))
+if ((browser=="Microsoft Internet Explorer") && (version<=7))
   {
   		
   }
@@ -45,7 +44,7 @@ else
   {
 		
 	  //Read More
-		shortHeight = '750px';
+		/*shortHeight = '750px';
 		$(".databoxpage").css('maxHeight',shortHeight);
 		$("span.expand").click(function(){
 			  
@@ -85,7 +84,7 @@ else
 			
 			
 		});
-		
+		*/
 		//Begin Nav
 	  $("ul.nav > li > a, ul.nav > li > ul").hover(function(){
 			$("ul.nav > li > ul").hide();												
