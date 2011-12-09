@@ -649,9 +649,8 @@ input, textarea{
 	font-family: "Calibri", Arial;
 }
 h3#comments{
-	line-height: 42px;
+	line-height: 16px;
 	text-align: left;
-	font-size: 26px;
 	color: #1f1f1f;
 	margin: 10px 0px;
 }
