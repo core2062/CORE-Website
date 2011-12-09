@@ -146,7 +146,7 @@
 
                 <li class="page_item page-item-2"><a title="Home" href="<?php bloginfo('url'); ?>">Home</a></li>
 
-                <?php wp_list_pages('exclude=3328&title_li='); ?>
+                <?php wp_list_pages('title_li='); ?>
 
             </ul> 
 

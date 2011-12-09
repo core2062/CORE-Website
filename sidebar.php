@@ -48,7 +48,7 @@
 
     <p><b>Team Location:</b> Waukesha, Wisconsin </p>
 
-    <p>Our name stands for Community of Robotic Engineers, and that is just what we are-we are from Waukesha, Wisconsin and accept students from any three of our community high schools, two preparatory academies, and homeschooled students from the area. We are part of a larger organization called <span>FIRST</span>. To read more about them, read the section below. We pair them up with great mentors who teach them the fundamentals of robotics and other life skills. </p>
+    <p>Our name stands for Community of Robotic Engineers, and that is just what we are-we are from Waukesha, Wisconsin and accept students from any three of our community high schools, two preparatory academies, and homeschool students from the area. We are part of a larger organization called <span>FIRST</span>. To read more about them, read the section below. We pair them up with great mentors who teach them the fundamentals of robotics and other life skills. </p>
 
     <a href="<?php bloginfo('url'); ?>/about/" class="button">Read More</a> 
 
@@ -119,5 +119,6 @@ new TWTR.Widget({
 </script>
 
 <!-- End Twitter Widget -->
+<img src="<?php bloginfo('url'); ?>/wp-content/themes/c0re/images/FRC-ExcelAward11.jpg" alt="Website Excellence Award"/>
 
 </div><!-- End sidebar -->
