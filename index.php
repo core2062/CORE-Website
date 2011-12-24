@@ -27,7 +27,8 @@
     	<div class="titleblock" title="Recent News"><h3>Recent News</h3></div>
 
         <ul>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php global $more;
+ if ( have_posts() ) : while ( have_posts() ) : the_post(); $more = 1;  ?>
         
         	<li>
 		<div class="posttitle"><a href="<?php the_permalink() ?>" rel="bookmark" title="Click here to read more"><?php the_title(); ?></a><span class="byline">By <?php the_author() ?> on <?php the_time('F jS, Y') ?></span></div>
