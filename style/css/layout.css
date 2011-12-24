@@ -585,6 +585,7 @@ div.text p{
 	border: 1px solid #d3d3d3;
 	border-top:none;
 	padding-left:15px;
+	overflow:hidden;
 }
 
 .postbox ul li{
