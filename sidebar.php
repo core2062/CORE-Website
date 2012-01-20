@@ -42,7 +42,9 @@
 
     <a href="<?php bloginfo('url'); ?>/about/" rel="lightbox" title="A team portrait" ><img src="<?php bloginfo('url'); ?>/wp-content/themes/c0re/images/team.jpg" alt="Drivers &amp; Mentors at Competition"/></a><br /><br />
 
-     <p><b>Team Name:</b> GE Volunteers, Rockwell Automation, Verizon Business, NASA, Dematic, Waukesha Electric, Milwaukee School of Engineering, InSinkErator, Thomson Reuters, Marcus Corporation, and School District of Waukesha </p>
+     <p><b>Team Name:</b> Verizon Business, Marcus Corporation, GE Volunteers, Rockwell Automation, InSinkerator, Milwaukee School of 
+Engineering, 
+Cooper Power, School District of Waukesha </p>
 
     <p><b>Team Number:</b> 2062</p>
 
