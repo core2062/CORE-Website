@@ -21,10 +21,10 @@ $("span:contains('FIRST')").addClass('first').wrap('<a href="http://usfirst.org"
 
 //Show JS Dependentcies 
 
-$(".font-big").show();
+/*$(".font-big").show();
  $(".font-normal").show();
  $(".font-small").show();
-
+*/
 js();
 
 
