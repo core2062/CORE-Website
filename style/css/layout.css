@@ -422,6 +422,7 @@ a.button:hover {
 }
 .main-content {
 	width: 570px;
+	margin-top: 10px;
 	float: right;
 }
 .main-content2 {
@@ -451,10 +452,15 @@ a.button:hover {
 }
 .databoxpage {
 	text-align: left;
-	margin-top: 10px;
 	background: #f0f0f0;
 	border: 1px solid #d3d3d3;
+	margin-top: 10px;
 	overflow: hidden;
+}
+.archivebox{
+	border: none;
+	background: inherit;
+
 }
 .databoxpagepost {
 	text-align: left;
@@ -564,6 +570,13 @@ div.text p{
 .archivelink:hover{
 	color: #080808;
 	font-weight: bold;
+}
+.archivetitle{
+	text-align:center;
+}
+.archivepage-spacer{
+	height:20px;
+
 }
 .byline{
 	position:absolute;
