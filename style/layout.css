@@ -13,10 +13,10 @@
 	float:right
 }
 object{
-outline: none;
+	outline: none;
 }
 hr{
-	margin: 10px 0px;
+	margin: 10px 0;
 }
 blockquote {
     margin: 1em 3em;
@@ -32,7 +32,7 @@ blockquote {
 	background:#efefef;
 	padding:10px;
 	margin:10px;
-	padding-bottom: 0px;
+	padding-bottom: 0;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
@@ -69,12 +69,12 @@ input#s {
 	border: 1px solid #73523b;
 	background: #3f1e0a;
 	height: 22px;
-	padding: 5px 25px 0px 10px;
+	padding: 5px 25px 0 10px;
 	color: #e2e2e2;
 	font-size: 13px;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
 	width: 190px;
-	margin: 0px;
+	margin: 0;
 }
 input#s:hover, input#s:active {
 	background: #73330f;
@@ -206,14 +206,14 @@ ul#dropmenu.nav{
 	border-left:1px solid #c8c8c8;
 }
 #dropmenu ul a:hover {
-	margin-top: 0px;
+	margin-top: 0;
 }
 #dropmenu li ul {
 	border-top:1px solid #c8c8c8;
 	width:200px;
 }
 #dropmenu li ul a {
-	padding: 4px 0px 4px 10px;
+	padding: 4px 0 4px 10px;
 	width:190px;
 	height:auto;
 	font-size: 11px;
@@ -222,7 +222,7 @@ ul#dropmenu.nav{
 	border-bottom:1px solid #c8c8c8;
 }
 #dropmenu li ul a:hover {
-	padding: 4px 0px 4px 10px;
+	padding: 4px 0 4px 10px;
 	border-bottom:1px solid #c8c8c8;
 	background: #FAC090;	
 }
@@ -256,59 +256,9 @@ ul#dropmenu.nav{
 }
 .banner-bar a.banner-title{
 	position: absolute;
-	left: 0px;
+	left: 0;
 }
-.personalize{
-	float: right;
-	display: block;
-	position: absolute;
-	right: 140px;
-	width: 27px;
-	height: 40px;
-	background: url(../images/settings.png) no-repeat center;
-	cursor: pointer;
-	top: 0px;
-}
-.font-big{
-	float: right;
-	display: block;
-	position: absolute;
-	width: 27px;
-	height: 27px;
-	background: url(../images/zoomin.png) no-repeat;
-	cursor: pointer;
-	right: 173px;
-	padding-right: 5px;
-	border-right: 1px dotted #333;
-	top: 8px;
-	display: none;
-}
-.font-normal{
-	float: right;
-	display: block;
-	position: absolute;
-	width: 27px;
-	height: 27px;
-	background: url(../images/zoom.png) no-repeat center;
-	cursor: pointer;
-	right: 208px;
-	top: 8px;
-	display: none;
-}
-.font-small{
-	float: right;
-	display: block;
-	position: absolute;
-	width: 27px;
-	height: 27px;
-	background: url(../images/zoomout.png) no-repeat right;
-	cursor: pointer;
-	right: 233px;
-	top: 8px;
-	padding-left: 5px;
-	border-left: 1px dotted #333;
-	display: none;
-}
+
 .banner-bar a, .banner-bar span.normal {
 	color: #f0f0f0;
 	font-size: 14px;
@@ -329,25 +279,18 @@ ul#dropmenu.nav{
 	display: inline-block;
 	height: 20px;
 	position: absolute;
-	right: 0px;
-	top: 0px;
+	right: 0;
+	top: 0;
 	padding: 12px 20px 10px 20px;
 }
 .banner-bar a.learnmore:hover {
 	background: #fe7420;
 }
-.box {
+.box, .box2 {
 	background: #f0f0f0;
 	border: 1px solid #d3d3d3;
 	padding: 10px;
-	margin: 10px 0px;
-	text-align: left;
-}
-.box2 {
-	background: #f0f0f0;
-	border: 1px solid #d3d3d3;
-	padding: 10px;
-	margin: 10px 0px;
+	margin: 10px 0;
 	text-align: left;
 }
 .about-intro {
@@ -372,7 +315,7 @@ ul#dropmenu.nav{
 	
 }
 .col1 p, .about-side p {
-	margin: 3px 0px;
+	margin: 3px 0;
 }
 .col1 p b, .about-side p b {
 	font-size: 108%;
@@ -391,7 +334,7 @@ a.button {
 	font-size: 1em;
 	padding: 5px 10px 4px 10px;
 	text-decoration: none;
-	margin: 10px 0px;
+	margin: 10px 0;
 	display: inline-block;
 }
 a.blue {
@@ -420,7 +363,7 @@ a.button:hover {
 	font-size: 14px;
 	line-height: 1.2em;
 	position: absolute;
-	left: 0px;
+	left: 0;
 	
 }
 #breadcrumbs a {
@@ -462,10 +405,10 @@ div.text p{
 	margin-bottom: 10px;
 }
 .databoxpage .comment p{
-	margin: 0px;
+	margin: 0;
 }
 .databoxpagepost .comment p{
-	margin: 0px;
+	margin: 0;
 }
 .titleblock {
 	background: #1f1f1f;
@@ -493,7 +436,7 @@ div.text p{
 	margin-right:5px;
 }
 .titleblock a{
-	padding: 0px;
+	padding: 0;
 }
 .titleblock a:hover{
 	text-decoration: none;
@@ -650,7 +593,7 @@ h3#comments{
 	line-height: 16px;
 	text-align: left;
 	color: #1f1f1f;
-	margin: 10px 0px;
+	margin: 10px 0;
 }
 input:hover, textarea:hover{
 	background: #f0f0f0;
@@ -672,7 +615,7 @@ input#submit:hover{
 
 .alert{
 	min-height: 45px;
-	margin: 10px 0px 20px 0px;
+	margin: 10px 0 20px 0;
 	position: relative;
 	text-align: left;
 }
@@ -681,7 +624,7 @@ input#submit:hover{
 }
 .alert h4{
 	font-size: 18px;
-	margin: 10px 10px 0px 50px;
+	margin: 10px 10px 0 50px;
 	padding-bottom: 3px;
 }
 .alert p{
@@ -707,18 +650,6 @@ input#submit:hover{
 	background: #b1e0a3 url(../images/success.png) no-repeat 10px 10px;
 	border: 1px solid #7ABD5E;
 }
-a.close{
-	font-size: 11px;
-	color: #772f21;
-	position: absolute;
-	top: 3px;
-	right: 10px;
-	display: none;
-}
-a.close:hover{
-	text-decoration: underline;
-}
-
 
 a.permlink{
 	font-size: 11px;
@@ -746,7 +677,7 @@ span.expand, span.expanded{
 	width: 100%;
 	text-align: center;
 	border-top: 1px solid #999;
-	padding: 10px 0px;
+	padding: 10px 0;
 	height: 18px;
 	background: url(../images/readmore.png) no-repeat;
 	cursor: pointer;
@@ -780,10 +711,6 @@ span.expanded{
 	float: right;
 }
 
-.settings{
-	display: none;
-}
-
 /*Translate*/
 
 #transl_sign{
@@ -802,7 +729,7 @@ span.expanded{
 	border-right: 1px solid #CCC;
 }
 body div.wam_wrap{
-	margin: 20px 0px;
+	margin: 20px 0;
 	padding-top: 20px;
 	border-top: 1px dashed #CCC;
 }
@@ -814,7 +741,7 @@ h4.wam{
 }
 body div.wam_wrap ul.wam_ul li{
 	background: #D3D3D3;
-	margin: 0px 0px 1px 20px;
+	margin: 0 0 1px 20px;
 	padding: 5px 10px;
 	width: 510px;
 	height: 20px;
