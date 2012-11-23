@@ -6,7 +6,7 @@
 			slide_panel_height="275" 
 			slide_panel_horizontal_align="center" 
 			slide_panel_vertical_align="top" 
-			  ui_visibility_time="2"
+			ui_visibility_time="2"
 		/>
 
 		<auto_play>
@@ -39,34 +39,34 @@
 	<slides>
 	
         <slide>
-            <url>http://core2062.com/wp-content/themes/c0re/images/drivers-mentors.jpg</url>
+            <url><?php bloginfo('template_url'); ?>/images/drivers-mentors.jpg</url>
         </slide>
 		<!-- changing transition between first & second slide -->
         <transition num="3" slicing="vertical" direction="down"/>
         <slide>
 			<link target="_self">/about/c-o-r-e-values</link>
-       		<url>http://core2062.com/wp-content/themes/c0re/images/slide_1.jpg</url>
+       		<url><?php bloginfo('template_url'); ?>/images/slide_1.jpg</url>
         </slide>		
 		<!-- changing transition between second & third slide -->
         <transition num="4" direction="right" shader="flat" />
 		<slide>
 			<link target="_self">/safety</link>
-            <url>http://core2062.com/wp-content/themes/c0re/images/slide_2.jpg</url>
+            <url><?php bloginfo('template_url'); ?>/images/slide_2.jpg</url>
         </slide>
 		<!-- transitions properties defined in transitions template -->
 		<slide>
 			<link target="_self">/about</link>
-       		<url>http://core2062.com/wp-content/themes/c0re/images/slide_3.jpg</url>
+       		<url><?php bloginfo('template_url'); ?>/images/slide_3.jpg</url>
         </slide>
         <!-- transitions properties defined in transitions template -->
 		<transition num="6" slicing="vertical" direction="up" shader="flat" delay="0.05" z_multiplier="4" />
         <slide>
 			<link>http://twitter.com/core2062</link>
-       		<url>http://core2062.com/wp-content/themes/c0re/images/slide_5.jpg</url>
+       		<url><?php bloginfo('template_url'); ?>/images/slide_5.jpg</url>
         </slide>
 		<transition num="6" slicing="vertical" direction="up" shader="flat" delay="0.05" z_multiplier="4" />
         <slide>
-       		<url>http://core2062.com/wp-content/themes/c0re/images/slide_6.jpg</url>
+       		<url><?php bloginfo('template_url'); ?>/images/slide_6.jpg</url>
         </slide>
 				
 	</slides>
