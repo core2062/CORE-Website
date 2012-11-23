@@ -99,7 +99,9 @@
 					</div>
 				<div class="clear"></div>
 			</div>
+
 			<?php get_footer(); ?>
+
 		</div>
 	</body>
 </html>
