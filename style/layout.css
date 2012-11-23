@@ -112,7 +112,7 @@ input#searchsubmit {
 	width: 100%;
 	overflow: hidden;
 	padding-top: 125px;
-	background: url(../../images/drivers-mentors-small.jpg) bottom no-repeat;
+	background: url(../images/drivers-mentors-small.jpg) bottom no-repeat;
 }
 .nav-bar {
 	height: 40px;
@@ -170,7 +170,7 @@ ul#dropmenu.nav{
 	background:#fff;
 	font-weight:bold;
 }
- #dropmenu ul {
+#dropmenu ul {
 	z-index: 1000;
 }
 #dropmenu a {
