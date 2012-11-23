@@ -1,8 +1,3 @@
 <?php
-/*
-Template Name: Sponsors
-*/
-
-header( 'Location: ' . bloginfo('url') . '/sponsors-2' ) ;
-
+	header('Location: ' . bloginfo('url') . '/sponsors-2');
 ?>
