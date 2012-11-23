@@ -132,7 +132,7 @@
 
             </div>
 
-            	<!--<img src="<?php bloginfo('url'); ?>/wp-content/themes/c0re/images/drivers-mentors.jpg" alt="Drivers & Mentors at Competition" />-->
+            	<!--<img src="<?php bloginfo('template_url'); ?>/images/drivers-mentors.jpg" alt="Drivers & Mentors at Competition" />-->
 
             </div><!--End header-show -->
 
