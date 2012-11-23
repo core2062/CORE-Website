@@ -28,7 +28,7 @@
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swfobject/swfobject.js"></script>
 	<script type="text/javascript">
 		var flashvars = {};
-		flashvars.xml = "<?php bloginfo('template_url'); ?>/config.php";
+		flashvars.xml = "<?php bloginfo('template_url'); ?>/config.xml";
 		flashvars.font = "font.swf";
 		var params = {};
 		params.wmode = "transparent";
