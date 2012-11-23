@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<xml version="1.0" encoding="utf-8">
 <cu3er>
 	<settings>
 		<general 
@@ -37,7 +37,6 @@
 	</settings>    
 
 	<slides>
-	
         <slide>
             <url><?php bloginfo('template_url'); ?>/images/drivers-mentors.jpg</url>
         </slide>
