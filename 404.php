@@ -48,17 +48,13 @@
 			<div class="page">
 				<div class="box settings"></div>
 					<div class="banner-bar">
-						<a href="#" title="Click here to return home" class="banner-title">Community of Robotic Engineers - Robotics Team 2062 - Waukesha, Wisconsin </a>
+						<a href="/" title="Click here to return home" class="banner-title">Community of Robotic Engineers - Robotics Team 2062 - Waukesha, Wisconsin </a>
 						<a class="learnmore" title="Click here to learn more!" href="/about">Learn More!</a>
-						<span title="Click here to make the text larger" class="font-big"></span>
-						<span title="Click here to make the text regular size" class="font-normal"></span>
-						<span title="Click here to make the text smaller" class="font-small"></span>
 					</div>
 
 					<?php get_sidebar(); ?>	
 
 					<div class="main-content">
-
 
 						<div class="alert red">
 							<h4>Oops! It looks like a 404.</h4>
