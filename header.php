@@ -29,7 +29,7 @@
 	<script type="text/javascript">
 		var flashvars = {};
 		flashvars.xml = "<?php bloginfo('template_url'); ?>/config.xml";
-		flashvars.font = "font.swf";
+		flashvars.font = "";
 		var params = {};
 		params.wmode = "transparent";
 		var attributes = {};
