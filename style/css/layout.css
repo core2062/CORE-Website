@@ -39,24 +39,9 @@ blockquote {
 ul a, a.logo-click{
 	outline: none;
 }
-/* You might find the following useful */
-br.dirtyLittleTrick {
-	clear:both;
-	display:block;
-	height:1px;
-	margin:-1px 0 0 0
-} /* Use this br class to clear your floated columns */
 div {
 	position:relative
 } /* This will save you having to declare each div's position as 'relative' and allows you to absolutely position elements inside them */
-li#theme-switcher {
-	background:#fff;
-	border:10px solid red;
-	padding:20px;
-	position:fixed;
-	top:0;
-	right:0
-} /* Use this if you have the Theme Switcher Reloaded plugin (http://themebot.com/webmaster-tools/1-wordpress-theme-switcher-reloaded) installed and want to make it nice and obvious */
 body {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
@@ -254,7 +239,6 @@ ul#dropmenu.nav{
 #dropmenu li:hover ul, #dropmenu li li:hover ul, #dropmenu li li li:hover ul, #dropmenu li li li li:hover ul {
 	display:block;
 }
-
 
 .page {
 	background: white;
@@ -687,52 +671,52 @@ input#submit:hover{
 /*Alerts */
 
 .alert{
-min-height: 45px;
-margin: 10px 0px 20px 0px;
-position: relative;
-text-align: left;
+	min-height: 45px;
+	margin: 10px 0px 20px 0px;
+	position: relative;
+	text-align: left;
 }
 .alert p{
-margin: 10px;
+	margin: 10px;
 }
 .alert h4{
-font-size: 18px;
-margin: 10px 10px 0px 50px;
-padding-bottom: 3px;
+	font-size: 18px;
+	margin: 10px 10px 0px 50px;
+	padding-bottom: 3px;
 }
 .alert p{
-font-size: 15px;
-color: #383625;
+	font-size: 15px;
+	color: #383625;
 }
 .yellow{
-background: #ffff9a url(../images/caution.png) no-repeat 10px 10px;
-border: 1px solid #c3c376;
+	background: #ffff9a url(../images/caution.png) no-repeat 10px 10px;
+	border: 1px solid #c3c376;
 }
 .yellow h4{
-border-bottom: 1px solid #c3c376;
+	border-bottom: 1px solid #c3c376;
 }
 .blue{
-background: #bacddf url(../images/message.png) no-repeat 10px 10px;
-border: 1px solid #82b2df;
+	background: #bacddf url(../images/message.png) no-repeat 10px 10px;
+	border: 1px solid #82b2df;
 }
 .red{
-background: #ecb4ae url(../images/error.png) no-repeat 10px 10px;
-border: 1px solid #c9867f;
+	background: #ecb4ae url(../images/error.png) no-repeat 10px 10px;
+	border: 1px solid #c9867f;
 }
 .green{
-background: #b1e0a3 url(../images/success.png) no-repeat 10px 10px;
-border: 1px solid #7ABD5E;
+	background: #b1e0a3 url(../images/success.png) no-repeat 10px 10px;
+	border: 1px solid #7ABD5E;
 }
 a.close{
-font-size: 11px;
-color: #772f21;
-position: absolute;
-top: 3px;
-right: 10px;
-display: none;
+	font-size: 11px;
+	color: #772f21;
+	position: absolute;
+	top: 3px;
+	right: 10px;
+	display: none;
 }
 a.close:hover{
-text-decoration: underline;
+	text-decoration: underline;
 }
 
 
