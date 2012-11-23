@@ -1,15 +1,6 @@
 <?php get_header(); ?>
 
-<div class="banner-bar">
-	<?php if ( function_exists('yoast_breadcrumb') ) {
-		yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-	} ?>
-	<a href="#" title="Click here to return home" class="banner-title">Community of Robotic Engineers - Robotics Team 2062 - Waukesha, Wisconsin </a>
-	<a class="learnmore" title="Click here to learn more!" href="/about">Learn More!</a>
-	<span title="Click here to make the text larger" class="font-big"></span>
-	<span title="Click here to make the text regular size" class="font-normal"></span>
-	<span title="Click here to make the text smaller" class="font-small"></span>
-</div>
+<?php include('component/banner_bar.php'); ?>
 
 <?php get_sidebar(); ?>
 
