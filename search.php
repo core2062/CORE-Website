@@ -11,7 +11,6 @@
 		<div class="alert yellow">
 			<h4>Search Results</h4>
 			<p>Here are all of the articles with <i>"<?php echo the_search_query();?>"</i> in them. You can either read the articles here together as one larger article, or click on the title of an article to go to it's own page.</p>
-			<a class="close" href="#">close</a>
 		</div>
 
 		<?php while (have_posts()) : the_post(); ?>
