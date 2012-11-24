@@ -27,7 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style/reset.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style/typography.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style/layout.css" media="screen" />
-	
+
 	<?php if(is_front_page()):?>
 		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/swfobject/swfobject.js"></script>
 		<script type="text/javascript">

@@ -1,6 +1,8 @@
 <div class="sidebar">
 	<div class="box">
-		<h2>Where it all began: <span>FIRST</span></h2>
+		<h2>
+			Where it all began: <span>FIRST</span>
+		</h2>
 		<a href="http://usfirst.org" title="Click here to go to FIRST's site">
 			<img src="<?php bloginfo('template_url'); ?>/images/first.gif" alt="FIRST Robotics"/>
 		</a>
