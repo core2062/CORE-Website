@@ -1,8 +1,7 @@
-<?php if(is_front_page()):?>
-
-	<div class="header">
-		<a class="logo-click" href="<?php bloginfo('url'); ?>" title="Click here to go back to the main page."></a>
-		<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+<div class="<?php echo (is_front_page() ? "header" : "header-short"); ?>">
+	<a class="logo-click" href="<?php bloginfo('url'); ?>" title="Click here to go back to the main page."></a>
+	<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+	<?php if(is_front_page()):?>
 		<div class="header-show">
 			<div id="cu3er-container">
 				<br />
@@ -15,26 +14,15 @@
 				</a>
 			</div>
 		</div>
-		<div class="nav-bar"></div>
-		<ul id="dropmenu" class="nav">
-			<li class="page_item page-item-2">
-				<a title="Home" href="<?php bloginfo('url'); ?>">Home</a>
-			</li>
-			<?php wp_list_pages('title_li='); ?>
-		</ul> 
-	</div>
-
-<?php else: ?>
-
-	<div class="header-short">
-		<a class="logo-click" href="<?php bloginfo('url'); ?>" title="Click here to go back to the main page."></a>
-		<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+	<?php else: ?>
 		<div class="header-short-pic"></div>
-		<div class="nav-bar"></div>
-		<ul id="dropmenu" class="nav">
-			<li class="page_item page-item-2"><a title="Home" href="<?php bloginfo('url'); ?>">Home</a></li>
-			<?php wp_list_pages('title_li='); ?>
-		</ul> 
-	</div>
+	<?php endif; ?>
 
-<?php endif; ?>
+	<div class="nav-bar"></div>
+	<ul id="dropmenu" class="nav">
+		<li class="page_item page-item-2">
+			<a title="Home" href="<?php bloginfo('url'); ?>">Home</a>
+		</li>
+		<?php wp_list_pages('title_li='); ?>
+	</ul> 
+</div>

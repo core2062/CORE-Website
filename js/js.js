@@ -1,6 +1,6 @@
 $(function() {
 
-	//Initial Settings 
+	//Initial Settings
 	//Read More
 	var browser = navigator.appName;
 	var b_version = navigator.appVersion;
