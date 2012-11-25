@@ -270,7 +270,6 @@ ul#dropmenu.nav{
 }
 .banner-bar a:hover {
 	color: #fb611e;
-	background-color: none;
 }
 .banner-bar a.learnmore {
 	background: #fb611e;
@@ -440,7 +439,6 @@ div.text p{
 .titleblock a:hover{
 	text-decoration: none;
 	color:#fb611e;
-	background-color: none;
 }
 .databox ul {
 }
@@ -480,7 +478,6 @@ div.text p{
 	background: #f0f0f0;
 	border: 1px solid #d3d3d3;
 	border-bottom:none;
-	/*border-top: none;*/
 	vertical-align:middle;
 	text-indent: 10px;
 	position: relative;
@@ -655,18 +652,6 @@ a.permlink{
 	font-style: italic;
 	color: #a6a65d;
 	float: right;
-}
-
-span.collapse{
-	background: url(../images/collapse-vert.png) no-repeat;
-	width: 21px;
-	height: 20px;
-	float: right;
-	position: absolute;
-	top: 10px;
-	right: 5px;
-	cursor: pointer;
-	display:none;
 }
 
 span.expand, span.expanded{

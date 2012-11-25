@@ -97,13 +97,5 @@ $(function() {
 			$(this).parent().slideUp(); //Slides up the link's parent element
 			return false;
 		});
-
-		//Panel Collapse
-		collapseHTML = '<span class="collapse" title="Click here to collapse this panel"></span>';
-		$(".titleblock").append(collapseHTML);
-
-		$(".collapse").click(function() {
-			$(this).parent().siblings("*").slideToggle();
-		});
 	}
 });
