@@ -41,7 +41,6 @@ div {
 /* This will save you having to declare each div's position as 'relative' and allows you to absolutely position elements inside them */
 }
 body {
-  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   background: #1f1f1f;
 }
@@ -130,8 +129,8 @@ input#searchsubmit {
 }
 #dropmenu {
   background: rgba(31,31,31,0.75);
-  position: relative;
-  bottom: 40px;
+  position: absolute;
+  bottom: 0;
   height: 40px;
   line-height: 30px;
   z-index: 2000;
@@ -242,8 +241,7 @@ input#searchsubmit {
   background: #1f1f1f;
   text-align: left;
 }
-.banner-bar a,
-.banner-bar span.normal {
+.banner-bar a {
   color: #fff;
   font-size: 14px;
   font-weight: bold;
@@ -255,11 +253,11 @@ input#searchsubmit {
 .banner-bar a:hover {
   color: #fb611e;
 }
-.banner-bar a .banner-title {
+.banner-bar a.banner-title {
   position: absolute;
   left: 0;
 }
-.banner-bar a .learnmore {
+.banner-bar a.learnmore {
   background: #fb611e;
   color: #fff;
   display: inline-block;
@@ -269,7 +267,7 @@ input#searchsubmit {
   top: 0;
   padding: 12px 20px 10px 20px;
 }
-.banner-bar a .learnmore:hover {
+.banner-bar a.learnmore:hover {
   background: #fe7420;
 }
 .box,
