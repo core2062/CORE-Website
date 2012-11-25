@@ -257,10 +257,6 @@ div.header ul#dropmenu.nav {
   background: #1f1f1f;
   text-align: left;
 }
-.banner-bar a.banner-title {
-  position: absolute;
-  left: 0;
-}
 .banner-bar a,
 .banner-bar span.normal {
   color: #fff;
@@ -274,7 +270,11 @@ div.header ul#dropmenu.nav {
 .banner-bar a:hover {
   color: #fb611e;
 }
-.banner-bar a.learnmore {
+.banner-bar a .banner-title {
+  position: absolute;
+  left: 0;
+}
+.banner-bar a .learnmore {
   background: #fb611e;
   color: #fff;
   display: inline-block;
@@ -284,7 +284,7 @@ div.header ul#dropmenu.nav {
   top: 0;
   padding: 12px 20px 10px 20px;
 }
-.banner-bar a.learnmore:hover {
+.banner-bar a .learnmore:hover {
   background: #fe7420;
 }
 .box,
@@ -316,11 +316,11 @@ div.header ul#dropmenu.nav {
   margin-top: 10px;
 }
 .col1 p,
-.about-side p {
+.col1 .about-side p {
   margin: 3px 0;
 }
 .col1 p b,
-.about-side p b {
+.col1 .about-side p b {
   font-size: 108%;
 }
 .col2 {
@@ -405,9 +405,7 @@ div.text {
 div.text p {
   margin-bottom: 10px;
 }
-.databoxpage .comment p {
-  margin: 0;
-}
+.databoxpage .comment p,
 .databoxpagepost .comment p {
   margin: 0;
 }
@@ -423,6 +421,13 @@ div.text p {
   padding: 10px;
   text-decoration: none;
 }
+.titleblock a {
+  padding: 0;
+}
+.titleblock a:hover {
+  text-decoration: none;
+  color: #fb611e;
+}
 .postpagetitle {
   display: inline;
   position: absolute;
@@ -436,13 +441,6 @@ div.text p {
   margin-top: 12px;
   font-size: 12px;
   margin-right: 5px;
-}
-.titleblock a {
-  padding: 0;
-}
-.titleblock a:hover {
-  text-decoration: none;
-  color: #fb611e;
 }
 .databox ul li {
   background: #f0f0f0;
@@ -475,6 +473,9 @@ div.text p {
 .postbox {
   text-align: left;
   margin-top: 10px;
+}
+.postbox ul li {
+  padding-bottom: 20px;
 }
 .posttitle {
   background: #f0f0f0;
@@ -521,9 +522,6 @@ div.text p {
   border-top: none;
   padding-left: 15px;
   overflow: hidden;
-}
-.postbox ul li {
-  padding-bottom: 20px;
 }
 .archivelink {
   text-align: right;
@@ -675,39 +673,6 @@ a.permlink {
 }
 #translation_bar a {
   margin: 5px;
-}
-.setting1 {
-  width: 250px;
-  text-align: left;
-  border-right: 1px solid #ccc;
-}
-body div.wam_wrap {
-  margin: 20px 0;
-  padding-top: 20px;
-  border-top: 1px dashed #ccc;
-}
-h4.wam {
-  font-size: 13px;
-  margin-left: 20px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-body div.wam_wrap ul.wam_ul li {
-  background: #d3d3d3;
-  margin: 0 0 1px 20px;
-  padding: 5px 10px;
-  width: 510px;
-  height: 20px;
-}
-body div.wam_wrap ul.wam_ul li:hover {
-  background: #e4e4e4;
-}
-.wam_ul li a {
-  color: #1d1d1d;
-  font-size: 11px;
-}
-.wam_ul li a:hover {
-  text-decoration: underline;
 }
 div.text ul,
 div.text li {

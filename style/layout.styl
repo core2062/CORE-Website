@@ -267,34 +267,35 @@ div.header ul#dropmenu.nav
 	background: #1f1f1f
 	text-align: left
 
-.banner-bar a.banner-title
-	position: absolute
-	left: 0
+	a, span.normal
+		color: white
+		font-size: 14px
+		font-weight: bold
+		text-decoration: none
+		padding-top: 14px
+		display: inline-block
+		margin-left: 10px
 
-.banner-bar a, .banner-bar span.normal
-	color: white
-	font-size: 14px
-	font-weight: bold
-	text-decoration: none
-	padding-top: 14px
-	display: inline-block
-	margin-left: 10px
+	a
+		&:hover
+			color: #fb611e
 
-.banner-bar a:hover
-	color: #fb611e
+		.banner-title
+			position: absolute
+			left: 0
 
-.banner-bar a.learnmore
-	background: #fb611e
-	color: white
-	display: inline-block
-	height: 20px
-	position: absolute
-	right: 0
-	top: 0
-	padding: 12px 20px 10px 20px
+		.learnmore
+			background: #fb611e
+			color: white
+			display: inline-block
+			height: 20px
+			position: absolute
+			right: 0
+			top: 0
+			padding: 12px 20px 10px 20px
 
-.banner-bar a.learnmore:hover
-	background: #fe7420
+			&:hover
+				background: #fe7420
 
 .box, .box2
 	background: #f0f0f0
@@ -319,15 +320,15 @@ div.header ul#dropmenu.nav
 	text-align: center
 	border-right: 1px dashed #CCC
 
-.col1 a
-	display: block
-	margin-top: 10px
+	a
+		display: block
+		margin-top: 10px
 
-.col1 p, .about-side p
-	margin: 3px 0
+	p, .about-side p
+		margin: 3px 0
 
-.col1 p b, .about-side p b
-	font-size: 108%
+		b
+			font-size: 108%
 
 .col2
 	width: 550px
@@ -374,12 +375,12 @@ a.button:hover
 	position: absolute
 	left: 0
 
-#breadcrumbs a
-	margin-left: 1px
-	font-size: 18px
+	a
+		margin-left: 1px
+		font-size: 18px
 
-#breadcrumbs a:hover
-	background: none
+		&:hover
+			background: none
 
 .databox
 	text-align: left
@@ -408,25 +409,30 @@ a.button:hover
 div.text
 	margin: 10px
 
-div.text p
-	margin-bottom: 10px
+	p
+		margin-bottom: 10px
 
-.databoxpage .comment p
-	margin: 0
-
-.databoxpagepost .comment p
-	margin: 0
+.databoxpage, .databoxpagepost
+	.comment p
+		margin: 0
 
 .titleblock
 	background: #1f1f1f
 	height: 40px
 	position: relative
 
-.titleblock h3, .titleblock a
-	font-size: 18px
-	color: white
-	padding: 10px
-	text-decoration: none
+	h3, a
+		font-size: 18px
+		color: white
+		padding: 10px
+		text-decoration: none
+
+	a
+		padding: 0
+
+		&:hover
+			text-decoration: none
+			color: #fb611e
 
 .postpagetitle
 	display: inline
@@ -442,12 +448,6 @@ div.text p
 	font-size: 12px
 	margin-right: 5px
 
-.titleblock a
-	padding: 0
-
-.titleblock a:hover
-	text-decoration: none
-	color: #fb611e
 
 .databox ul li
 	background: #f0f0f0
@@ -480,6 +480,9 @@ div.text p
 .postbox
 	text-align: left
 	margin-top: 10px
+
+	ul li
+		padding-bottom: 20px
 
 .posttitle
 	background: #f0f0f0
@@ -527,9 +530,6 @@ div.text p
 	padding-left: 15px
 	overflow: hidden
 
-.postbox ul li
-	padding-bottom: 20px
-
 .archivelink
 	text-align: right
 	margin-bottom: 5px
@@ -544,38 +544,38 @@ div.text p
 	text-align: left
 	margin-bottom: -10px
 
-.commentbar img
-	margin: 4px
-	display: inline
-	float: left
+	img
+		margin: 4px
+		display: inline
+		float: left
 
-.commentbar p
-	display: inline
-	position: relative
-	top: 10px
-	color: #a5a5a5
-	font-size: 14px
+	p
+		display: inline
+		position: relative
+		top: 10px
+		color: #a5a5a5
+		font-size: 14px
 
-.commentbar p a
-	color: #a5a5a5
-	font-weight: bold
-	text-decoration: none
+		a
+			color: #a5a5a5
+			font-weight: bold
+			text-decoration: none
 
-.commentbar p a:hover
-	text-decoration: underline
-	background: none
+			&:hover
+				text-decoration: underline
+				background: none
 
-.commentbar p i
-	font-size: 11px
+		i
+			font-size: 11px
 
-.commentbar p cite, .commentbar h3, .commentbar p cite a
-	font-weight: bold
-	color: white
-	font-size: 18px
-	text-transform: capitalize
+	p cite, h3, p cite a
+		font-weight: bold
+		color: white
+		font-size: 18px
+		text-transform: capitalize
 
-.commentbar h3
-	padding: 10px 5px
+	h3
+		padding: 10px 5px
 
 input, textarea
 	background: #e6e6e6
@@ -676,39 +676,6 @@ a.permlink
 	a
 		margin: 5px
 
-.setting1
-	width: 250px
-	text-align: left
-	border-right: 1px solid #CCC
-
-body div.wam_wrap
-	margin: 20px 0
-	padding-top: 20px
-	border-top: 1px dashed #CCC
-
-h4.wam
-	font-size: 13px
-	margin-left: 20px
-	font-weight: bold
-	margin-bottom: 5px
-
-body div.wam_wrap ul.wam_ul li
-	background: #D3D3D3
-	margin: 0 0 1px 20px
-	padding: 5px 10px
-	width: 510px
-	height: 20px
-
-body div.wam_wrap ul.wam_ul li:hover
-	background: #E4E4E4
-
-.wam_ul li a
-	color: #1D1D1D
-	font-size: 11px
-
-.wam_ul li a:hover
-	text-decoration: underline
-
 div.text ul, div.text li
 	list-style: square
 	margin-left: 10px
@@ -716,25 +683,25 @@ div.text ul, div.text li
 div.text li
 	list-style: inherit
 
-.subnav ul li a
-	display: block
-	width: 100%
-	border-bottom: 1px dotted #666
-	line-height: 28px
-	font-size: .8em
-	font-weight: bold
-	color: #1f1f1f
+.subnav ul li
+	a
+		display: block
+		width: 100%
+		border-bottom: 1px dotted #666
+		line-height: 28px
+		font-size: .8em
+		font-weight: bold
+		color: #1f1f1f
 
-.subnav ul li a:hover
-	color: #1f1f1f
-	background: #B7CFDB
+		&:hover
+			color: #1f1f1f
+			background: #B7CFDB
 
-.subnav ul li ul
-	margin-left: 20px
-	border-left: solid 2px #E4E4E4
-	padding-left: 5px
+	ul
+		margin-left: 20px
+		border-left: solid 2px #E4E4E4
+		padding-left: 5px
 
-.subnav ul li ul li a
-	line-height: 24px
-	font-size: .7em
-
+		li a
+			line-height: 24px
+			font-size: .7em
