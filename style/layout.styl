@@ -1,3 +1,15 @@
+//Resources
+right_arrow_img = url(../images/menu-right-arrow.png)
+arrow_img = url(../images/menu-arrow.png)
+caution_img = url(../images/caution.png)
+message_img = url(../images/message.png)
+error_img = url(../images/error.png)
+success_img = url(../images/success.png)
+search_img =  url(../images/search.png)
+header_img = url(../images/header.jpg)
+
+//Dimensions
+
 .aligncenter
 	display: block
 	margin: 0 auto
@@ -77,7 +89,7 @@ input#s:hover, input#s:active
 	background: #73330f
 
 input#searchsubmit
-	background: url(../images/search.png) no-repeat
+	background: search_img no-repeat
 	text-indent: -9999px
 	width: 19px
 	height: 21px
@@ -87,7 +99,7 @@ input#searchsubmit
 	margin-top: 4px
 
 .header
-	background: #fb611e url(../images/header.jpg) top no-repeat
+	background: #fb611e header_img top no-repeat
 	width: 100%
 	height: 400px
 	z-index: 500
@@ -99,7 +111,7 @@ input#searchsubmit
 	padding-top: 125px
 
 .header-short
-	background: #fb611e url(../images/header.jpg) top no-repeat
+	background: #fb611e header_img top no-repeat
 	width: 100%
 	height: 285px
 	z-index: 500
@@ -130,25 +142,26 @@ div.header ul#dropmenu.nav
 .current_page_ancestor
 	background: #C7C7C7
 
-#dropmenu a.fatherli
-	background: url(../images/menu-arrow.png) right no-repeat
-	background-position: 95% 16px
-	padding-right: 20px
+#dropmenu a
+	&.fatherli
+		background: arrow_img right no-repeat
+		background-position: 95% 16px
+		padding-right: 20px
 
-#dropmenu a.fatherli:hover, #dropmenu a.fatherli.hover
-	background: #fb611e url(../images/menu-arrow.png) right no-repeat
-	background-position: 95% 18px
-	padding-right: 20px
+		&:hover, &.hover
+			background: #fb611e arrow_img right no-repeat
+			background-position: 95% 18px
+			padding-right: 20px
 
-#dropmenu a.childfatherli
-	background: url(../images/menu-right-arrow.png) right no-repeat
-	background-position: 95%
+	&.childfatherli
+		background: right_arrow_img right no-repeat
+		background-position: 95%
 
-#dropmenu a.childfatherli:hover, #dropmenu a.childfatherli.hover-sub
-	background: #FAC090 url(../images/menu-right-arrow.png) right no-repeat
-	background-position: 95%
+		&:hover, &.hover-sub
+			background: #FAC090 right_arrow_img right no-repeat
+			background-position: 95%
 
-ul#dropmenu.nav
+#dropmenu.nav
 	position: relative
 	top: -40px
 	height: 40px
@@ -167,73 +180,78 @@ ul#dropmenu.nav
 	background: #fff
 	font-weight: bold
 
-#dropmenu ul
-	z-index: 1000
+#dropmenu
+	a
+		display: block
+		padding: 4px 12px
+		color: white
+		border-right: none
+		text-decoration: none
+		background: none
+		font-size: 14px
 
-#dropmenu a
-	display: block
-	padding: 4px 12px
-	color: white
-	border-right: none
-	text-decoration: none
-	background: none
-	font-size: 14px
+		&:hover, &.hover
+			background: #fb611e
+			margin-top: -2px
+			padding: 6px 12px 3px 12px
+			border-bottom: 3px solid #c64006
 
-#dropmenu a:hover, #dropmenu a.hover
-	background: #fb611e
-	margin-top: -2px
-	padding: 6px 12px 3px 12px
-	border-bottom: 3px solid #c64006
 
-#dropmenu li
-	float: left
-	position: relative
-	z-index: 1000
+	ul
+		z-index: 1000
+		position: absolute
+		display: none
+		width: 12em
+		top: 39px
+		text-align: left
 
-#dropmenu ul
-	position: absolute
-	display: none
-	width: 12em
-	top: 39px
-	text-align: left
+		a
+			color: #333
+			border-left: 1px solid #c8c8c8
 
-#dropmenu ul a
-	color: #333
-	border-left: 1px solid #c8c8c8
+			&:hover
+				margin-top: 0
 
-#dropmenu ul a:hover
-	margin-top: 0
+		ul
+			top: auto
 
-#dropmenu li ul
-	border-top: 1px solid #c8c8c8
-	width: 200px
+	li
+		float: left
+		position: relative
+		z-index: 1000
 
-#dropmenu li ul a
-	padding: 4px 0 4px 10px
-	width: 190px
-	height: auto
-	font-size: 11px
-	float: left
-	margin-left: -1px
-	border-bottom: 1px solid #c8c8c8
+		ul
+			border-top: 1px solid #c8c8c8
+			width: 200px
 
-#dropmenu li ul a:hover
-	padding: 4px 0 4px 10px
-	border-bottom: 1px solid #c8c8c8
-	background: #FAC090
+			a
+				padding: 4px 0 4px 10px
+				width: 190px
+				height: auto
+				font-size: 11px
+				float: left
+				margin-left: -1px
+				border-bottom: 1px solid #c8c8c8
 
-#dropmenu ul ul
-	top: auto
+				&:hover
+					padding: 4px 0 4px 10px
+					border-bottom: 1px solid #c8c8c8
+					background: #FAC090
 
-#dropmenu li ul ul
-	left: 12em
-	margin: 0px
 
-#dropmenu li:hover ul ul, #dropmenu li:hover ul ul ul, #dropmenu li:hover ul ul ul ul
-	display: none
+			ul
+				left: 12em
+				margin: 0px
 
-#dropmenu li:hover ul, #dropmenu li li:hover ul, #dropmenu li li li:hover ul, #dropmenu li li li li:hover ul
-	display: block
+		&:hover
+			ul ul, ul ul ul, ul ul ul ul
+				display: none
+
+	li:hover ul,
+	li li:hover ul,
+	li li li:hover ul,
+	li li li li:hover ul
+		display: block
 
 .page
 	background: white
@@ -431,8 +449,6 @@ div.text p
 	text-decoration: none
 	color: #fb611e
 
-.databox ul
-
 .databox ul li
 	background: #f0f0f0
 	border: 1px solid #d3d3d3
@@ -441,25 +457,25 @@ div.text p
 	text-indent: 10px
 	position: relative
 
-.databox ul li:hover
-	background: #e9e9e9
+	&:hover
+		background: #e9e9e9
 
-.databox ul li p
-	display: inline
-	position: relative
-	top: 10px
+	p
+		display: inline
+		position: relative
+		top: 10px
 
-.databox ul li a
-	position: absolute
-	top: 12px
-	right: 10px
-	color: #e36214
-	text-decoration: none
-	font-size: .8em
+	a
+		position: absolute
+		top: 12px
+		right: 10px
+		color: #e36214
+		text-decoration: none
+		font-size: .8em
 
-.databox ul li a:hover
-	color: #080808
-	font-weight: bold
+		&:hover
+			color: #080808
+			font-weight: bold
 
 .postbox
 	text-align: left
@@ -481,9 +497,9 @@ div.text p
 	padding-bottom: 10px
 	clear: left
 
-.archivelink:hover
-	color: #080808
-	font-weight: bold
+	&:hover
+		color: #080808
+		font-weight: bold
 
 .archivetitle
 	text-align: center
@@ -587,9 +603,9 @@ label
 input#submit
 	cursor: pointer
 
-input#submit:hover
-	background: #1f1f1f
-	color: white
+	&:hover
+		background: #1f1f1f
+		color: white
 
 .alert
 	min-height: 45px
@@ -597,35 +613,35 @@ input#submit:hover
 	position: relative
 	text-align: left
 
-.alert p
-	margin: 10px
+	p
+		margin: 10px
 
-.alert h4
-	font-size: 18px
-	margin: 10px 10px 0 50px
-	padding-bottom: 3px
+	h4
+		font-size: 18px
+		margin: 10px 10px 0 50px
+		padding-bottom: 3px
 
-.alert p
-	font-size: 15px
-	color: #383625
+	p
+		font-size: 15px
+		color: #383625
 
 .yellow
-	background: #ffff9a url(../images/caution.png) no-repeat 10px 10px
+	background: #ffff9a caution_img no-repeat 10px 10px
 	border: 1px solid #c3c376
 
-.yellow h4
-	border-bottom: 1px solid #c3c376
+	h4
+		border-bottom: 1px solid #c3c376
 
 .blue
-	background: #bacddf url(../images/message.png) no-repeat 10px 10px
+	background: #bacddf message_img no-repeat 10px 10px
 	border: 1px solid #82b2df
 
 .red
-	background: #ecb4ae url(../images/error.png) no-repeat 10px 10px
+	background: #ecb4ae error_img no-repeat 10px 10px
 	border: 1px solid #c9867f
 
 .green
-	background: #b1e0a3 url(../images/success.png) no-repeat 10px 10px
+	background: #b1e0a3 success_img no-repeat 10px 10px
 	border: 1px solid #7ABD5E
 
 a.permlink
@@ -633,29 +649,6 @@ a.permlink
 	font-style: italic
 	color: #a6a65d
 	float: right
-
-span.expand, span.expanded
-	position: absolute
-	top: 712px
-	display: block
-	width: 100%
-	text-align: center
-	border-top: 1px solid #999
-	padding: 10px 0
-	height: 18px
-	background: url(../images/readmore.png) no-repeat
-	cursor: pointer
-	color: white
-	font-weight: bold
-	font-size: 13px
-
-span.expand:hover, span.expanded:hover
-	color: #ff731c
-
-span.expanded
-	top: auto
-	margin-top: -8px
-	background: url(../images/readless.png) no-repeat
 
 .footer
 	background: #ff731c
@@ -665,14 +658,14 @@ span.expanded
 	margin-bottom: 25px
 	text-align: left
 
-.footer a
-	color: white
+	a
+		color: white
 
-.footer a:hover
-	text-decoration: underline
+		&:hover
+			text-decoration: underline
 
-.footer span
-	float: right
+	span
+		float: right
 
 #transl_sign
 	display: none
@@ -680,8 +673,8 @@ span.expanded
 #translation_bar
 	width: 250px
 
-#translation_bar a
-	margin: 5px
+	a
+		margin: 5px
 
 .setting1
 	width: 250px
