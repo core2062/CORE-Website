@@ -27,7 +27,12 @@
 	</div>
 
 	<!-- Twitter Widget -->
-	<script src="http://widgets.twimg.com/j/2/widget.js" type="text/javascript"></script>
+	<div class="box">
+		<h2>Twitter</h2>
+		<div id="twitter"></div>
+		<a href="https://twitter.com/core2062">Join the conversation</a>
+	</div>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.tweet.js"></script>
 	<script type="text/javascript">
 		new TWTR.Widget({
 			version: 2,
@@ -57,5 +62,14 @@
 				behavior: 'all'
 			}
 		}).render().setUser('core2062').start();
+	</script>
+	<script type='text/javascript'>
+		jQuery(function($){
+			$("#twitter").tweet({
+				username: "core2062",
+				count: 5,
+				loading_text: "loading tweets..."
+			});
+		});
 	</script>
 </div>

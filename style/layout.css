@@ -248,24 +248,27 @@ input#searchsubmit {
   text-decoration: none;
   padding-top: 14px;
   display: inline-block;
-  margin-left: 10px;
 }
 .banner-bar a:hover {
   color: #fb611e;
 }
-.banner-bar a.banner-title {
+.banner-bar a.banner-title,
+.banner-bar a.learnmore {
+  padding: 0 20px;
   position: absolute;
+  line-height: 42px;
+  height: 100%;
+  vertical-align: middle;
+}
+.banner-bar a.banner-title {
   left: 0;
 }
 .banner-bar a.learnmore {
   background: #fb611e;
   color: #fff;
   display: inline-block;
-  height: 20px;
-  position: absolute;
   right: 0;
   top: 0;
-  padding: 12px 20px 10px 20px;
 }
 .banner-bar a.learnmore:hover {
   background: #fe7420;
@@ -665,4 +668,12 @@ div.text li {
 .subnav ul li ul li a {
   line-height: 24px;
   font-size: 0.7em;
+}
+.tweet_list li {
+  border-top: dotted #000 1px;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+.tweet_list:first-child {
+  border-top: none;
 }

@@ -263,24 +263,26 @@ input#searchsubmit
 		text-decoration none
 		padding-top 14px
 		display inline-block
-		margin-left 10px
 
 		&:hover
 			color #fb611e
 
-		&.banner-title
+		&.banner-title, &.learnmore
+			padding 0 20px
 			position absolute
+			line-height 42px
+			height 100%
+			vertical-align middle
+
+		&.banner-title
 			left 0
 
 		&.learnmore
 			background #fb611e
 			color white
 			display inline-block
-			height 20px
-			position absolute
 			right 0
 			top 0
-			padding 12px 20px 10px 20px
 
 			&:hover
 				background #fe7420
@@ -676,3 +678,12 @@ div.text
 		li a
 			line-height 24px
 			font-size .7em
+
+.tweet_list
+	li
+		border-top dotted black 1px
+		margin-top 5px
+		padding-top 5px
+
+	&:first-child
+		border-top none
