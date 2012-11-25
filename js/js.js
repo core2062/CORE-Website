@@ -1,4 +1,13 @@
 $(function() {
+	jQuery("#dropmenu ul").css({display: "none"}); // Opera Fix
+	jQuery("#dropmenu li").hover(
+		function(){
+			jQuery(this).find('ul:first').css({visibility: "visible",display: "none"}).show(268);
+		},
+		function(){
+			jQuery(this).find('ul:first').css({visibility: "hidden"});
+		}
+	);
 
 	//Initial Settings
 	//Read More

@@ -48,17 +48,4 @@
 	<?php wp_head(); ?>
 
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/js.js"></script>	
-	<script type="text/javascript">
-		jQuery(document).ready(function() {
-			jQuery("#dropmenu ul").css({display: "none"}); // Opera Fix
-			jQuery("#dropmenu li").hover(
-				function(){
-					jQuery(this).find('ul:first').css({visibility: "visible",display: "none"}).show(268);
-				},
-				function(){
-					jQuery(this).find('ul:first').css({visibility: "hidden"});
-				}
-			);
-		});
-	</script>
 </head>
