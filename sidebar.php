@@ -25,7 +25,6 @@
 		<p>Our name stands for Community of Robotic Engineers, and that is just what we are - we are from Waukesha, Wisconsin and accept students from any three of our community high schools, two preparatory academies, and homeschool students from the area. We are part of a larger organization called <span>FIRST</span>. To read more about them, read the section below. We pair them up with great mentors who teach them the fundamentals of robotics and other life skills.</p>
 		<a href="<?php bloginfo('url'); ?>/about/" class="button">Read More</a> 
 	</div>
-	<img src="<?php bloginfo('template_url'); ?>/images/FRC-ExcelAward11.jpg" alt="Website Excellence Award"/>
 
 	<!-- Twitter Widget -->
 	<script src="http://widgets.twimg.com/j/2/widget.js" type="text/javascript"></script>
