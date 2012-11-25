@@ -26,7 +26,6 @@
 					</div>
 					<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 				</div>
-				<div class="clear"></div>
 			</div>
 
 			<?php get_footer(); ?>

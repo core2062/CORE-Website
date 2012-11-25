@@ -50,7 +50,6 @@
 					</div>
 					<a href="archives" class="archivelink">more posts</a>
 				</div>
-				<div class="clear"></div>
 				<?php get_footer(); ?>
 			</div>
 		</div>

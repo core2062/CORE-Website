@@ -11,7 +11,6 @@
 
 				<?php //get_sidebar(); ?>	
 				<div class="main-content"></div>
-				<div class="clear"></div>
 			</div>
 
 			<?php get_footer(); ?>

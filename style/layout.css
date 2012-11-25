@@ -619,11 +619,17 @@ a.permlink {
   color: #a6a65d;
   float: right;
 }
+.badge {
+  float: right;
+  margin: 10px;
+}
 .footer {
   background: #ff731c;
   font-size: 12px;
   padding: 5px;
   text-align: left;
+  margin: -10px;
+  margin-top: 10px;
 }
 .footer a {
   color: #000;
@@ -631,15 +637,6 @@ a.permlink {
 }
 .footer span {
   float: right;
-}
-#transl_sign {
-  display: none;
-}
-#translation_bar {
-  width: 250px;
-}
-#translation_bar a {
-  margin: 5px;
 }
 div.text ul,
 div.text li {

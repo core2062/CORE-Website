@@ -45,7 +45,6 @@
 					</div>
 					<?php comments_template(); ?>
 				</div>
-				<div class="clear"></div>
 			</div>
 			<?php get_footer(); ?>
 		</div>
