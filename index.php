@@ -48,7 +48,7 @@
 							<?php endif; ?>
 						</ul>
 					</div>
-					<a href="archives" class="archivelink">More posts →</a>
+					<a href="archives" class="archivelink">more posts</a>
 				</div>
 				<div class="clear"></div>
 				<?php get_footer(); ?>

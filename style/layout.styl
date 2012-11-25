@@ -1,4 +1,5 @@
 //Resources
+
 right_arrow_img = url(../images/menu-right-arrow.png)
 arrow_img = url(../images/menu-arrow.png)
 caution_img = url(../images/caution.png)
@@ -9,6 +10,13 @@ search_img =  url(../images/search.png)
 header_img = url(../images/header.jpg)
 
 //Dimensions
+
+// space between the boxes that hold articles / other content
+box_margin = 10px
+
+//Colors
+
+orange = #ff731c
 
 .aligncenter
 	display: block
@@ -50,6 +58,7 @@ ul a, a.logo-click
 div
 	position: relative
 	/* This will save you having to declare each div's position as 'relative' and allows you to absolutely position elements inside them */
+	//this should be removed
 
 body
 	text-align: center
@@ -60,6 +69,7 @@ body
 	width: 900px
 	margin-left: auto
 	margin-right: auto
+	margin-bottom: 40px
 
 .logo-click
 	display: block
@@ -85,8 +95,8 @@ input#s
 	width: 190px
 	margin: 0
 
-input#s:hover, input#s:active
-	background: #73330f
+	&:hover, &:active
+		background: #73330f
 
 input#searchsubmit
 	background: search_img no-repeat
@@ -99,19 +109,18 @@ input#searchsubmit
 	margin-top: 4px
 
 .header
-	background: #fb611e header_img top no-repeat
+	background: orange header_img top left no-repeat
 	width: 100%
 	height: 400px
 	z-index: 500
 
 .header-show
-	height: 285px
 	width: 100%
 	overflow: hidden
 	padding-top: 125px
 
 .header-short
-	background: #fb611e header_img top no-repeat
+	background: orange header_img top left no-repeat
 	width: 100%
 	height: 285px
 	z-index: 500
@@ -123,51 +132,8 @@ input#searchsubmit
 	padding-top: 125px
 	background: url(../images/drivers-mentors-small.jpg) bottom no-repeat
 
-.nav-bar
-	height: 40px
-	width: 100%
-	background: #1f1f1f
-	opacity: 0.75
-	//filter: alpha(opacity=75)
-	position: absolute
-	margin-top: -40px
-	z-index: 100
-
-div.header .nav-bar
-	margin-top: -50px
-
-div.header ul#dropmenu.nav
-	top: -50px
-
 .current_page_ancestor
 	background: #C7C7C7
-
-#dropmenu a
-	&.fatherli
-		background: arrow_img right no-repeat
-		background-position: 95% 16px
-		padding-right: 20px
-
-		&:hover, &.hover
-			background: #fb611e arrow_img right no-repeat
-			background-position: 95% 18px
-			padding-right: 20px
-
-	&.childfatherli
-		background: right_arrow_img right no-repeat
-		background-position: 95%
-
-		&:hover, &.hover-sub
-			background: #FAC090 right_arrow_img right no-repeat
-			background-position: 95%
-
-#dropmenu.nav
-	position: relative
-	top: -40px
-	height: 40px
-	line-height: 30px
-	background: none
-	z-index: 2000
 
 #dropmenu, #dropmenu ul
 	margin: 0
@@ -177,10 +143,17 @@ div.header ul#dropmenu.nav
 	position: relative
 	line-height: 1.5em
 	width: 100%
-	background: #fff
+	background: white
 	font-weight: bold
 
 #dropmenu
+	background: rgba(31, 31, 31, 0.75)
+	position: relative
+	bottom: 40px
+	height: 40px
+	line-height: 30px
+	z-index: 2000
+
 	a
 		display: block
 		padding: 4px 12px
@@ -196,6 +169,23 @@ div.header ul#dropmenu.nav
 			padding: 6px 12px 3px 12px
 			border-bottom: 3px solid #c64006
 
+		&.fatherli
+			background: arrow_img right no-repeat
+			background-position: 95% 16px
+			padding-right: 20px
+
+			&:hover, &.hover
+				background: #fb611e arrow_img right no-repeat
+				background-position: 95% 18px
+				padding-right: 20px
+
+		&.childfatherli
+			background: right_arrow_img right no-repeat
+			background-position: 95%
+
+			&:hover, &.hover-sub
+				background: #FAC090 right_arrow_img right no-repeat
+				background-position: 95%
 
 	ul
 		z-index: 1000
@@ -338,7 +328,7 @@ div.header ul#dropmenu.nav
 	clear: both
 
 a.button
-	color: #ffffff
+	color: white
 	background: #1f1f1f
 	font-weight: bold
 	font-size: 1em
@@ -347,11 +337,12 @@ a.button
 	margin: 10px 0
 	display: inline-block
 
+	&:hover
+		background: #fe7420
+
 a.blue
 	background: #0066b3
 
-a.button:hover
-	background: #fe7420
 
 .sidebar
 	width: 300px
@@ -494,16 +485,6 @@ div.text
 	padding-bottom: 15px
 	padding-top: 10px
 
-.archivelink
-	display: block
-	float: right
-	padding-bottom: 10px
-	clear: left
-
-	&:hover
-		color: #080808
-		font-weight: bold
-
 .archivetitle
 	text-align: center
 
@@ -530,9 +511,6 @@ div.text
 	padding-left: 15px
 	overflow: hidden
 
-.archivelink
-	text-align: right
-	margin-bottom: 5px
 
 .aligncenter
 	margin-left: auto
@@ -651,18 +629,14 @@ a.permlink
 	float: right
 
 .footer
-	background: #ff731c
-	color: #0f0602
+	background: orange
 	font-size: 12px
 	padding: 5px
-	margin-bottom: 25px
 	text-align: left
-
+	
 	a
-		color: white
-
-		&:hover
-			text-decoration: underline
+		color: black
+		text-decoration: underline
 
 	span
 		float: right
@@ -676,12 +650,13 @@ a.permlink
 	a
 		margin: 5px
 
-div.text ul, div.text li
-	list-style: square
-	margin-left: 10px
+div.text
+	ul, li
+		list-style: square
+		margin-left: 10px
 
-div.text li
-	list-style: inherit
+	li
+		list-style: inherit
 
 .subnav ul li
 	a

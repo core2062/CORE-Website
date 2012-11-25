@@ -18,7 +18,6 @@
 		<div class="header-short-pic"></div>
 	<?php endif; ?>
 
-	<div class="nav-bar"></div>
 	<ul id="dropmenu" class="nav">
 		<li class="page_item page-item-2">
 			<a title="Home" href="<?php bloginfo('url'); ?>">Home</a>
