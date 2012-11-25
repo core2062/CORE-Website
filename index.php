@@ -51,10 +51,8 @@
 					<a href="archives" class="archivelink">More posts →</a>
 				</div>
 				<div class="clear"></div>
+				<?php get_footer(); ?>
 			</div>
-
-			<?php get_footer(); ?>
-
 		</div>
 	</body>
 </html>
