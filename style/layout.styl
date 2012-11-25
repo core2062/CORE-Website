@@ -11,8 +11,11 @@ header_img = url(../images/header.jpg)
 
 //Dimensions
 
-// space between the boxes that hold articles / other content
-box_margin = 10px
+
+box_margin = 5px // 1/2 of space between the boxes that hold articles / other content
+logo_height = 80px // height of logo at top of page above cu3er
+searchform_height = 30px
+cu3er_height = 275px
 
 //Colors
 
@@ -78,45 +81,49 @@ body
 	z-index 200
 
 form#searchform
-	position absolute
-	right 20px
-	z-index 100
-	top 50px
+	float right
+	padding-top ((logo_height - searchform_height) / 2)
+
+	input
+		display inline
 
 input#s
-	border 1px solid #73523b
-	background #3f1e0a
-	height 22px
-	padding 5px 25px 0 10px
+	border_thickness = 1px
 	color #e2e2e2
+	border border_thickness solid #73523b
+	background darken(orange, 70%)
 	font-size 13px
 	font-family "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif
 	width 190px
+	height searchform_height - border_thickness * 2
+	padding 0
 	margin 0
+	padding-right searchform_height
 
 	&:hover, &:active
-		background #73330f
+		background darken(orange, 50%)
 
 input#searchsubmit
+	margin 0
+	margin-left -(searchform_height)
+	width searchform_height
+	height searchform_height
+	padding 0
+	z-index 9999
 	background search_img no-repeat
-	text-indent -9999px
-	width 19px
-	height 21px
 	border none
-	position absolute
-	margin-left -23px
-	margin-top 4px
 
 .header
 	background orange header_img top left no-repeat
 	width 100%
-	height 400px
+	height logo_height + cu3er_height
 	z-index 500
 
 .header-show
 	width 100%
 	overflow hidden
-	padding-top 125px
+	position absolute
+	bottom 0
 
 .header-short
 	background orange header_img top left no-repeat
@@ -301,29 +308,6 @@ input#searchsubmit
 	font-size 85%
 	line-height 18px
 
-.col1
-	width 275px
-	font-size 85%
-	line-height 18px
-	color #1f1f1f
-	float left
-	text-align center
-	border-right 1px dashed #CCC
-
-	a
-		display block
-		margin-top 10px
-
-	p, .about-side p
-		margin 3px 0
-
-		b
-			font-size 108%
-
-.col2
-	width 550px
-	float right
-
 .clear
 	clear both
 
@@ -343,17 +327,20 @@ a.button
 a.blue
 	background #0066b3
 
+.sidebar, .main-content
+	display inline-block
 
 .sidebar
 	width 300px
-	float left
+	//float left
 
 .main-content
+	vertical-align top
 	width 570px
 	margin-top 10px
-	float right
+	//float right
 
-.main-content2
+.main-content2 //where is page-no-bar used?
 	width 100%
 	float left
 	margin-top -35px
@@ -679,11 +666,17 @@ div.text
 			line-height 24px
 			font-size .7em
 
-.tweet_list
+#twitter_box
+	h2 img
+		width 20px //twitter logo
+
 	li
 		border-top dotted black 1px
 		margin-top 5px
 		padding-top 5px
 
-	&:first-child
-		border-top none
+		&.tweet_first
+			border-top none
+			margin-top 0
+			padding-top 0
+

@@ -1,6 +1,6 @@
-<div id="badges">
+<!-- <div id="badges"> -->
 	<img src="<?php bloginfo('template_url'); ?>/images/FRC-ExcelAward11.jpg" alt="Website Excellence Award"/>
-</div>
+<!-- </div> -->
 
 <div class="clear"></div>
 <p class="footer">

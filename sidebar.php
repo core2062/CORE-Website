@@ -27,10 +27,10 @@
 	</div>
 
 	<!-- Twitter Widget -->
-	<div class="box">
-		<h2>Twitter</h2>
-		<div id="twitter"></div>
-		<a href="https://twitter.com/core2062">Join the conversation</a>
+	<div class="box" id="twitter_box">
+		<h2>Twitter <img src="<?php bloginfo('template_url'); ?>/images/twitter.svg"></img></h2>
+		<div></div>
+		<a href="https://twitter.com/core2062" class="button">Join the Conversation</a>
 	</div>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.tweet.js"></script>
 	<script type="text/javascript">
@@ -65,7 +65,7 @@
 	</script>
 	<script type='text/javascript'>
 		jQuery(function($){
-			$("#twitter").tweet({
+			$("#twitter_box div").tweet({
 				username: "core2062",
 				count: 5,
 				loading_text: "loading tweets..."
