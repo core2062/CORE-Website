@@ -11,7 +11,6 @@ header_img = url(../images/header.jpg)
 
 //Dimensions
 
-
 box_margin = 5px // 1/2 of space between the boxes that hold articles / other content
 logo_height = 100px // height of logo at top of page above cu3er (logo_height > searchform_height + box_margin*4)
 searchform_height = 30px
@@ -25,6 +24,63 @@ main_content_width = (page_width) * (2/3) - box_margin * 2
 //Colors
 
 orange = #ff731c
+
+//Layout
+
+#page-wrap
+	width page_width - box_margin * 2 // because of padding on #page
+	margin-left auto
+	margin-right auto
+	margin-bottom 40px
+
+#page
+	background white
+	min-height 400px
+	padding box_margin
+	position relative
+	font-size 0 // remove space between inline-block elements
+	z-index 5
+
+//Typography
+
+h1, h2, h3, h5, h5, h6
+	font-weight: bold
+
+h1
+	font-size: 28px
+	line-height: 36px
+
+h2
+	font-size: 21px
+	line-height: 28px
+	color: #1f1f1f
+	margin-bottom: 10px
+
+h3
+	font-size: 18px
+	line-height: 24px
+
+h4
+	font-size: 16px
+	line-height: 22px
+
+p, .wp-caption, .wp-caption-dd, .databoxpage, .post-content, .tweet_list, .box
+	font-family: "Calibri", Arial, Verdana, sans-serif
+	font-size: 15px
+	line-height: 21px
+
+.post-content, .post-content p
+	line-height: 18px
+
+a
+	color: #ff731c
+	text-decoration: none
+
+p a:hover
+	background-color: #ff731c
+	color: white
+
+//Styles
 
 .aligncenter
 	display block
@@ -72,19 +128,6 @@ body
 	font-family Arial, Helvetica, sans-serif
 	background #1f1f1f
 
-.page-wrap
-	width page_width - box_margin * 2 // because of padding on .page
-	margin-left auto
-	margin-right auto
-	margin-bottom 40px
-
-.page
-	background white
-	min-height 400px
-	padding box_margin
-	position relative
-	font-size 0 // remove space between inline-block elements
-	z-index 5
 
 .logo-click
 	display block
@@ -333,6 +376,9 @@ a.blue
 
 .sidebar
 	width sidebar_width
+
+	img
+		max-width sidebar_width - box_margin*6 - 2px // box_border = 2px total
 
 .main-content
 	vertical-align top

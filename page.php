@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<?php get_header(); ?>
 	<body>
-		<div class="page-wrap">
+		<div id="page-wrap">
 			<?php include('component/header.php'); ?>
-			<div class="page">
+			<div id="page">
 				<?php include('component/banner_bar.php'); ?>
 				<?php get_sidebar(); ?>	
 				<div class="main-content">

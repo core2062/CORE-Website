@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<?php get_header(); ?>
 	<body>
-		<div class="page-wrap">
+		<div id="page-wrap">
 			<?php include('component/header.php'); ?>
-			<div class="page">
+			<div id="page">
 				<div class="banner-bar">
 					<p id="breadcrumbs"> <a href="http://localhost">C.O.R.E. Home</a> &raquo; <span class="normal">All Articles with <i>"<?php echo the_search_query();?>"</i> in it.</span></p>
 				</div>

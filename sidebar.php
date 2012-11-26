@@ -4,7 +4,7 @@
 			Where it all began: <span>FIRST</span>
 		</h2>
 		<a href="http://usfirst.org" title="Click here to go to FIRST's site">
-			<img src="<?php bloginfo('template_url'); ?>/images/FIRST.svg" alt="FIRST Robotics" width="250px"/>
+			<img src="<?php bloginfo('template_url'); ?>/images/FIRST.svg" alt="FIRST Robotics"/>
 		</a>
 		<br />
 		<br />

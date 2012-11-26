@@ -1,3 +1,66 @@
+#page-wrap {
+  width: 890px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+#page {
+  background: #fff;
+  min-height: 400px;
+  padding: 5px;
+  position: relative;
+  font-size: 0;
+  z-index: 5;
+}
+h1,
+h2,
+h3,
+h5,
+h5,
+h6 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 28px;
+  line-height: 36px;
+}
+h2 {
+  font-size: 21px;
+  line-height: 28px;
+  color: #1f1f1f;
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+h4 {
+  font-size: 16px;
+  line-height: 22px;
+}
+p,
+.wp-caption,
+.wp-caption-dd,
+.databoxpage,
+.post-content,
+.tweet_list,
+.box {
+  font-family: "Calibri", Arial, Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 21px;
+}
+.post-content,
+.post-content p {
+  line-height: 18px;
+}
+a {
+  color: #ff731c;
+  text-decoration: none;
+}
+p a:hover {
+  background-color: #ff731c;
+  color: #fff;
+}
 .aligncenter {
   display: block;
   margin: 0 auto;
@@ -43,20 +106,6 @@ div {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #1f1f1f;
-}
-.page-wrap {
-  width: 890px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-}
-.page {
-  background: #fff;
-  min-height: 400px;
-  padding: 5px;
-  position: relative;
-  font-size: 0;
-  z-index: 5;
 }
 .logo-click {
   display: block;
@@ -309,6 +358,9 @@ a.blue {
 }
 .sidebar {
   width: 290px;
+}
+.sidebar img {
+  max-width: 258px;
 }
 .main-content {
   vertical-align: top;
