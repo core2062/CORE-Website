@@ -45,10 +45,18 @@ body {
   background: #1f1f1f;
 }
 .page-wrap {
-  width: 900px;
+  width: 890px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+}
+.page {
+  background: #fff;
+  min-height: 400px;
+  padding: 5px;
+  position: relative;
+  font-size: 0;
+  z-index: 5;
 }
 .logo-click {
   display: block;
@@ -59,7 +67,8 @@ body {
 }
 form#searchform {
   float: right;
-  padding-top: 25px;
+  padding-top: 35px;
+  padding-right: 10px;
 }
 form#searchform input {
   display: inline;
@@ -93,7 +102,7 @@ input#searchsubmit {
 .header {
   background: #ff731c url("../images/header.jpg") top left no-repeat;
   width: 100%;
-  height: 355px;
+  height: 375px;
   z-index: 500;
 }
 .header-show {
@@ -230,19 +239,11 @@ input#searchsubmit {
 #dropmenu li li li li:hover ul {
   display: block;
 }
-.page {
-  background: #fff;
-  width: 880px;
-  min-height: 400px;
-  padding: 5px;
-  position: relative;
-  z-index: 5;
-}
 .banner-bar {
-  width: 100%;
   height: 42px;
   background: #1f1f1f;
   text-align: left;
+  margin: 5px;
 }
 .banner-bar a {
   color: #fff;
@@ -276,14 +277,6 @@ input#searchsubmit {
 .banner-bar a.learnmore:hover {
   background: #fe7420;
 }
-.box,
-.box2 {
-  background: #f0f0f0;
-  border: 1px solid #d3d3d3;
-  padding: 10px;
-  margin: 10px 0;
-  text-align: left;
-}
 .about-intro {
   width: 860px;
 }
@@ -315,12 +308,11 @@ a.blue {
   display: inline-block;
 }
 .sidebar {
-  width: 300px;
+  width: 290px;
 }
 .main-content {
   vertical-align: top;
-  width: 570px;
-  margin-top: 10px;
+  width: 590px;
 }
 .main-content2 //where is page-no-bar used? {
   width: 100%;
@@ -380,6 +372,8 @@ div.text p {
   background: #1f1f1f;
   height: 40px;
   position: relative;
+  margin: 5px;
+  margin-bottom: -5px;
 }
 .titleblock h3,
 .titleblock a {
@@ -437,22 +431,10 @@ div.text p {
   color: #080808;
   font-weight: bold;
 }
-.postbox {
-  text-align: left;
-  margin-top: 10px;
-}
-.postbox ul li {
-  padding-bottom: 20px;
-}
-.posttitle {
+.post-title {
   background: #f0f0f0;
-  border: 1px solid #d3d3d3;
-  border-bottom: none;
   vertical-align: middle;
-  text-indent: 10px;
   position: relative;
-  padding-bottom: 15px;
-  padding-top: 10px;
 }
 .archivetitle {
   text-align: center;
@@ -466,19 +448,10 @@ div.text p {
   text-align: right;
 }
 .post-content {
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 5px;
+  padding: 10px;
 }
 .arclist {
   display: block;
-}
-.posts {
-  background: #f0f0f0;
-  border: 1px solid #d3d3d3;
-  border-top: none;
-  padding-left: 15px;
-  overflow: hidden;
 }
 .aligncenter {
   margin-left: auto;
@@ -558,21 +531,22 @@ input#submit:hover {
   background: #1f1f1f;
   color: #fff;
 }
+.box,
+.alert {
+  background: #f0f0f0;
+  border: 1px solid #d3d3d3;
+  margin: 5px;
+  padding: 10px;
+}
 .alert {
   min-height: 45px;
-  margin: 10px 0 20px 0;
-  position: relative;
-  text-align: left;
-}
-.alert p {
-  margin: 10px;
 }
 .alert h4 {
   font-size: 18px;
-  margin: 10px 10px 0 50px;
-  padding-bottom: 3px;
+  margin: 3px 0 3px 40px;
 }
 .alert p {
+  margin: 10px;
   font-size: 15px;
   color: #383625;
 }

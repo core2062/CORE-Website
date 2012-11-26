@@ -13,9 +13,14 @@ header_img = url(../images/header.jpg)
 
 
 box_margin = 5px // 1/2 of space between the boxes that hold articles / other content
-logo_height = 80px // height of logo at top of page above cu3er
+logo_height = 100px // height of logo at top of page above cu3er (logo_height > searchform_height + box_margin*4)
 searchform_height = 30px
 cu3er_height = 275px
+
+page_width = 900px
+sidebar_width = (page_width) * (1/3) - box_margin * 2
+main_content_width = (page_width) * (2/3) - box_margin * 2
+
 
 //Colors
 
@@ -68,10 +73,18 @@ body
 	background #1f1f1f
 
 .page-wrap
-	width 900px
+	width page_width - box_margin * 2 // because of padding on .page
 	margin-left auto
 	margin-right auto
 	margin-bottom 40px
+
+.page
+	background white
+	min-height 400px
+	padding box_margin
+	position relative
+	font-size 0 // remove space between inline-block elements
+	z-index 5
 
 .logo-click
 	display block
@@ -83,6 +96,7 @@ body
 form#searchform
 	float right
 	padding-top ((logo_height - searchform_height) / 2)
+	padding-right box_margin*2
 
 	input
 		display inline
@@ -249,19 +263,12 @@ input#searchsubmit
 	li li li li:hover ul
 		display block
 
-.page
-	background white
-	width 880px
-	min-height 400px
-	padding box_margin
-	position relative
-	z-index 5
 
 .banner-bar
-	width 100%
 	height 42px
 	background #1f1f1f
 	text-align left
+	margin box_margin
 
 	a
 		color white
@@ -294,12 +301,6 @@ input#searchsubmit
 			&:hover
 				background #fe7420
 
-.box, .box2
-	background #f0f0f0
-	border 1px solid #d3d3d3
-	padding 10px
-	margin 10px 0
-	text-align left
 
 .about-intro
 	width 860px
@@ -331,14 +332,11 @@ a.blue
 	display inline-block
 
 .sidebar
-	width 300px
-	//float left
+	width sidebar_width
 
 .main-content
 	vertical-align top
-	width 570px
-	margin-top 10px
-	//float right
+	width main_content_width
 
 .main-content2 //where is page-no-bar used?
 	width 100%
@@ -398,6 +396,8 @@ div.text
 	background #1f1f1f
 	height 40px
 	position relative
+	margin box_margin
+	margin-bottom -(box_margin)
 
 	h3, a
 		font-size 18px
@@ -455,22 +455,10 @@ div.text
 			color #080808
 			font-weight bold
 
-.postbox
-	text-align left
-	margin-top 10px
-
-	ul li
-		padding-bottom 20px
-
-.posttitle
+.post-title
 	background #f0f0f0
-	border 1px solid #d3d3d3
-	border-bottom none
 	vertical-align middle
-	text-indent 10px
 	position relative
-	padding-bottom 15px
-	padding-top 10px
 
 .archivetitle
 	text-align center
@@ -484,20 +472,10 @@ div.text
 	text-align right
 
 .post-content
-	padding-bottom 20px
-	padding-left 10px
-	padding-right 5px
+	padding box_margin*2
 
 .arclist
 	display block
-
-.posts
-	background #f0f0f0
-	border 1px solid #d3d3d3
-	border-top none
-	padding-left 15px
-	overflow hidden
-
 
 .aligncenter
 	margin-left auto
@@ -572,21 +550,21 @@ input#submit
 		background #1f1f1f
 		color white
 
+.box, .alert
+	background #f0f0f0
+	border 1px solid #d3d3d3
+	margin box_margin
+	padding box_margin*2
+
 .alert
 	min-height 45px
-	margin 10px 0 20px 0
-	position relative
-	text-align left
-
-	p
-		margin 10px
 
 	h4
 		font-size 18px
-		margin 10px 10px 0 50px
-		padding-bottom 3px
+		margin 3px 0 3px 40px
 
 	p
+		margin 10px
 		font-size 15px
 		color #383625
 
