@@ -221,7 +221,6 @@ input#searchsubmit {
 #dropmenu a.fatherli.hover {
   background: #fb611e url("../images/menu-arrow.png") right no-repeat;
   background-position: 95% 18px;
-  padding-right: 20px;
 }
 #dropmenu a.childfatherli {
   background: url("../images/menu-right-arrow.png") right no-repeat;
@@ -230,7 +229,6 @@ input#searchsubmit {
 #dropmenu a.childfatherli:hover,
 #dropmenu a.childfatherli.hover-sub {
   background: #fac090 url("../images/menu-right-arrow.png") right no-repeat;
-  background-position: 95%;
 }
 #dropmenu ul {
   z-index: 1000;
@@ -317,14 +315,14 @@ input#searchsubmit {
   left: 0;
 }
 .banner-bar a.learnmore {
-  background: #fb611e;
+  background: #ff731c;
   color: #fff;
   display: inline-block;
   right: 0;
   top: 0;
 }
 .banner-bar a.learnmore:hover {
-  background: #fe7420;
+  background: #ff883e;
 }
 .about-intro {
   width: 860px;
@@ -335,6 +333,9 @@ input#searchsubmit {
 }
 .clear {
   clear: both;
+}
+.break {
+  height: 1px;
 }
 a.button {
   color: #fff;

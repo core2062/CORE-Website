@@ -17,4 +17,5 @@
 
 		</div>
 	</body>
+	<?php include('component/scripts.php'); ?>
 </html>

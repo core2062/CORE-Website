@@ -49,4 +49,5 @@
 			<?php get_footer(); ?>
 		</div>
 	</body>
+	<?php include('component/scripts.php'); ?>
 </html>
