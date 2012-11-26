@@ -1,36 +1,32 @@
-<?php get_header(); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
+	<?php get_header(); ?>
+	<body>
+		<div id="page-wrap">
+			<?php include('component/top.php'); ?>
+			<div id="page">
+				<?php include('component/banner_bar.php'); ?>
+				<?php get_sidebar(); ?>	
+				<div class="main-content">
+					<div class="titleblock">
+						<h3>Posts from This Year</h3>
+					</div>
+					<div class="break"></div>
+					<?php query_posts('cat=3');?>
+					<?php include('component/posts.php'); ?>
 
-<?php include('component/banner_bar.php'); ?>
-    <?php get_sidebar(); ?>
-<div class="main-content">
-	<div class="databoxpage archivebox">
-		<div class="titleblock archivetitle"><h3>Posts from This Year</h3></div>
-		<div class="archivepage-spacer"></div>
-		<?php query_posts( 'cat=3');?>
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<div class="post" id="post-<?php the_ID(); ?>">
-			<div class="databoxpagepost">
-				<div class="titleblock"><h3 class="postpagetitle"><?php the_title(); ?></h3>
-					<span class="bylinepage">By <?php the_author() ?> on <?php the_time('F jS, Y') ?></span>
-				</div>
-				<div class="text">
-					<?php the_content(); ?>
+					<div class="titleblock">
+						<h3>Posts from Previous Years</h3>
+					</div>
+					<div class="box">
+						<div class="post-content">
+							<?php wp_list_categories('exclude=3,7'); ?>
+						</div>
+					</div>
 				</div>
 			</div>
+			<?php get_footer(); ?>
 		</div>
-		<?php endwhile; else: ?> 
-		<p><?php _e(''); ?></p>
-		<?php endif; ?>
-	</div>
-	<div class="archivepage-spacer"></div>
-	<div class="databoxpage">
-		<div class="text"></div>
-		<div class="titleblock"><h3>Posts from Previous Years</h3></div>
-		<div class="text">
-			<?php wp_list_categories('exclude=3,7'); ?>
-		</div>
-	</div>
-</div>
-
-
-<?php get_footer(); ?>
+	</body>
+	<?php include('component/scripts.php'); ?>
+</html>

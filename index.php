@@ -3,9 +3,7 @@
 	<?php get_header(); ?>
 	<body>
 		<div id="page-wrap">
-
-			<?php include('component/header.php'); ?>
-
+			<?php include('component/top.php'); ?>
 			<div id="page">
 				<?php include('component/banner_bar.php'); ?>
 
@@ -23,30 +21,12 @@
 					</div>
 					<div class="break"></div>
 					<?php
-						global $more;
 						query_posts('posts_per_page=3');
-						if( have_posts() ) : while ( have_posts() ) : the_post(); $more = 1;
 					?>
-						
-						<div class="box">
-							<h4 class="post-title">
-								<a href="<?php the_permalink() ?>" rel="bookmark" title="Click here to read more"><?php the_title(); ?></a>
-								<span class="byline">By <?php the_author() ?> on <?php the_time('F jS, Y') ?></span>
-							</h4>
-							<div class="post-content">
-								<?php the_content(); ?>
-							</div>
-						</div>
-						<div class="break"></div>
-
-					<?php endwhile; else: ?>
-
-						<p>
-							<?php _e('Sorry, no posts matched your criteria.'); ?>
-						</p>
-
-					<?php endif; ?>
-					<a href="archives" class="archivelink">more posts</a>
+					<?php include('component/posts.php'); ?>
+					<div class="box more-posts">
+						<a href="archives">more posts...</a>
+					</div>
 				</div>
 				<?php get_footer(); ?>
 			</div>

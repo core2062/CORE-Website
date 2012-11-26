@@ -3,7 +3,7 @@
 	<?php get_header(); ?>
 	<body>
 		<div id="page-wrap">
-			<?php include('component/header.php'); ?>
+			<?php include('component/top.php'); ?>
 			<div id="page">
 				<div class="banner-bar">
 					<p id="breadcrumbs"> <a href="http://localhost">C.O.R.E. Home</a> &raquo; <span class="normal">All Articles with <i>"<?php echo the_search_query();?>"</i> in it.</span></p>

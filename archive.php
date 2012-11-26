@@ -1,20 +1,20 @@
-<?php get_header(); ?>
-<?php include('component/banner_bar.php'); ?>
-<?php get_sidebar(); ?> 
-    <div class="main-content">
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<div class="post archivepost" id="post-<?php the_ID(); ?>">
-			<div class="databoxpagepost">
-				<div class="titleblock"><h3 class="postpagetitle"><?php the_title(); ?></h3>
-					<span class="bylinepage">By <?php the_author() ?> on <?php the_time('F jS, Y') ?></span>
-				</div>
-				<div class="text">
-					<?php the_content(); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
+	<?php get_header(); ?>
+	<body>
+		<div id="page-wrap">
+			<?php include('component/top.php'); ?>
+			<div id="page">
+				<?php include('component/banner_bar.php'); ?>
+
+				<?php get_sidebar(); ?>	
+
+				<div class="main-content">
+					<?php include('component/posts.php'); ?>
 				</div>
 			</div>
+			<?php get_footer(); ?>
 		</div>
-			<?php endwhile; else: ?> 
-			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-			<?php endif; ?>
-	</div>
-<?php get_footer(); ?>
+	</body>
+	<?php include('component/scripts.php'); ?>
+</html>

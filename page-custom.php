@@ -3,9 +3,7 @@
 	<?php get_header(); ?>
 	<body>
 		<div id="page-wrap">
-
-			<?php include('component/header.php'); ?>
-
+			<?php include('component/top.php'); ?>
 			<div id="page">
 				<?php include('component/banner_bar.php'); ?>
 

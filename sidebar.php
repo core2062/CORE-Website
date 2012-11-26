@@ -13,7 +13,6 @@
 		<a href="<?php bloginfo('url'); ?>/first" class="button">Read More</a> 
 	</div>
 	<div class="break"></div>
-	<?php include('component/scripts.php'); ?>
 	<div class="box about-side">
 		<h2>About C.O.R.E. 2062</h2>
 		<a href="<?php bloginfo('url'); ?>/about/" rel="lightbox" title="A team portrait" >

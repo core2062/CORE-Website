@@ -57,7 +57,8 @@ a {
   color: #ff731c;
   text-decoration: none;
 }
-p a:hover {
+p a:hover,
+.more-posts a:hover {
   background-color: #ff731c;
   color: #fff;
 }
@@ -80,7 +81,7 @@ hr {
 blockquote {
   margin: 1em 3em;
   padding: 0.5em 1em;
-  border-left: 5px solid #fb611e;
+  border-left: 5px solid #ff731c;
   background-color: #f6ebc1;
 }
 .wp-caption {
@@ -154,23 +155,20 @@ input#searchsubmit {
   height: 375px;
   z-index: 500;
 }
-.header-show {
+.header-show,
+.header-short-pic {
   width: 100%;
-  overflow: hidden;
   position: absolute;
   bottom: 0;
 }
 .header-short {
   background: #ff731c url("../images/header.jpg") top left no-repeat;
-  width: 100%;
-  height: 285px;
-  z-index: 500;
+  height: 250px;
 }
 .header-short-pic {
-  height: 160px;
+  z-index: 600;
+  height: 150px;
   width: 100%;
-  overflow: hidden;
-  padding-top: 125px;
   background: url("../images/drivers-mentors-small.jpg") bottom no-repeat;
 }
 .current_page_ancestor {
@@ -207,7 +205,7 @@ input#searchsubmit {
 }
 #dropmenu a:hover,
 #dropmenu a.hover {
-  background: #fb611e;
+  background: #ff731c;
   margin-top: -2px;
   padding: 6px 12px 3px 12px;
   border-bottom: 3px solid #c64006;
@@ -219,7 +217,7 @@ input#searchsubmit {
 }
 #dropmenu a.fatherli:hover,
 #dropmenu a.fatherli.hover {
-  background: #fb611e url("../images/menu-arrow.png") right no-repeat;
+  background: #ff731c url("../images/menu-arrow.png") right no-repeat;
   background-position: 95% 18px;
 }
 #dropmenu a.childfatherli {
@@ -228,7 +226,7 @@ input#searchsubmit {
 }
 #dropmenu a.childfatherli:hover,
 #dropmenu a.childfatherli.hover-sub {
-  background: #fac090 url("../images/menu-right-arrow.png") right no-repeat;
+  background: #ffb98e url("../images/menu-right-arrow.png") right no-repeat;
 }
 #dropmenu ul {
   z-index: 1000;
@@ -269,7 +267,7 @@ input#searchsubmit {
 #dropmenu li ul a:hover {
   padding: 4px 0 4px 10px;
   border-bottom: 1px solid #c8c8c8;
-  background: #fac090;
+  background: #ffb98e;
 }
 #dropmenu li ul ul {
   left: 12em;
@@ -301,7 +299,7 @@ input#searchsubmit {
   display: inline-block;
 }
 .banner-bar a:hover {
-  color: #fb611e;
+  color: #ff731c;
 }
 .banner-bar a.banner-title,
 .banner-bar a.learnmore {
@@ -440,7 +438,7 @@ div.text p {
 }
 .titleblock a:hover {
   text-decoration: none;
-  color: #fb611e;
+  color: #ff731c;
 }
 .postpagetitle {
   display: inline;
@@ -502,6 +500,17 @@ div.text p {
 }
 .post-content {
   padding: 10px;
+}
+.post-content ul,
+.post-content li {
+  list-style: square;
+  margin-left: 10px;
+}
+.post-content li {
+  list-style: inherit;
+}
+.more-posts {
+  text-align: center;
 }
 .arclist {
   display: block;
@@ -646,14 +655,6 @@ a.permlink {
 }
 .footer span {
   float: right;
-}
-div.text ul,
-div.text li {
-  list-style: square;
-  margin-left: 10px;
-}
-div.text li {
-  list-style: inherit;
 }
 .subnav ul li a {
   display: block;

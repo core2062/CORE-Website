@@ -15,36 +15,6 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/js.js"></script>
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.tweet.js"></script>
-<script type="text/javascript">
-	new TWTR.Widget({
-		version: 2,
-		type: 'profile',
-		rpp: 5,
-		interval: 6000,
-		width: 'auto',
-		height: 300,
-		theme: {
-			shell: {
-				background: '#1f1f1f',
-				color: '#ffffff'
-			},
-			tweets: {
-				background: '#000000',
-				color: '#ffffff',
-				links: '#ff731c'
-			}
-		},
-		features: {
-			scrollbar: false,
-			loop: false,
-			live: false,
-			hashtags: true,
-			timestamp: true,
-			avatars: false,
-			behavior: 'all'
-		}
-	}).render().setUser('core2062').start();
-</script>
 <script type='text/javascript'>
 	jQuery(function($){
 		$("#twitter_box div").tweet({

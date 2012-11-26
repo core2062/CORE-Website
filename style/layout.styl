@@ -15,6 +15,7 @@ box_margin = 5px // 1/2 of space between the boxes that hold articles / other co
 logo_height = 100px // height of logo at top of page above cu3er (logo_height > searchform_height + box_margin*4)
 searchform_height = 30px
 cu3er_height = 275px
+header_pic_height = 150px
 
 page_width = 900px
 sidebar_width = (page_width) * (1/3) - box_margin * 2
@@ -76,9 +77,10 @@ a
 	color: orange
 	text-decoration: none
 
-p a:hover
-	background-color: orange
-	color: white
+p, .more-posts
+	a:hover
+		background-color: orange
+		color: white
 
 //Styles
 
@@ -101,7 +103,7 @@ hr
 blockquote
 	margin 1em 3em
 	padding .5em 1em
-	border-left 5px solid #fb611e
+	border-left 5px solid orange
 	background-color #f6ebc1
 
 .wp-caption
@@ -176,23 +178,19 @@ input#searchsubmit
 	height logo_height + cu3er_height
 	z-index 500
 
-.header-show
+.header-show, .header-short-pic
 	width 100%
-	overflow hidden
 	position absolute
 	bottom 0
 
 .header-short
 	background orange header_img top left no-repeat
-	width 100%
-	height 285px
-	z-index 500
+	height logo_height + header_pic_height
 
 .header-short-pic
-	height 160px
+	z-index 600
+	height header_pic_height
 	width 100%
-	overflow hidden
-	padding-top 125px
 	background url(../images/drivers-mentors-small.jpg) bottom no-repeat
 
 .current_page_ancestor
@@ -227,7 +225,7 @@ input#searchsubmit
 		font-size 14px
 
 		&:hover, &.hover
-			background #fb611e
+			background orange
 			margin-top -2px
 			padding 6px 12px 3px 12px
 			border-bottom 3px solid #c64006
@@ -238,7 +236,7 @@ input#searchsubmit
 			padding-right 20px
 
 			&:hover, &.hover
-				background #fb611e arrow_img right no-repeat
+				background orange arrow_img right no-repeat
 				background-position 95% 18px
 
 		&.childfatherli
@@ -246,7 +244,7 @@ input#searchsubmit
 			background-position 95%
 
 			&:hover, &.hover-sub
-				background #FAC090 right_arrow_img right no-repeat
+				background lighten(orange, 50%) right_arrow_img right no-repeat
 
 	ul
 		z-index 1000
@@ -287,7 +285,7 @@ input#searchsubmit
 				&:hover
 					padding 4px 0 4px 10px
 					border-bottom 1px solid #c8c8c8
-					background #FAC090
+					background lighten(orange, 50%)
 
 
 			ul
@@ -320,7 +318,7 @@ input#searchsubmit
 		display inline-block
 
 		&:hover
-			color #fb611e
+			color orange
 
 		&.banner-title, &.learnmore
 			padding 0 20px
@@ -457,7 +455,7 @@ div.text
 
 		&:hover
 			text-decoration none
-			color #fb611e
+			color orange
 
 .postpagetitle
 	display inline
@@ -520,6 +518,16 @@ div.text
 
 .post-content
 	padding box_margin*2
+
+	ul, li
+		list-style square
+		margin-left 10px
+
+	li
+		list-style inherit
+
+.more-posts
+	text-align center
 
 .arclist
 	display block
@@ -658,14 +666,6 @@ a.permlink
 
 	span
 		float right
-
-div.text
-	ul, li
-		list-style square
-		margin-left 10px
-
-	li
-		list-style inherit
 
 .subnav ul li
 	a
