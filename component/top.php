@@ -86,14 +86,9 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		$item_output .= '</a>';
 
-		$item_output .= '
-		<input type="radio" id="tab-' . $item->ID . '" name="group-' . $depth . '">
-		<label for="tab-' . $item->ID . '">▼</label>
-		<div>
-			<input type="radio" id="tab-close-' . $depth . '" name="group-' . $depth . '">
-			<label for="tab-close-' . $depth . '">▲</label>
-		</div>';
+		$item_output .= '<input type="radio" id="tab-' . $item->ID . '" name="group-' . $depth . '"><label for="tab-' . $item->ID . '">▼</label><div><input type="radio" id="tab-close-' . $depth . '" name="group-' . $depth . '"><label for="tab-close-' . $depth . '">▲</label></div>';
 		//group should also contain the name of the menu
+		//
 
 		$item_output .= $args->after;
 
