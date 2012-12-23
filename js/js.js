@@ -8,8 +8,7 @@ $(function() {
 		}
 	);
 
-	$("#menu-main li:has(ul)").children('a').addClass('fatherli');
-	$("#menu-main li ul li:has(ul)").children('a').removeClass('fatherli').addClass('childfatherli');
+	$("#menu-main li:has(ul)").children('a').addClass('has-children');
 
 	//Begin Nav
 	$("ul.menu > li > a, ul.menu > li > ul").hover(function() {
@@ -20,7 +19,7 @@ $(function() {
 
 	}, function() {
 		$('ul.menu li a').removeClass("hover");
-		$(this).parent() /*.pause(2000)*/
+		$(this).parent()
 		.children('ul.menu > li > ul').hide();
 		$("ul.menu > li > ul").hide();
 	});
@@ -29,7 +28,7 @@ $(function() {
 		$("ul.menu > li > ul > li > ul").hide();
 		$(this).parent().children('ul.menu > li > ul > li > ul').show();
 	}, function() {
-		$(this).parent() /*.pause(2000)*/
+		$(this).parent()
 		.children('ul.menu > li > ul > li > ul').hide();
 		$("ul.menu > li > ul > li > ul").hide();
 	});

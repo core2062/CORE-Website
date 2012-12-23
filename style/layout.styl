@@ -1,3 +1,6 @@
+@import 'nib/vendor'
+vendor-prefixes = webkit moz o ms official
+
 //Resources
 
 right_arrow_img = url(../images/menu-right-arrow.png)
@@ -193,114 +196,90 @@ input#searchsubmit
 	width 100%
 	background url(../images/drivers-mentors-small.jpg) bottom no-repeat
 
-.current-page-ancestor
+.current-page-ancestor, .current-menu-item
 	background #C7C7C7
 
-#menu-main, #menu-main ul
+#menu-main
 	margin 0
 	padding 0
 	list-style-type none
 	list-style-position outside
-	position relative
-	line-height 1.5em
 	width 100%
-	background white
 	font-weight bold
-
-#menu-main
 	background rgba(31, 31, 31, 0.75)
 	position absolute
 	bottom 0
-	height 40px
-	line-height 30px
+	line-height 40px
+	//height auto
 	z-index 2000
 
 	a
 		display block
-		padding 4px 12px
 		color white
-		border-right none
-		text-decoration none
-		background none
+		padding 0 12px
 		font-size 14px
 
-		&:hover, &.hover
-			background orange
-			margin-top -2px
-			padding 6px 12px 3px 12px
-			border-bottom 3px solid #c64006
-
-		&.fatherli
+		&.has-children
 			background arrow_img right no-repeat
 			background-position 95% 16px
 			padding-right 20px
 
-			&:hover, &.hover
-				background orange arrow_img right no-repeat
-				background-position 95% 18px
+	li:hover
+		&> a
+			background orange
 
-		&.childfatherli
-			background right_arrow_img right no-repeat
-			background-position 95%
-
-			&:hover, &.hover-sub
-				background lighten(orange, 50%) right_arrow_img right no-repeat
+		&> ul
+			width 12em
+			height auto
 
 	ul
-		z-index 1000
+		line-height 1.5em
+		background white
 		position absolute
-		display none
-		width 12em
-		top 39px
-		text-align left
+		display block
+		top 40px
+		width 0
+		height 0
+		overflow hidden
+		vendor(transition, unquote('height 600ms ease-in-out, width 600ms ease-in-out'))
+		border-top 1px solid #c8c8c8
 
 		a
 			color #333
 			border-left 1px solid #c8c8c8
+			padding 4px 0 4px 10px
+			width 190px
+			font-size 11px
+			float left
+			margin-left -1px
+			border-bottom 1px solid #c8c8c8
+
+			&.has-children
+				background right_arrow_img right no-repeat
+				background-position 95%
+				padding-right 0
+				padding 4px 0 4px 10px
+				border-bottom 1px solid #c8c8c8
+				background lighten(orange, 50%)
 
 			&:hover
 				margin-top 0
 
+		li:hover > a
+			background lighten(orange, 50%) right_arrow_img right no-repeat
+
+
 		ul
 			top auto
+			left 12em
+			margin 0
 
 	li
 		float left
-		position relative
-		z-index 1000
-
-		ul
-			border-top 1px solid #c8c8c8
-			width 200px
-
-			a
-				padding 4px 0 4px 10px
-				width 190px
-				height auto
-				font-size 11px
-				float left
-				margin-left -1px
-				border-bottom 1px solid #c8c8c8
-
-				&:hover
-					padding 4px 0 4px 10px
-					border-bottom 1px solid #c8c8c8
-					background lighten(orange, 50%)
+		//position relative
+		//z-index 1000
 
 
-			ul
-				left 12em
-				margin 0px
-
-		&:hover
-			ul ul, ul ul ul, ul ul ul ul
-				display none
-
-	li:hover ul,
-	li li:hover ul,
-	li li li:hover ul,
-	li li li li:hover ul
-		display block
 
 
 .banner-bar
