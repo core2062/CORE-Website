@@ -200,86 +200,97 @@ input#searchsubmit
 	background #C7C7C7
 
 #menu-main
+	top_level_height = 40px
+	submenu_width = 200px
+
+	position absolute
+	bottom 0
+	background rgba(31, 31, 31, 0.75)
 	margin 0
 	padding 0
 	list-style-type none
 	list-style-position outside
-	width 100%
 	font-weight bold
-	background rgba(31, 31, 31, 0.75)
-	position absolute
-	bottom 0
-	line-height 40px
-	//height auto
 	z-index 2000
+	line-height top_level_height
+	height top_level_height
+	width 100%
+
+	div
+		display none
+
+	a, label
+		display inline-block
+		color white
+		height 100%
 
 	a
-		display block
-		color white
-		padding 0 12px
+		padding 0 6px
 		font-size 14px
 
-		&.has-children
-			background arrow_img right no-repeat
-			background-position 95% 16px
-			padding-right 20px
+	label
+		color white
+		cursor pointer
+		padding 0 4px
+		font-size 12px
 
-	li:hover
-		&> a
-			background orange
 
-		&> ul
-			width 12em
-			height auto
+	li
+		float left
+		font-size 0 // to remove space between <label> and <a>
+		height top_level_height
+
+		&:hover >
+			a
+				background orange
+
+			label, div
+				background darken(orange, 20%)
+
+	[type=radio]
+		display none
+
+		&:checked ~ label
+			display none
+
+			~ div
+				display inline-block
+
+			~ ul
+				width submenu_width
+				height 100%
 
 	ul
 		line-height 1.5em
 		background white
 		position absolute
 		display block
-		top 40px
+		top top_level_height
+		overflow hidden
+		border-top 1px solid #c8c8c8
 		width 0
 		height 0
-		overflow hidden
 		vendor(transition, unquote('height 600ms ease-in-out, width 600ms ease-in-out'))
-		border-top 1px solid #c8c8c8
 
 		a
-			color #333
-			border-left 1px solid #c8c8c8
-			padding 4px 0 4px 10px
-			width 190px
 			font-size 11px
-			float left
-			margin-left -1px
-			border-bottom 1px solid #c8c8c8
-
-			&.has-children
-				background right_arrow_img right no-repeat
-				background-position 95%
-				padding-right 0
-				padding 4px 0 4px 10px
-				border-bottom 1px solid #c8c8c8
-				background lighten(orange, 50%)
+			color #333
+			//border-left 1px solid #c8c8c8
+			//border-bottom 1px solid #c8c8c8
+			padding 4px 0 4px 10px
+			//width 100%
 
 			&:hover
-				margin-top 0
+				background lighten(orange, 50%)
 
-		li:hover > a
-			background lighten(orange, 50%) right_arrow_img right no-repeat
-
+		li:hover >
+			a, label
+				background orange
 
 		ul
 			top auto
-			left 12em
-			margin 0
-
-	li
-		float left
-		//position relative
-		//z-index 1000
-
-
+			left submenu_width
+			//margin 0
 
 
 .banner-bar

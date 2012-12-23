@@ -66,12 +66,12 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$class_names = $value = '';
 
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		$classes[] = 'menu-item-' . $item->ID;
+		//$classes[] = 'menu-item-' . $item->ID;
 
-		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+		$class_names = join(' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ));
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
-		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
+		//$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
 		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
 		$output .= '<li' . $id . $value . $class_names .'>';
@@ -85,6 +85,16 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$item_output .= '<a'. $attributes .'>';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		$item_output .= '</a>';
+
+		$item_output .= '
+		<input type="radio" id="tab-' . $item->ID . '" name="group-' . $depth . '">
+		<label for="tab-' . $item->ID . '">▼</label>
+		<div>
+			<input type="radio" id="tab-close-' . $depth . '" name="group-' . $depth . '">
+			<label for="tab-close-' . $depth . '">▲</label>
+		</div>';
+		//group should also contain the name of the menu
+
 		$item_output .= $args->after;
 
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );

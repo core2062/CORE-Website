@@ -176,35 +176,62 @@ input#searchsubmit {
   background: #c7c7c7;
 }
 #menu-main {
+  position: absolute;
+  bottom: 0;
+  background: rgba(31,31,31,0.75);
   margin: 0;
   padding: 0;
   list-style-type: none;
   list-style-position: outside;
-  width: 100%;
   font-weight: bold;
-  background: rgba(31,31,31,0.75);
-  position: absolute;
-  bottom: 0;
-  line-height: 40px;
   z-index: 2000;
+  line-height: 40px;
+  height: 40px;
+  width: 100%;
+}
+#menu-main div {
+  display: none;
+}
+#menu-main a,
+#menu-main label {
+  display: inline-block;
+  color: #fff;
+  height: 100%;
 }
 #menu-main a {
-  display: block;
-  color: #fff;
-  padding: 0 12px;
+  padding: 0 6px;
   font-size: 14px;
 }
-#menu-main a.has-children {
-  background: url("../images/menu-arrow.png") right no-repeat;
-  background-position: 95% 16px;
-  padding-right: 20px;
+#menu-main label {
+  color: #fff;
+  cursor: pointer;
+  padding: 0 4px;
+  font-size: 12px;
 }
-#menu-main li:hover> a {
+#menu-main li {
+  float: left;
+  font-size: 0;
+  height: 40px;
+}
+#menu-main li:hover > a {
   background: #ff731c;
 }
-#menu-main li:hover> ul {
-  width: 12em;
-  height: auto;
+#menu-main li:hover > label,
+#menu-main li:hover > div {
+  background: #e25700;
+}
+#menu-main [type=radio] {
+  display: none;
+}
+#menu-main [type=radio]:checked ~ label {
+  display: none;
+}
+#menu-main [type=radio]:checked ~ label ~ div {
+  display: inline-block;
+}
+#menu-main [type=radio]:checked ~ label ~ ul {
+  width: 200px;
+  height: 100%;
 }
 #menu-main ul {
   line-height: 1.5em;
@@ -212,9 +239,10 @@ input#searchsubmit {
   position: absolute;
   display: block;
   top: 40px;
+  overflow: hidden;
+  border-top: 1px solid #c8c8c8;
   width: 0;
   height: 0;
-  overflow: hidden;
   -webkit-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
   -moz-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
   -o-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
@@ -224,39 +252,22 @@ input#searchsubmit {
   -o-transition: height 600ms ease-in-out, width 600ms ease-in-out;
   -ms-transition: height 600ms ease-in-out, width 600ms ease-in-out;
   transition: height 600ms ease-in-out, width 600ms ease-in-out;
-  border-top: 1px solid #c8c8c8;
 }
 #menu-main ul a {
-  color: #333;
-  border-left: 1px solid #c8c8c8;
-  padding: 4px 0 4px 10px;
-  width: 190px;
   font-size: 11px;
-  float: left;
-  margin-left: -1px;
-  border-bottom: 1px solid #c8c8c8;
-}
-#menu-main ul a.has-children {
-  background: url("../images/menu-right-arrow.png") right no-repeat;
-  background-position: 95%;
-  padding-right: 0;
+  color: #333;
   padding: 4px 0 4px 10px;
-  border-bottom: 1px solid #c8c8c8;
-  background: #ffb98e;
 }
 #menu-main ul a:hover {
-  margin-top: 0;
+  background: #ffb98e;
 }
-#menu-main ul li:hover > a {
-  background: #ffb98e url("../images/menu-right-arrow.png") right no-repeat;
+#menu-main ul li:hover > a,
+#menu-main ul li:hover > label {
+  background: #ff731c;
 }
 #menu-main ul ul {
   top: auto;
-  left: 12em;
-  margin: 0;
-}
-#menu-main li {
-  float: left;
+  left: 200px;
 }
 .banner-bar {
   height: 42px;
