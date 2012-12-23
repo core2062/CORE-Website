@@ -18,10 +18,5 @@
 		<div class="header-short-pic"></div>
 	<?php endif; ?>
 
-	<ul id="dropmenu" class="nav">
-		<li class="page_item page-item-2">
-			<a title="Home" href="<?php bloginfo('url'); ?>">Home</a>
-		</li>
-		<?php wp_list_pages('title_li='); ?>
-	</ul> 
+	<?php wp_nav_menu(array('container' => false, 'theme_location' => 'main-menu')); ?>
 </div>
