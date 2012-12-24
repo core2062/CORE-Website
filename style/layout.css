@@ -109,11 +109,11 @@ body {
   background: #1f1f1f;
 }
 .logo-click {
-  display: block;
+  margin: 10px;
+  background: url("../images/CORE-logo.svg") no-repeat;
   width: 275px;
-  height: 125px;
+  height: 80px;
   position: absolute;
-  z-index: 200;
 }
 form#searchform {
   float: right;

@@ -1,14 +1,4 @@
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100" width="100" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
-<metadata>
-<rdf:RDF>
-<cc:Work rdf:about="">
-<dc:format>image/svg+xml</dc:format>
-<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-<dc:title/>
-</cc:Work>
-</rdf:RDF>
-</metadata>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <g transform="translate(0,-952.36218)">
 <g transform="matrix(0.33544954,0,0,0.33544965,-72.43908,830.49047)" fill="#000">
 <path d="m365,661c10.7-0.008,21.7-1.19,32.6-3.63,69.4-15.5,117-77.1,117-145l-25.2-0.003c0.0429,56.7-39.1,108-96.8,121-9.07,2.03-18.1,3.01-27.1,3.02z"/>
