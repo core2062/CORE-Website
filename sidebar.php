@@ -20,10 +20,10 @@
 		</a>
 		<br />
 		<br />
-		<p><b>Team Name:</b> Verizon Business, Marcus Corporation, GE Volunteers, Rockwell Automation, InSinkerator, Milwaukee School of Engineering, Cooper Power, School District of Waukesha</p>
+		<p><b>Team Name:</b> Marcus Corporation, GE Volunteers, Rockwell Automation, InSinkerator, Milwaukee School of Engineering, Cooper Power, School District of Waukesha</p>
 		<p><b>Team Number:</b> 2062</p>
 		<p><b>Team Location:</b> Waukesha, Wisconsin</p>
-		<p>Our name stands for Community of Robotic Engineers, and that is just what we are - we are from Waukesha, Wisconsin and accept students from any three of our community high schools, two preparatory academies, and homeschool students from the area. We are part of a larger organization called <span>FIRST</span>. To read more about them, read the section below. We pair them up with great mentors who teach them the fundamentals of robotics and other life skills.</p>
+		<p>Our name stands for Community of Robotic Engineers, and that is just what we are - we are from Waukesha, Wisconsin and accept students from any three of our community high schools, two preparatory academies, and homeschool students from the area. We are part of a larger organization called <span>FIRST</span>. To read more about them, read the section above. We pair them up with great mentors who teach them the fundamentals of robotics and other life skills.</p>
 		<a href="<?php bloginfo('url'); ?>/about/" class="button">Read More</a> 
 	</div>
 	<div class="break"></div>
