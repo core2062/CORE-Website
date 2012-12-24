@@ -203,12 +203,8 @@ input#searchsubmit
 	background rgba(199, 199, 199, 0.75)
 
 #menu-main
-	top_level_height = 40px
-	top_level_font_size = 14px
-
-	submenu_height = 20px
-	submenu_width = 200px
-	submenu_font_size = 11px
+	menu_height = 40px
+	menu_font_size = 14px
 
 	position absolute
 	bottom 0
@@ -220,7 +216,7 @@ input#searchsubmit
 	font-size 0 // to remove space between <label> and <a>
 	font-weight bold
 	z-index 2000
-	line-height top_level_height
+	line-height menu_height
 	width 100%
 
 	div, label
@@ -234,11 +230,11 @@ input#searchsubmit
 
 	a
 		height 100%
-		font-size top_level_font_size
+		font-size menu_font_size
 
 	label
 		cursor pointer
-		font-size top_level_font_size - 2px
+		font-size menu_font_size - 2px
 
 	div
 		display none
@@ -273,8 +269,7 @@ input#searchsubmit
 			~ ul
 				display block
 
-	ul	
-		line-height submenu_height
+	ul
 		background white
 		position absolute
 		display none
@@ -285,24 +280,22 @@ input#searchsubmit
 			color #333
 
 		a
-			font-size submenu_font_size
 			vendor(box-sizing, border-box)
-			width 100%
 
 		div, label
-			font-size submenu_font_size - 2px
 			position absolute
 			right 0
 
 		li
-			border-bottom 1px solid #c8c8c8
-			height submenu_height
 			display block
+
 			padding-right 20px //label_width
 
 			&.no-children
 				// class set w/ js
 				padding-right 0		
+
+			border-bottom 1px solid #c8c8c8
 
 			&:first-child
 				border-top 1px solid #c8c8c8
@@ -313,7 +306,7 @@ input#searchsubmit
 				> label, > div label
 					background lighten(orange, 30%)
 
-		[type=radio]:checked ~ label ~ div
+		[type=radio]:checked ~ label ~ div label
 			background lighten(orange, 30%) // keep it obvious which menu is open
 
 		ul
@@ -529,46 +522,7 @@ a.blue
 .aligncenter
 	margin-left auto
 	margin-right auto
-/*
-.commentbar
-	background #1f1f1f
-	height 40px
-	text-align left
-	margin-bottom -10px
 
-	img
-		margin 4px
-		display inline
-		float left
-
-	p
-		display inline
-		position relative
-		top 10px
-		color #a5a5a5
-		font-size 14px
-
-		a
-			color #a5a5a5
-			font-weight bold
-			text-decoration none
-
-			&:hover
-				text-decoration underline
-				background none
-
-		i
-			font-size 11px
-
-	p cite, h3, p cite a
-		font-weight bold
-		color white
-		font-size 18px
-		text-transform capitalize
-
-	h3
-		padding 10px 5px
-*/
 input, textarea
 	background #e6e6e6
 	border 1px solid #a1a1a1// <- Good Stake Sauce times 3

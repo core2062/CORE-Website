@@ -217,7 +217,7 @@ input#searchsubmit {
 #menu-main li {
   cursor: default;
   display: inline-block;
-  height: 40px;
+  height: top_level_height;
   white-space: nowrap;
 }
 #menu-main li.no-children label,
@@ -245,11 +245,10 @@ input#searchsubmit {
   display: block;
 }
 #menu-main ul {
-  line-height: 20px;
   background: #fff;
   position: absolute;
   display: none;
-  top: 40px;
+  top: top_level_height;
   -webkit-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
   -moz-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
   -o-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
@@ -265,7 +264,6 @@ input#searchsubmit {
   color: #333;
 }
 #menu-main ul a {
-  font-size: 11px;
   -webkit-box-sizing(): border-box;
   -moz-box-sizing(): border-box;
   -o-box-sizing(): border-box;
@@ -273,19 +271,16 @@ input#searchsubmit {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 100%;
 }
 #menu-main ul div,
 #menu-main ul label {
-  font-size: 9px;
   position: absolute;
   right: 0;
 }
 #menu-main ul li {
-  border-bottom: 1px solid #c8c8c8;
-  height: 20px;
   display: block;
   padding-right: 20px;
+  border-bottom: 1px solid #c8c8c8;
 }
 #menu-main ul li.no-children {
   padding-right: 0;
@@ -300,7 +295,7 @@ input#searchsubmit {
 #menu-main ul li:hover > div label {
   background: #ff9d60;
 }
-#menu-main ul [type=radio]:checked ~ label ~ div {
+#menu-main ul [type=radio]:checked ~ label ~ div label {
   background: #ff9d60;
 }
 #menu-main ul ul {
@@ -518,46 +513,6 @@ a.blue {
   margin-left: auto;
   margin-right: auto;
 }
-/*
-.commentbar
-	background #1f1f1f
-	height 40px
-	text-align left
-	margin-bottom -10px
-
-	img
-		margin 4px
-		display inline
-		float left
-
-	p
-		display inline
-		position relative
-		top 10px
-		color #a5a5a5
-		font-size 14px
-
-		a
-			color #a5a5a5
-			font-weight bold
-			text-decoration none
-
-			&:hover
-				text-decoration underline
-				background none
-
-		i
-			font-size 11px
-
-	p cite, h3, p cite a
-		font-weight bold
-		color white
-		font-size 18px
-		text-transform capitalize
-
-	h3
-		padding 10px 5px
-*/
 input,
 textarea {
   background: #e6e6e6;
