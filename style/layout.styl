@@ -186,6 +186,9 @@ input#searchsubmit
 	position absolute
 	bottom 0
 
+	object
+		width 100%
+
 .header-short
 	background orange header_img top left no-repeat
 	height logo_height + header_pic_height
@@ -218,36 +221,38 @@ input#searchsubmit
 	font-weight bold
 	z-index 2000
 	line-height top_level_height
-	height top_level_height
 	width 100%
 
 	div, label
 		vertical-align top
-		float right
+		//float right
 
 	a, label
 		display inline-block
 		color white
-		height 100%
+		padding 0 6px
 
 	a
-		padding 0 6px
+		height 100%
 		font-size top_level_font_size
 
 	label
-		color white
 		cursor pointer
-		padding 0 4px
 		font-size top_level_font_size - 2px
-		height 100%
 
 	div
 		display none
 
 	li
+		cursor default
 		display inline-block
 		height top_level_height
 		white-space: nowrap
+
+		&.no-children
+			// class set w/ js (show arrows by default)
+			label, div
+				display none	
 
 		&:hover
 			background orange
@@ -266,21 +271,14 @@ input#searchsubmit
 				display inline-block
 
 			~ ul
-				//width submenu_width
-				//height 100%
-				display block //blah
+				display block
 
-	ul
+	ul	
 		line-height submenu_height
 		background white
 		position absolute
-		//display block
 		display none
 		top top_level_height
-		//overflow hidden
-		border-top 1px solid #c8c8c8
-		//width 0
-		//height 0
 		vendor(transition, unquote('height 600ms ease-in-out, width 600ms ease-in-out'))
 
 		a, label
@@ -288,18 +286,31 @@ input#searchsubmit
 
 		a
 			font-size submenu_font_size
+			vendor(box-sizing, border-box)
+			width 100%
 
-		label
+		div, label
 			font-size submenu_font_size - 2px
+			position absolute
+			right 0
 
 		li
+			border-bottom 1px solid #c8c8c8
 			height submenu_height
 			display block
+			padding-right 20px //label_width
+
+			&.no-children
+				// class set w/ js
+				padding-right 0		
+
+			&:first-child
+				border-top 1px solid #c8c8c8
 
 			&:hover
 				background lighten(orange, 50%)
 				
-				> label, > div
+				> label, > div label
 					background lighten(orange, 30%)
 
 		[type=radio]:checked ~ label ~ div
@@ -410,31 +421,7 @@ a.blue
 		&:hover
 			background none
 
-.databox
-	text-align left
-	margin-top 10px
-
-.databoxpage
-	text-align left
-	background #f0f0f0
-	border 1px solid #d3d3d3
-	margin-top 10px
-	overflow hidden
-
-.archivebox
-	border none
-	background inherit
-
-.databoxpagepost
-	text-align left
-	margin-top 10px
-	background #f0f0f0
-	border 1px solid #d3d3d3
-	padding-bottom 10px
-	margin-bottom 10px
-	overflow hidden
-
-div.text
+.text
 	margin 10px
 
 	p
@@ -542,7 +529,7 @@ div.text
 .aligncenter
 	margin-left auto
 	margin-right auto
-
+/*
 .commentbar
 	background #1f1f1f
 	height 40px
@@ -581,7 +568,7 @@ div.text
 
 	h3
 		padding 10px 5px
-
+*/
 input, textarea
 	background #e6e6e6
 	border 1px solid #a1a1a1// <- Good Stake Sauce times 3

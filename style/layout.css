@@ -161,6 +161,10 @@ input#searchsubmit {
   position: absolute;
   bottom: 0;
 }
+.header-show object,
+.header-short-pic object {
+  width: 100%;
+}
 .header-short {
   background: #ff731c url("../images/header.jpg") top left no-repeat;
   height: 250px;
@@ -187,38 +191,38 @@ input#searchsubmit {
   font-weight: bold;
   z-index: 2000;
   line-height: 40px;
-  height: 40px;
   width: 100%;
 }
 #menu-main div,
 #menu-main label {
   vertical-align: top;
-  float: right;
 }
 #menu-main a,
 #menu-main label {
   display: inline-block;
   color: #fff;
-  height: 100%;
+  padding: 0 6px;
 }
 #menu-main a {
-  padding: 0 6px;
+  height: 100%;
   font-size: 14px;
 }
 #menu-main label {
-  color: #fff;
   cursor: pointer;
-  padding: 0 4px;
   font-size: 12px;
-  height: 100%;
 }
 #menu-main div {
   display: none;
 }
 #menu-main li {
+  cursor: default;
   display: inline-block;
   height: 40px;
   white-space: nowrap;
+}
+#menu-main li.no-children label,
+#menu-main li.no-children div {
+  display: none;
 }
 #menu-main li:hover {
   background: #ff731c;
@@ -246,7 +250,6 @@ input#searchsubmit {
   position: absolute;
   display: none;
   top: 40px;
-  border-top: 1px solid #c8c8c8;
   -webkit-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
   -moz-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
   -o-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
@@ -263,19 +266,38 @@ input#searchsubmit {
 }
 #menu-main ul a {
   font-size: 11px;
+  -webkit-box-sizing(): border-box;
+  -moz-box-sizing(): border-box;
+  -o-box-sizing(): border-box;
+  -ms-box-sizing(): border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
 }
+#menu-main ul div,
 #menu-main ul label {
   font-size: 9px;
+  position: absolute;
+  right: 0;
 }
 #menu-main ul li {
+  border-bottom: 1px solid #c8c8c8;
   height: 20px;
   display: block;
+  padding-right: 20px;
+}
+#menu-main ul li.no-children {
+  padding-right: 0;
+}
+#menu-main ul li:first-child {
+  border-top: 1px solid #c8c8c8;
 }
 #menu-main ul li:hover {
   background: #ffb98e;
 }
 #menu-main ul li:hover > label,
-#menu-main ul li:hover > div {
+#menu-main ul li:hover > div label {
   background: #ff9d60;
 }
 #menu-main ul [type=radio]:checked ~ label ~ div {
@@ -386,34 +408,10 @@ a.blue {
 #breadcrumbs a:hover {
   background: none;
 }
-.databox {
-  text-align: left;
-  margin-top: 10px;
-}
-.databoxpage {
-  text-align: left;
-  background: #f0f0f0;
-  border: 1px solid #d3d3d3;
-  margin-top: 10px;
-  overflow: hidden;
-}
-.archivebox {
-  border: none;
-  background: inherit;
-}
-.databoxpagepost {
-  text-align: left;
-  margin-top: 10px;
-  background: #f0f0f0;
-  border: 1px solid #d3d3d3;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-div.text {
+.text {
   margin: 10px;
 }
-div.text p {
+.text p {
   margin-bottom: 10px;
 }
 .databoxpage .comment p,
@@ -520,47 +518,46 @@ div.text p {
   margin-left: auto;
   margin-right: auto;
 }
-.commentbar {
-  background: #1f1f1f;
-  height: 40px;
-  text-align: left;
-  margin-bottom: -10px;
-}
-.commentbar img {
-  margin: 4px;
-  display: inline;
-  float: left;
-}
-.commentbar p {
-  display: inline;
-  position: relative;
-  top: 10px;
-  color: #a5a5a5;
-  font-size: 14px;
-}
-.commentbar p a {
-  color: #a5a5a5;
-  font-weight: bold;
-  text-decoration: none;
-}
-.commentbar p a:hover {
-  text-decoration: underline;
-  background: none;
-}
-.commentbar p i {
-  font-size: 11px;
-}
-.commentbar p cite,
-.commentbar h3,
-.commentbar p cite a {
-  font-weight: bold;
-  color: #fff;
-  font-size: 18px;
-  text-transform: capitalize;
-}
-.commentbar h3 {
-  padding: 10px 5px;
-}
+/*
+.commentbar
+	background #1f1f1f
+	height 40px
+	text-align left
+	margin-bottom -10px
+
+	img
+		margin 4px
+		display inline
+		float left
+
+	p
+		display inline
+		position relative
+		top 10px
+		color #a5a5a5
+		font-size 14px
+
+		a
+			color #a5a5a5
+			font-weight bold
+			text-decoration none
+
+			&:hover
+				text-decoration underline
+				background none
+
+		i
+			font-size 11px
+
+	p cite, h3, p cite a
+		font-weight bold
+		color white
+		font-size 18px
+		text-transform capitalize
+
+	h3
+		padding 10px 5px
+*/
 input,
 textarea {
   background: #e6e6e6;
