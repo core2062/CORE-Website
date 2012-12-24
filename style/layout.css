@@ -190,8 +190,10 @@ input#searchsubmit {
   height: 40px;
   width: 100%;
 }
-#menu-main div {
-  display: none;
+#menu-main div,
+#menu-main label {
+  vertical-align: top;
+  float: right;
 }
 #menu-main a,
 #menu-main label {
@@ -208,16 +210,17 @@ input#searchsubmit {
   cursor: pointer;
   padding: 0 4px;
   font-size: 12px;
-  height: 39px;
+  height: 100%;
+}
+#menu-main div {
+  display: none;
 }
 #menu-main li {
   display: inline-block;
   height: 40px;
+  white-space: nowrap;
 }
 #menu-main li:hover {
-  background: #e25700;
-}
-#menu-main li:hover > a {
   background: #ff731c;
 }
 #menu-main li:hover > label,
@@ -226,7 +229,6 @@ input#searchsubmit {
 }
 #menu-main [type=radio] {
   display: none;
-  visability: hidden;
 }
 #menu-main [type=radio]:checked ~ label {
   display: none;
@@ -244,7 +246,6 @@ input#searchsubmit {
   position: absolute;
   display: none;
   top: 40px;
-  overflow: hidden;
   border-top: 1px solid #c8c8c8;
   -webkit-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
   -moz-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
@@ -256,30 +257,33 @@ input#searchsubmit {
   -ms-transition: height 600ms ease-in-out, width 600ms ease-in-out;
   transition: height 600ms ease-in-out, width 600ms ease-in-out;
 }
-#menu-main ul a {
-  font-size: 11px;
+#menu-main ul a,
+#menu-main ul label {
   color: #333;
 }
+#menu-main ul a {
+  font-size: 11px;
+}
 #menu-main ul label {
-  height: 20px;
+  font-size: 9px;
 }
 #menu-main ul li {
   height: 20px;
   display: block;
 }
 #menu-main ul li:hover {
-  background: #ff9d60;
-}
-#menu-main ul li:hover > a {
   background: #ffb98e;
 }
 #menu-main ul li:hover > label,
 #menu-main ul li:hover > div {
   background: #ff9d60;
 }
+#menu-main ul [type=radio]:checked ~ label ~ div {
+  background: #ff9d60;
+}
 #menu-main ul ul {
-  top: auto;
-  left: 200px;
+  top: 0;
+  left: 100%;
 }
 .banner-bar {
   height: 42px;

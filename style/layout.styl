@@ -201,8 +201,11 @@ input#searchsubmit
 
 #menu-main
 	top_level_height = 40px
+	top_level_font_size = 14px
+
 	submenu_height = 20px
 	submenu_width = 200px
+	submenu_font_size = 11px
 
 	position absolute
 	bottom 0
@@ -218,8 +221,9 @@ input#searchsubmit
 	height top_level_height
 	width 100%
 
-	div
-		display none
+	div, label
+		vertical-align top
+		float right
 
 	a, label
 		display inline-block
@@ -228,30 +232,31 @@ input#searchsubmit
 
 	a
 		padding 0 6px
-		font-size 14px
+		font-size top_level_font_size
 
 	label
 		color white
 		cursor pointer
 		padding 0 4px
-		font-size 12px
-		height top_level_height - 1px  // to hide space below label
+		font-size top_level_font_size - 2px
+		height 100%
+
+	div
+		display none
 
 	li
 		display inline-block
 		height top_level_height
+		white-space: nowrap
 
 		&:hover
-			background darken(orange, 20%) // to hide space above label
-			> a
-				background orange
+			background orange
 
 			> label, > div
 				background darken(orange, 20%)
 
 	[type=radio]
 		display none
-		visability hidden
 
 		&:checked ~ label
 			display none
@@ -272,36 +277,37 @@ input#searchsubmit
 		//display block
 		display none
 		top top_level_height
-		overflow hidden
+		//overflow hidden
 		border-top 1px solid #c8c8c8
 		//width 0
 		//height 0
 		vendor(transition, unquote('height 600ms ease-in-out, width 600ms ease-in-out'))
 
-		a
-			font-size 11px
+		a, label
 			color #333
 
+		a
+			font-size submenu_font_size
+
 		label
-			height submenu_height
+			font-size submenu_font_size - 2px
 
 		li
 			height submenu_height
 			display block
 
 			&:hover
-				background lighten(orange, 30%) // to hide space above label
-			
-				> a
-					background lighten(orange, 50%)
+				background lighten(orange, 50%)
 				
 				> label, > div
 					background lighten(orange, 30%)
 
+		[type=radio]:checked ~ label ~ div
+			background lighten(orange, 30%) // keep it obvious which menu is open
+
 		ul
-			top auto
-			left submenu_width
-			//margin 0
+			top 0
+			left 100%
 
 
 .banner-bar
