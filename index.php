@@ -6,9 +6,6 @@
 			<?php include('component/top.php'); ?>
 			<div id="page">
 				<?php include('component/banner_bar.php'); ?>
-
-				<?php get_sidebar(); ?>	
-
 				<div class="main-content">
 					<div class="alert blue">
 						<h4>Welcome!</h4>
@@ -28,6 +25,7 @@
 						<a href="archives">more posts...</a>
 					</div>
 				</div>
+				<?php get_sidebar(); ?>	
 				<?php get_footer(); ?>
 			</div>
 		</div>

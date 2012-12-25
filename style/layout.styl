@@ -21,11 +21,6 @@ searchform_height = 30px
 cu3er_height = 275px
 header_pic_height = 150px
 
-page_width = 900px
-sidebar_width = (page_width) * (1/3) - box_margin * 2
-main_content_width = (page_width) * (2/3) - box_margin * 2
-
-
 //Colors
 
 orange = #ff731c
@@ -33,7 +28,7 @@ orange = #ff731c
 //Layout
 
 #page-wrap
-	width page_width - box_margin * 2 // because of padding on #page
+	max-width 900px
 	margin-left auto
 	margin-right auto
 	margin-bottom 40px
@@ -46,13 +41,45 @@ orange = #ff731c
 	font-size 0 // remove space between inline-block elements
 	z-index 5
 
+.sidebar, .sidebar .wrapper, .main-content
+	display inline-block
+
+.sidebar
+	width 100% * (1/3)
+
+	img
+		//FIRST logo
+		width 100%
+
+.main-content
+	vertical-align top
+	width 100% * (2/3)
+
+@media screen and (max-width: 700px)
+	.sidebar .wrapper
+		width 50%
+
+	.main-content, .sidebar
+		width 100%
+
+//TODO: remove CORE text on smaller screen sizes (only keep logo)
+//TODO: change nav bar to dropdown menu on mobile devices?
+
 //Typography
+
+rem(property, pixels)
+	// first in pixels for bad browsers
+	add-property(property, (pixels * 1px))
+	add-property(property, (pixels * 0.1rem))
+
+html
+	font-size 62.5%
 
 h1, h2, h3, h5, h5, h6
 	font-weight: bold
 
 h1
-	font-size: 28px
+	rem(font-size, 28)
 	line-height: 36px
 
 h2
@@ -69,7 +96,7 @@ h4
 	font-size: 16px
 	line-height: 22px
 
-p, .wp-caption, .wp-caption-dd, .databoxpage, .post-content, .tweet_list, .box
+p, .wp-caption, .wp-caption-dd, .post-content, .tweet_list, .box
 	font-family: "Calibri", Arial, Verdana, sans-serif
 	font-size: 15px
 	line-height: 21px
@@ -345,7 +372,6 @@ input#searchsubmit
 		&.learnmore
 			background orange
 			color white
-			display inline-block
 			right 0
 			top 0
 
@@ -382,24 +408,6 @@ a.button
 a.blue
 	background #0066b3
 
-.sidebar, .main-content
-	display inline-block
-
-.sidebar
-	width sidebar_width
-
-	img
-		max-width sidebar_width - box_margin*6 - 2px // box_border = 2px total
-
-.main-content
-	vertical-align top
-	width main_content_width
-
-.main-content2 //where is page-no-bar used?
-	width 100%
-	float left
-	margin-top -35px
-
 #breadcrumbs
 	color #dadada
 	margin-left 10px
@@ -420,10 +428,6 @@ a.blue
 
 	p
 		margin-bottom 10px
-
-.databoxpage, .databoxpagepost
-	.comment p
-		margin 0
 
 .titleblock
 	background #1f1f1f
@@ -458,35 +462,6 @@ a.blue
 	margin-top 12px
 	font-size 12px
 	margin-right 5px
-
-
-.databox ul li
-	background #f0f0f0
-	border 1px solid #d3d3d3
-	border-top none
-	height 40px
-	text-indent 10px
-	position relative
-
-	&:hover
-		background #e9e9e9
-
-	p
-		display inline
-		position relative
-		top 10px
-
-	a
-		position absolute
-		top 12px
-		right 10px
-		color #e36214
-		text-decoration none
-		font-size .8em
-
-		&:hover
-			color #080808
-			font-weight bold
 
 .post-title
 	background #f0f0f0
@@ -652,4 +627,3 @@ a.permlink
 			border-top none
 			margin-top 0
 			padding-top 0
-

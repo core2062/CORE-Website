@@ -8,7 +8,7 @@
 		params.wmode = "transparent";
 		var attributes = {};
 		attributes.id = "slider";
-		swfobject.embedSWF("<?php bloginfo('template_url'); ?>/cu3er.swf", "cu3er-container", "900", "275", "9", "expressInstall.swf", flashvars,params, attributes);
+		swfobject.embedSWF("<?php bloginfo('template_url'); ?>/cu3er.swf", "cu3er-container", "100%", "275", "9", "expressInstall.swf", flashvars,params, attributes);
 	</script>
 <?php endif; ?>
 

@@ -1,5 +1,5 @@
 #page-wrap {
-  width: 890px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -12,6 +12,33 @@
   font-size: 0;
   z-index: 5;
 }
+.sidebar,
+.sidebar .wrapper,
+.main-content {
+  display: inline-block;
+}
+.sidebar {
+  width: 33.33333333333333%;
+}
+.sidebar img {
+  width: 100%;
+}
+.main-content {
+  vertical-align: top;
+  width: 66.66666666666666%;
+}
+@media screen and (max-width: 700px) {
+  .sidebar .wrapper {
+    width: 50%;
+  }
+  .main-content,
+  .sidebar {
+    width: 100%;
+  }
+}
+html {
+  font-size: 62.5%;
+}
 h1,
 h2,
 h3,
@@ -22,6 +49,7 @@ h6 {
 }
 h1 {
   font-size: 28px;
+  font-size: 2.8000000000000003rem;
   line-height: 36px;
 }
 h2 {
@@ -41,7 +69,6 @@ h4 {
 p,
 .wp-caption,
 .wp-caption-dd,
-.databoxpage,
 .post-content,
 .tweet_list,
 .box {
@@ -333,7 +360,6 @@ input#searchsubmit {
 .banner-bar a.learnmore {
   background: #ff731c;
   color: #fff;
-  display: inline-block;
   right: 0;
   top: 0;
 }
@@ -369,25 +395,6 @@ a.button:hover {
 a.blue {
   background: #0066b3;
 }
-.sidebar,
-.main-content {
-  display: inline-block;
-}
-.sidebar {
-  width: 290px;
-}
-.sidebar img {
-  max-width: 258px;
-}
-.main-content {
-  vertical-align: top;
-  width: 590px;
-}
-.main-content2 //where is page-no-bar used? {
-  width: 100%;
-  float: left;
-  margin-top: -35px;
-}
 #breadcrumbs {
   color: #dadada;
   margin-left: 10px;
@@ -408,10 +415,6 @@ a.blue {
 }
 .text p {
   margin-bottom: 10px;
-}
-.databoxpage .comment p,
-.databoxpagepost .comment p {
-  margin: 0;
 }
 .titleblock {
   background: #1f1f1f;
@@ -447,34 +450,6 @@ a.blue {
   margin-top: 12px;
   font-size: 12px;
   margin-right: 5px;
-}
-.databox ul li {
-  background: #f0f0f0;
-  border: 1px solid #d3d3d3;
-  border-top: none;
-  height: 40px;
-  text-indent: 10px;
-  position: relative;
-}
-.databox ul li:hover {
-  background: #e9e9e9;
-}
-.databox ul li p {
-  display: inline;
-  position: relative;
-  top: 10px;
-}
-.databox ul li a {
-  position: absolute;
-  top: 12px;
-  right: 10px;
-  color: #e36214;
-  text-decoration: none;
-  font-size: 0.8em;
-}
-.databox ul li a:hover {
-  color: #080808;
-  font-weight: bold;
 }
 .post-title {
   background: #f0f0f0;

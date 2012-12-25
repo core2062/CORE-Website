@@ -2,8 +2,6 @@
 <cu3er>
 	<settings>
 		<general 
-			slide_panel_width="900" 
-			slide_panel_height="275" 
 			slide_panel_horizontal_align="center" 
 			slide_panel_vertical_align="top" 
 			ui_visibility_time="2"
