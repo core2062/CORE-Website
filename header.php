@@ -17,6 +17,7 @@
 		?>
 	</title>
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
+	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 	<meta name="description" content="<?php bloginfo('description') ?>" />
 
