@@ -3,9 +3,11 @@
 <?php endif; ?>
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/js.js"></script>
-
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.tweet.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.hypher.js"></script>
 <script type='text/javascript'>
+	$('p').hyphenate('en-us');
+
 	jQuery(function($){
 		$("#twitter_box div").tweet({
 			username: "core2062",

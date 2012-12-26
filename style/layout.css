@@ -1,5 +1,5 @@
 #page-wrap {
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -27,7 +27,17 @@
   vertical-align: top;
   width: 66.66666666666666%;
 }
+@media screen and (max-width:1020px) {
+  #page-wrap {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 @media screen and (max-width: 700px) {
+  #page-wrap {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .sidebar .wrapper {
     width: 50%;
   }
@@ -50,21 +60,28 @@ h6 {
 h1 {
   font-size: 28px;
   font-size: 2.8000000000000003rem;
-  line-height: 36px;
+  line-height: 37.33333333333333px;
+  line-height: 3.733333333333333rem;
 }
 h2 {
   font-size: 21px;
+  font-size: 2.1rem;
   line-height: 28px;
+  line-height: 2.8000000000000003rem;
   color: #1f1f1f;
   margin-bottom: 10px;
 }
 h3 {
   font-size: 18px;
+  font-size: 1.8rem;
   line-height: 24px;
+  line-height: 2.4000000000000004rem;
 }
 h4 {
   font-size: 16px;
-  line-height: 22px;
+  font-size: 1.6rem;
+  line-height: 21.333333333333332px;
+  line-height: 2.1333333333333333rem;
 }
 p,
 .wp-caption,
@@ -74,7 +91,20 @@ p,
 .box {
   font-family: "Calibri", Arial, Verdana, sans-serif;
   font-size: 15px;
-  line-height: 21px;
+  font-size: 1.5rem;
+  line-height: 20px;
+  line-height: 2rem;
+}
+p {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-after: 1;
+  -webkit-hyphenate-limit-before: 3;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 .post-content,
 .post-content p {
@@ -219,6 +249,11 @@ input#searchsubmit {
   z-index: 2000;
   line-height: 40px;
   width: 100%;
+}
+@media screen and (max-width: 500px) {
+  #menu-main li {
+    display: block;
+  }
 }
 #menu-main div,
 #menu-main label {
@@ -418,19 +453,17 @@ a.blue {
 }
 .titleblock {
   background: #1f1f1f;
-  height: 40px;
   position: relative;
   margin: 5px;
   margin-bottom: -5px;
+  color: #fff;
 }
 .titleblock h3,
 .titleblock a {
-  font-size: 18px;
-  color: #fff;
   padding: 10px;
-  text-decoration: none;
 }
 .titleblock a {
+  text-decoration: none;
   padding: 0;
 }
 .titleblock a:hover {
