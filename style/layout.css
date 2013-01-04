@@ -251,8 +251,11 @@ input#searchsubmit {
   width: 100%;
 }
 @media screen and (max-width: 500px) {
-  #menu-main li {
-    display: block;
+  #menu-main > li {
+    width: 33.333333333333336%;
+  }
+  #menu-main > a {
+    width: 100%;
   }
 }
 #menu-main div,
@@ -270,6 +273,7 @@ input#searchsubmit {
   font-size: 14px;
 }
 #menu-main label {
+  float: right;
   cursor: pointer;
   font-size: 12px;
 }
@@ -279,8 +283,6 @@ input#searchsubmit {
 #menu-main li {
   cursor: default;
   display: inline-block;
-  height: top_level_height;
-  white-space: nowrap;
 }
 #menu-main li.no-children label,
 #menu-main li.no-children div {

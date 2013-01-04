@@ -278,12 +278,14 @@ input#searchsubmit
 
 	@media screen and (max-width: 500px)
 		//switch to a grid-style menu on small devices
-		li
-			display block
+		> li
+			width (100% / 3)
+
+		> a
+			width 100%
 
 	div, label
 		vertical-align top
-		//float right
 
 	a, label
 		display inline-block
@@ -295,6 +297,7 @@ input#searchsubmit
 		font-size menu_font_size
 
 	label
+		float right
 		cursor pointer
 		font-size menu_font_size - 2px
 
@@ -304,8 +307,8 @@ input#searchsubmit
 	li
 		cursor default
 		display inline-block
-		height top_level_height
-		white-space: nowrap
+		//height top_level_height
+		//white-space: nowrap
 
 		&.no-children
 			// class set w/ js (show arrows by default)
