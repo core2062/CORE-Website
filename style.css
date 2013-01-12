@@ -1,17 +1,17 @@
-/**
-  Theme Name: c0re
-  Theme URI: http://www.core2062.com/site
-  Version: 0.1
-  Author: Connor Zwick
-  Author URI: http://www.connorzwick.com
-  Tags: simple, clean, fixed width, widget-ready, widgets, right sidebar, two columns, valid XHTML, valid CSS, sleek
-  Licence: 
-  
-  Description: A theme designed for easy functionality that supports a lot of information displayed in a readable and usable fashion. 
+/*
+	Theme Name: core2062
+	Theme URI: http://www.core2062.com/site
+	Github Theme URI: https://github.com/2062/CORE-Website
+	Version: 0.1
+	Author: FIRST Robotics Team, CORE 2062
+	License: GPL
+	Description: A theme designed for easy functionality that supports a lot of information displayed in a readable and usable fashion.
+*/
+/*
+	Special thanks to the original designer, Connor Zwick as well as other contributors: Evan Gilgenbach and Sean Lang
 */
 
 
 @import "style/css/reset.css";
 @import "style/css/typography.css";
 @import "style/css/layout.css";
-
