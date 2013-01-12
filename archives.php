@@ -14,7 +14,7 @@ Template Name: Archives
 	<div class="databoxpage archivebox">
 		<div class="titleblock archivetitle"><h3>Posts from This Year</h3></div>
 		<div class="archivepage-spacer"></div>
-		<?php query_posts( 'cat=3');?>
+		<?php query_posts( 'cat=9');?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<div class="databoxpagepost">
@@ -35,7 +35,7 @@ Template Name: Archives
 		<div class="text"></div>
 		<div class="titleblock"><h3>Posts from Previous Years</h3></div>
 		<div class="text">
-			<?php wp_list_categories('exclude=3,7'); ?>
+			<?php wp_list_categories('exclude=9,1'); ?>
 		</div><!-- End text -->
 	</div> <!--End second databoxpage -->
 </div><!-- End main-content -->
