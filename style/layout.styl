@@ -262,6 +262,7 @@ body
 #menu-main
 	menu_height = 40px
 	menu_font_size = 14px
+	arrow_width = 24px
 
 	position absolute
 	bottom 0
@@ -281,7 +282,9 @@ body
 		> li
 			width (100% / 6)
 
-		> a
+		a
+			vendor(box-sizing, border-box)
+			margin-right -(arrow_width)
 			width 100%
 
 	@media screen and (max-width: 800px)
@@ -317,7 +320,8 @@ body
 		font-size menu_font_size
 
 	label, div
-		float right
+		position relative
+		z-index 100
 		cursor pointer
 		font-size menu_font_size - 2px
 
@@ -355,6 +359,7 @@ body
 				display block
 
 	ul // submenu
+		z-index 101
 		background white
 		position absolute
 		display none
@@ -365,17 +370,15 @@ body
 		a, label
 			color #333
 
-		a
-			vendor(box-sizing, border-box)
-
 		div, label
+			z-index 102
 			position absolute
 			right 0
 
 		li
 			display block
 
-			padding-right 20px //label_width
+			padding-right arrow_width
 
 			&.no-children
 				// class set w/ js

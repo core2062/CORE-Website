@@ -1,20 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
-	<?php get_header(); ?>
-	<body>
-		<div id="page-wrap">
-			<?php include('component/top.php'); ?>
-			<div id="page">
-				<?php include('component/banner_bar.php'); ?>
-
-				<?php get_sidebar(); ?>	
-
-				<div class="main-content">
-					<?php include('component/posts.php'); ?>
-				</div>
-			</div>
-			<?php get_footer(); ?>
-		</div>
-	</body>
-	<?php include('component/scripts.php'); ?>
-</html>
+<?php ob_start(); ?>
+<div class="main-content">
+	<?php include('component/posts.php'); ?>
+</div>
+<?php
+	get_sidebar();
+	include("wrapper.php");
+?>

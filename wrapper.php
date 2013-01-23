@@ -16,11 +16,20 @@ ob_clean();
 		<div id="page-wrap">
 			<?php include('component/top.php'); ?>
 			<div id="page">
-				<?php
-					include('component/banner_bar.php');
-					echo $unique_content;
-					get_footer();
-				?>
+				<div class="banner-bar">
+					<a href="<?php bloginfo('url'); ?>" title="Click here to return home" class="banner-title">Community of Robotic Engineers - Robotics Team 2062 - Waukesha, Wisconsin</a>
+					<a class="learnmore" title="Click here to learn more!" href="/about">Learn More!</a>
+				</div>
+				<?php echo $unique_content;?>
+				<img src="<?php bloginfo('template_url'); ?>/images/FRC-ExcelAward11.jpg" alt="Website Excellence Award" class="badge"/>
+				<div class="clear"></div>
+				<p class="footer">
+					C.O.R.E. 2062 is proudly part of <a href="http://usfirst.org/" target="_blank">FIRST Robotics</a>.
+					This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>
+					<a style="float:right" href="<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a>
+				</p>
+
+				<?php wp_footer(); ?>
 			</div>
 		</div>
 	</body>

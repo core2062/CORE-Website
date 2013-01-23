@@ -253,7 +253,15 @@ body {
   #menu-main > li {
     width: 16.666666666666668%;
   }
-  #menu-main > a {
+  #menu-main a {
+    -webkit-box-sizing(): border-box;
+    -moz-box-sizing(): border-box;
+    -o-box-sizing(): border-box;
+    -ms-box-sizing(): border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: -24px;
     width: 100%;
   }
 }
@@ -298,7 +306,8 @@ body {
 }
 #menu-main label,
 #menu-main div {
-  float: right;
+  position: relative;
+  z-index: 100;
   cursor: pointer;
   font-size: 12px;
 }
@@ -334,6 +343,7 @@ body {
   display: block;
 }
 #menu-main ul {
+  z-index: 101;
   background: #fff;
   position: absolute;
   display: none;
@@ -353,23 +363,15 @@ body {
 #menu-main ul label {
   color: #333;
 }
-#menu-main ul a {
-  -webkit-box-sizing(): border-box;
-  -moz-box-sizing(): border-box;
-  -o-box-sizing(): border-box;
-  -ms-box-sizing(): border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 #menu-main ul div,
 #menu-main ul label {
+  z-index: 102;
   position: absolute;
   right: 0;
 }
 #menu-main ul li {
   display: block;
-  padding-right: 20px;
+  padding-right: 24px;
   border-bottom: 1px solid #c8c8c8;
 }
 #menu-main ul li.no-children {
