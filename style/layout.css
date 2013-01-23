@@ -1,5 +1,6 @@
 #page-wrap {
   max-width: 1000px;
+  min-width: 200px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -129,9 +130,6 @@ p a:hover,
 .alignright {
   float: right;
 }
-object {
-  outline: none;
-}
 hr {
   margin: 10px 0;
 }
@@ -172,15 +170,15 @@ body {
   height: 80px;
   position: absolute;
 }
-form#searchform {
+#searchform {
   float: right;
   padding-top: 35px;
   padding-right: 10px;
 }
-form#searchform input {
+#searchform input {
   display: inline;
 }
-input#s {
+#s {
   color: #e2e2e2;
   border: 1px solid #73523b;
   background: #552100;
@@ -192,11 +190,11 @@ input#s {
   margin: 0;
   padding-right: 30px;
 }
-input#s:hover,
-input#s:active {
+#s:hover,
+#s:active {
   background: #8e3600;
 }
-input#searchsubmit {
+#searchsubmit {
   margin: 0;
   margin-left: -30px;
   width: 30px;
@@ -208,6 +206,7 @@ input#searchsubmit {
 }
 .header {
   background: #ff731c url("../images/header.jpg") top left no-repeat;
+  background: #ff731c url("../images/header.jpg") top left no-repeat radial-gradient(50% 0 45deg, circle closest-corner, rgba(255,255,255,0.5) 0%, transparent 100%) no-repeat;
   width: 100%;
   height: 375px;
   z-index: 500;
@@ -250,11 +249,36 @@ input#searchsubmit {
   line-height: 40px;
   width: 100%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 950px) {
+  #menu-main > li {
+    width: 16.666666666666668%;
+  }
+  #menu-main > a {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #menu-main > li {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 700px) {
+  #menu-main > li {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 600px) {
   #menu-main > li {
     width: 33.333333333333336%;
   }
-  #menu-main > a {
+}
+@media screen and (max-width: 400px) {
+  #menu-main > li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 300px) {
+  #menu-main > li {
     width: 100%;
   }
 }
@@ -272,7 +296,8 @@ input#searchsubmit {
   height: 100%;
   font-size: 14px;
 }
-#menu-main label {
+#menu-main label,
+#menu-main div {
   float: right;
   cursor: pointer;
   font-size: 12px;
@@ -313,6 +338,7 @@ input#searchsubmit {
   position: absolute;
   display: none;
   top: top_level_height;
+  min-width: 200px;
   -webkit-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
   -moz-transition(): height 600ms ease-in-out, width 600ms ease-in-out;
   -o-transition(): height 600ms ease-in-out, width 600ms ease-in-out;

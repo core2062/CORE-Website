@@ -25,12 +25,14 @@ searchform_height = 30px
 slice_box_height = 275px
 header_pic_height = 150px
 max_width = 1000px
+min_width = 200px // sorry, but any smaller is crazy
 
 //Layout
 
 #page-wrap
 	//center the page if the screen is really big
 	max-width max_width
+	min-width min_width
 	margin-left auto
 	margin-right auto
 	margin-bottom 40px
@@ -154,9 +156,6 @@ p, .more-posts
 .alignright
 	float right
 
-object
-	outline none
-
 hr
 	margin 10px 0
 
@@ -198,7 +197,7 @@ body
 	height logo_height - 20px
 	position absolute
 
-form#searchform
+#searchform
 	float right
 	padding-top ((logo_height - searchform_height) / 2)
 	padding-right box_margin*2
@@ -206,7 +205,7 @@ form#searchform
 	input
 		display inline
 
-input#s
+#s
 	border_thickness = 1px
 	color #e2e2e2
 	border border_thickness solid #73523b
@@ -222,7 +221,7 @@ input#s
 	&:hover, &:active
 		background darken(orange, 50%)
 
-input#searchsubmit
+#searchsubmit
 	margin 0
 	margin-left -(searchform_height)
 	width searchform_height
@@ -234,6 +233,7 @@ input#searchsubmit
 
 .header
 	background orange header_img top left no-repeat
+	background orange header_img top left no-repeat radial-gradient(50% 0 45deg, circle closest-corner, rgba(255,255,255,.5) 0%, transparent 100%) no-repeat
 	width 100%
 	height logo_height + slice_box_height
 	z-index 500
@@ -276,13 +276,33 @@ input#searchsubmit
 	line-height menu_height
 	width 100%
 
-	@media screen and (max-width: 500px)
-		//switch to a grid-style menu on small devices
+	//switch to a grid-style menu on small devices
+	@media screen and (max-width: 950px)
 		> li
-			width (100% / 3)
+			width (100% / 6)
 
 		> a
 			width 100%
+
+	@media screen and (max-width: 800px)
+		> li
+			width (100% / 5)
+
+	@media screen and (max-width: 700px)
+		> li
+			width (100% / 4)
+
+	@media screen and (max-width: 600px)
+		> li
+			width (100% / 3)
+
+	@media screen and (max-width: 400px)
+		> li
+			width (100% / 2)
+
+	@media screen and (max-width: 300px)
+		> li
+			width (100%)
 
 	div, label
 		vertical-align top
@@ -296,7 +316,7 @@ input#searchsubmit
 		height 100%
 		font-size menu_font_size
 
-	label
+	label, div
 		float right
 		cursor pointer
 		font-size menu_font_size - 2px
@@ -334,11 +354,12 @@ input#searchsubmit
 			~ ul
 				display block
 
-	ul
+	ul // submenu
 		background white
 		position absolute
 		display none
 		top top_level_height
+		min-width 200px
 		vendor(transition, unquote('height 600ms ease-in-out, width 600ms ease-in-out'))
 
 		a, label
