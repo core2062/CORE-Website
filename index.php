@@ -11,7 +11,9 @@
 	</div>
 	<div class="break"></div>
 	<?php query_posts('posts_per_page=3'); ?>
+
 	<?php include('component/posts.php'); ?>
+
 	<div class="box more-posts">
 		<a href="archives">more posts...</a>
 	</div>
