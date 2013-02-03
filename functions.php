@@ -9,14 +9,28 @@ function add_ie_html5_shim () {
 }
 add_action('wp_head', 'add_ie_html5_shim');
   
-if(function_exists('register_sidebar')){
-	register_sidebar(array(
-		'before_widget' => '<li id="%1$s" class="widget %2$s">',
-		'after_widget' => '</li>',
-		'before_title' => '<h2 class="widgettitle">',
+function core_widgets_init() {
+	/*
+	register_sidebar( array(
+		'name' => __( 'Main Sidebar', 'core' ),
+		'id' => 'sidebar-1',
+		'description' => __( 'Appears on posts and pages except the optional Homepage template, which uses its own set of widgets', 'core' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	*/
+	register_sidebar( array(
+		'name' => __( 'Homepage Widgets', 'core' ),
+		'id' => 'sidebar-home',
+		'before_widget' => '<div class="wrapper"><div class="box">',
+		'before_title' => '<h2>',
 		'after_title' => '</h2>',
-	));
+		'after_widget' => "</div></div>",
+	) );
 }
+add_action( 'widgets_init', 'core_widgets_init' );
 
 function register_my_menus() {
 	register_nav_menus(
