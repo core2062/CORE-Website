@@ -277,6 +277,13 @@ body
 	line-height menu_height
 	width 100%
 
+	//because of the borders around the nav bar elements
+	vendor(box-sizing, border-box)
+	border-top solid orange 1px
+	border-left solid orange 1px
+	padding-right 1px
+	padding-bottom 1px
+
 	//switch to a grid-style menu on small devices
 	@media screen and (max-width: 950px)
 		> li
@@ -331,11 +338,16 @@ body
 	li
 		cursor default
 		display inline-block
-		//height top_level_height
-		//white-space: nowrap
+
+		//almost like border collapsing... but more hackish
+		border-right solid orange 1px
+		border-bottom solid orange 1px
+		margin-right -1px
+		margin-bottom -1px
 
 		&.no-children
 			// class set w/ js (show arrows by default)
+			// TODO: make the arrows get removed by the PHP function that makes the menu
 			label, div
 				display none	
 
@@ -406,8 +418,10 @@ body
 .banner-bar
 	height 42px
 	background #1f1f1f
-	text-align left
 	margin box_margin
+
+	@media screen and (max-width: 600px)
+		display none
 
 	a
 		color white
