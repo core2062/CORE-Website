@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Orbitron:700");
 #page-wrap {
   max-width: 1000px;
   min-width: 200px;
@@ -165,12 +166,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #1f1f1f;
 }
-.logo-click {
+#logo {
   margin: 10px;
+  padding-top: 15px;
+  height: 65px;
   background: url("../images/CORE-logo.svg") no-repeat;
-  width: 275px;
-  height: 80px;
+  padding-left: 85px;
+  color: #000;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
   position: absolute;
+  text-align: justify;
 }
 #searchform {
   float: right;
@@ -207,8 +213,8 @@ body {
   border: none;
 }
 .header {
-  background: #ff731c url("../images/header.jpg") top left no-repeat;
-  background: #ff731c url("../images/header.jpg") top left no-repeat radial-gradient(50% 0 45deg, circle closest-corner, rgba(255,255,255,0.5) 0%, transparent 100%) no-repeat;
+  background: #ff731c;
+  background: #ff731c radial-gradient(50% 0 45deg, circle closest-corner, rgba(255,255,255,0.5) 0%, transparent 100%) no-repeat;
   width: 100%;
   height: 375px;
   z-index: 500;
@@ -224,7 +230,7 @@ body {
   width: 100%;
 }
 .header-short {
-  background: #ff731c url("../images/header.jpg") top left no-repeat;
+  background: #ff731c header_img top left no-repeat;
   height: 250px;
 }
 .header-short-pic {
@@ -511,10 +517,12 @@ a.blue {
   color: #fff;
 }
 .titleblock h3,
+.titleblock h4,
 .titleblock a {
   padding: 10px;
 }
 .titleblock a {
+  color: #fff;
   text-decoration: none;
   padding: 0;
 }

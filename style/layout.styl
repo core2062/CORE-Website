@@ -1,6 +1,8 @@
 @import 'nib/vendor'
 vendor-prefixes = webkit moz o ms official
 
+@import url(http://fonts.googleapis.com/css?family=Orbitron:700);
+
 //Resources
 
 right_arrow_img = url(../images/menu-right-arrow.png)
@@ -10,7 +12,6 @@ message_img = url(../images/message.png)
 error_img = url(../images/error.png)
 success_img = url(../images/success.png)
 search_img =  url(../images/search.png)
-header_img = url(../images/header.jpg)
 core_logo_img = url(../images/CORE-logo.svg)
 
 //Colors
@@ -193,12 +194,17 @@ body
 	background black
 
 
-.logo-click
+#logo
 	margin 10px
+	padding-top 15px
+	height logo_height - 20px - 15px
 	background core_logo_img no-repeat
-	width 275px
-	height logo_height - 20px
+	padding-left logo_height - 15px
+	color #000
+	font-family 'Orbitron', sans-serif
+	font-size 28px
 	position absolute
+	text-align justify
 
 #searchform
 	float right
@@ -235,8 +241,8 @@ body
 	border none
 
 .header
-	background orange header_img top left no-repeat
-	background orange header_img top left no-repeat radial-gradient(50% 0 45deg, circle closest-corner, rgba(255,255,255,.5) 0%, transparent 100%) no-repeat
+	background orange
+	background orange radial-gradient(50% 0 45deg, circle closest-corner, rgba(255,255,255,.5) 0%, transparent 100%) no-repeat
 	width 100%
 	height logo_height + slice_box_height
 	z-index 500
@@ -515,10 +521,11 @@ a.blue
 	margin-bottom -(box_margin)
 	color white
 
-	h3, a
+	h3, h4, a
 		padding 10px
 
 	a
+		color white
 		text-decoration none
 		padding 0
 
