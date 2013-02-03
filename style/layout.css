@@ -7,7 +7,6 @@
 }
 #page {
   background: #fff;
-  min-height: 400px;
   padding: 5px;
   position: relative;
   font-size: 0;
@@ -27,6 +26,9 @@
 .main-content {
   vertical-align: top;
   width: 66.66666666666666%;
+}
+.main-content.no-sidebar {
+  width: 100%;
 }
 @media screen and (max-width:1020px) {
   #page-wrap {
@@ -597,12 +599,6 @@ label {
   font-size: 12px;
   color: #595959;
 }
-h3#comments {
-  line-height: 16px;
-  text-align: left;
-  color: #1f1f1f;
-  margin: 10px 0;
-}
 .box,
 .alert {
   background: #f0f0f0;
@@ -660,7 +656,7 @@ a.permlink {
   margin-top: 5px;
 }
 .footer a {
-  color: #000;
+  color: #1f1f1f;
   text-decoration: underline;
 }
 .footer span {
@@ -692,7 +688,7 @@ a.permlink {
   width: 20px;
 }
 #twitter_box li {
-  border-top: dotted #000 1px;
+  border-top: dotted #1f1f1f 1px;
   margin-top: 5px;
   padding-top: 5px;
 }

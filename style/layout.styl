@@ -16,6 +16,7 @@ core_logo_img = url(../images/CORE-logo.svg)
 //Colors
 
 orange = #ff731c
+black = #1f1f1f
 
 //Dimensions
 
@@ -39,7 +40,6 @@ min_width = 200px // sorry, but any smaller is crazy
 
 #page
 	background white
-	min-height 400px
 	padding box_margin
 	position relative
 	font-size 0 // remove space between inline-block elements
@@ -58,6 +58,9 @@ min_width = 200px // sorry, but any smaller is crazy
 .main-content
 	vertical-align top
 	width 100% * (2/3)
+
+.main-content.no-sidebar
+	width 100%
 
 media_query = 'screen and (max-width:' + (max_width + box_margin*4) + ')'
 @media media_query
@@ -104,7 +107,7 @@ h2
 	font_size = 21
 	rem(font-size, font_size)
 	rem(line-height, font_size*(4/3))
-	color: #1f1f1f
+	color black
 	margin-bottom: 10px
 
 h3
@@ -187,7 +190,7 @@ div
 
 body
 	font-family Arial, Helvetica, sans-serif
-	background #1f1f1f
+	background black
 
 
 .logo-click
@@ -418,7 +421,7 @@ body
 
 .banner-bar
 	height 42px
-	background #1f1f1f
+	background black
 	margin box_margin
 
 	@media screen and (max-width: 600px)
@@ -470,7 +473,7 @@ body
 
 a.button
 	color white
-	background #1f1f1f
+	background black
 	font-weight bold
 	font-size 16px
 	padding 5px 10px 4px 10px
@@ -506,7 +509,7 @@ a.blue
 		margin-bottom 10px
 
 .titleblock
-	background #1f1f1f
+	background black
 	position relative
 	margin box_margin
 	margin-bottom -(box_margin)
@@ -577,7 +580,7 @@ input, textarea
 	background #e6e6e6
 	border 1px solid #a1a1a1// <- Good Stake Sauce times 3
 	font-size 14px
-	color #1f1f1f
+	color black
 	padding 5px
 	margin 5px
 	font-family "Calibri", Arial
@@ -590,18 +593,12 @@ input#submit
 	cursor pointer
 
 	&:hover
-		background #1f1f1f
+		background black
 		color white
 
 label
 	font-size 12px
 	color #595959
-
-h3#comments
-	line-height 16px
-	text-align left
-	color #1f1f1f
-	margin 10px 0
 
 .box, .alert
 	background #f0f0f0
@@ -673,10 +670,10 @@ a.permlink
 		line-height 28px
 		font-size .8em
 		font-weight bold
-		color #1f1f1f
+		color black
 
 		&:hover
-			color #1f1f1f
+			color black
 			background #B7CFDB
 
 	ul
