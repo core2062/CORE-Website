@@ -11,6 +11,7 @@
 	<div class="box">
 		<div class="post-content">
 			<?php the_content(); ?>
+			<div class="break"></div>
 		</div>
 	</div>
 	<div class="break"></div>
