@@ -204,7 +204,6 @@ body
 	color #000
 	font-family 'Orbitron', sans-serif
 	font-size 28px
-	position static
 	text-align justify
 
 #searchform
@@ -216,8 +215,8 @@ body
 	padding-bottom box_margin*2
 
 #s
-	display inline
 	border_thickness = 1px
+	display inline-block
 	color #e2e2e2
 	border border_thickness solid #73523b
 	background search_img, #552100
@@ -230,7 +229,6 @@ body
 	padding 0
 	margin 0
 	padding-right searchform_height
-	box-sizing content-box // reset for chrome
 
 	&:hover, &:active
 		background search_img, darken(orange, 50%)
@@ -266,6 +264,10 @@ body
 
 .current-page-ancestor, .current-menu-item
 	background rgba(199, 199, 199, 0.75)
+
+#nav-wrapper
+	display inline-block
+	width 100%
 
 #menu-main
 	menu_height = 40px
@@ -345,6 +347,11 @@ body
 	li
 		cursor default
 		display inline-block
+
+		//this prevents firefox from being weird and making the <a>'s in the
+		//nav menu be 100% of the screen height
+		position relative
+		height menu_height
 
 		//almost like border collapsing... but more hackish
 		border-right solid orange 1px
@@ -550,12 +557,10 @@ a.blue
 	vertical-align middle
 	position relative
 
-.archivetitle
-	text-align center
-
-.archivepage-spacer
-	height 20px
-
+	a
+		position static
+		display inline-block
+		
 .byline
 	position absolute
 	right 6px
@@ -665,6 +670,7 @@ a.permlink
 		text-decoration underline
 
 	span
+		display inline-block
 		float right
 
 .subnav ul li

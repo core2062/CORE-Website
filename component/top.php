@@ -120,9 +120,11 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 		<div class="header-short-pic"></div>
 	<?php endif; ?>
 
-	<?php wp_nav_menu(array(
-		'container' => false,
-		'theme_location' => 'main-menu',
-		'walker'=> new Custom_Walker_Nav_Menu
-	));?>
+	<div id="nav-wrapper">
+		<?php wp_nav_menu(array(
+			'container' => false,
+			'theme_location' => 'main-menu',
+			'walker'=> new Custom_Walker_Nav_Menu
+		));?>
+	</div>
 </div>
