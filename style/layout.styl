@@ -558,13 +558,25 @@ a.blue
 	position relative
 
 	a
-		width 100%
 		display inline-block
+
+	@media screen and (max-width: 600px)
+
+		a
+			width 100%
 		
 	.byline
-		display inline-block
+		float right
 		right 6px
 		text-align right
+		margin-bottom 6px
+
+	@media screen and (max-width: 600px)
+		
+		.byline
+			float left
+			display inline-block
+			right 6px
 
 .post-content
 	padding box_margin*2
@@ -575,6 +587,9 @@ a.blue
 
 	li
 		list-style inherit
+
+	p
+		display inline-block
 
 .more-posts
 	text-align center

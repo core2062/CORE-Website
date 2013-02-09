@@ -554,13 +554,25 @@ a.blue {
   position: relative;
 }
 .post-title a {
-  width: 100%;
   display: inline-block;
 }
+@media screen and (max-width: 600px) {
+  .post-title a {
+    width: 100%;
+  }
+}
 .post-title .byline {
-  display: inline-block;
+  float: right;
   right: 6px;
   text-align: right;
+  margin-bottom: 6px;
+}
+@media screen and (max-width: 600px) {
+  .post-title .byline {
+    float: left;
+    display: inline-block;
+    right: 6px;
+  }
 }
 .post-content {
   padding: 10px;
@@ -572,6 +584,9 @@ a.blue {
 }
 .post-content li {
   list-style: inherit;
+}
+.post-content p {
+  display: inline-block;
 }
 .more-posts {
   text-align: center;
