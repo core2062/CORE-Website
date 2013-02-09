@@ -554,11 +554,11 @@ a.blue {
   position: relative;
 }
 .post-title a {
-  position: static;
+  margin-right: 28px;
   display: inline-block;
 }
-.byline {
-  position: absolute;
+.post-title .byline {
+  display: inline-block;
   right: 6px;
   text-align: right;
 }
@@ -670,7 +670,6 @@ a.permlink {
   text-decoration: underline;
 }
 .footer span {
-  display: inline-block;
   float: right;
 }
 .subnav ul li a {
