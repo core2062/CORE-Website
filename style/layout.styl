@@ -18,6 +18,8 @@ core_logo_img = url(../images/CORE-logo.svg)
 
 orange = #ff731c
 black = #1f1f1f
+darkened_orange = #552100
+brown = #73523b
 
 //Dimensions
 
@@ -219,8 +221,8 @@ body
 	border_thickness = 1px
 	display inline-block
 	color #e2e2e2
-	border border_thickness solid #73523b
-	background search_img, #552100
+	border border_thickness solid brown
+	background search_img, darkened_orange
 	background-repeat no-repeat
 	background-position center right, top left
 	font-size 13px
@@ -291,8 +293,8 @@ body
 
 	//because of the borders around the nav bar elements
 	vendor(box-sizing, border-box)
-	border-top solid orange 1px
-	border-left solid orange 1px
+	border-top solid brown 1px
+	border-left solid brown 1px
 	padding-right 1px
 	padding-bottom 1px
 
@@ -335,7 +337,7 @@ body
 		padding 0 ((arrow_width - 12px) / 2)
 
 	a
-		height 100%
+		height auto
 		font-size menu_font_size
 
 	label, div
@@ -356,8 +358,8 @@ body
 		height menu_height
 
 		//almost like border collapsing... but more hackish
-		border-right solid orange 1px
-		border-bottom solid orange 1px
+		border-right solid brown 1px
+		border-bottom solid brown 1px
 		margin-right -1px
 		margin-bottom -1px
 
@@ -398,6 +400,11 @@ body
 		min-width 200px
 		vendor(transition, unquote('height 600ms ease-in-out, width 600ms ease-in-out'))
 
+		a
+			width auto
+			white-space nowrap
+			margin 0
+
 		a, label
 			color #333
 
@@ -407,6 +414,7 @@ body
 			right 0
 
 		li
+			width auto
 			border none
 			display block
 
