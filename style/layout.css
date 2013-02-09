@@ -554,7 +554,7 @@ a.blue {
   position: relative;
 }
 .post-title a {
-  margin-right: 28px;
+  width: 100%;
   display: inline-block;
 }
 .post-title .byline {
