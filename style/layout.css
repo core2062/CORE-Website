@@ -342,12 +342,14 @@ body {
 #menu-main li {
   cursor: default;
   display: inline-block;
-  position: relative;
   height: 40px;
   border-right: solid #ff731c 1px;
   border-bottom: solid #ff731c 1px;
   margin-right: -1px;
   margin-bottom: -1px;
+}
+#menu-main li a {
+  height: auto;
 }
 #menu-main li.no-children label,
 #menu-main li.no-children div {

@@ -353,7 +353,6 @@ body
 
 		//this prevents firefox from being weird and making the <a>'s in the
 		//nav menu be 100% of the screen height
-		position relative
 		height menu_height
 
 		//almost like border collapsing... but more hackish
@@ -361,6 +360,9 @@ body
 		border-bottom solid orange 1px
 		margin-right -1px
 		margin-bottom -1px
+
+		a
+			height auto
 
 		&.no-children
 			// class set w/ js (show arrows by default)
