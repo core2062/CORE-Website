@@ -22,6 +22,7 @@ black = #1f1f1f
 //Dimensions
 
 box_margin = 5px // 1/2 of space between the boxes that hold articles / other content
+img_margin = 10px // space between text and floated images
 logo_height = 100px // height of logo at top of page above slice_box (logo_height > searchform_height + box_margin*4)
 searchform_height = 30px
 slice_box_height = 275px
@@ -590,6 +591,10 @@ a.blue
 
 	p
 		display inline-block
+
+		a img
+			margin img_margin
+			margin-bottom 3px
 
 .more-posts
 	text-align center

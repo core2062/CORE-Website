@@ -588,6 +588,10 @@ a.blue {
 .post-content p {
   display: inline-block;
 }
+.post-content p a img {
+  margin: 10px;
+  margin-bottom: 3px;
+}
 .more-posts {
   text-align: center;
 }
