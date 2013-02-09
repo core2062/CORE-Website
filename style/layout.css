@@ -167,6 +167,7 @@ body {
   background: #1f1f1f;
 }
 #logo {
+  display: inline-block;
   margin: 10px;
   padding-top: 15px;
   height: 65px;
@@ -175,13 +176,16 @@ body {
   color: #000;
   font-family: 'Orbitron', sans-serif;
   font-size: 28px;
-  position: absolute;
+  position: static;
   text-align: justify;
 }
 #searchform {
+  position: static;
+  display: inline-block;
   float: right;
   padding-top: 35px;
   padding-right: 10px;
+  padding-bottom: 10px;
 }
 #searchform input {
   display: inline;
@@ -203,6 +207,8 @@ body {
   background: #8e3600;
 }
 #searchsubmit {
+  position: relative;
+  top: 5px;
   margin: 0;
   margin-left: -30px;
   width: 30px;

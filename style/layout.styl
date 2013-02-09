@@ -195,6 +195,7 @@ body
 
 
 #logo
+	display inline-block
 	margin 10px
 	padding-top 15px
 	height logo_height - 20px - 15px
@@ -203,13 +204,16 @@ body
 	color #000
 	font-family 'Orbitron', sans-serif
 	font-size 28px
-	position absolute
+	position static
 	text-align justify
 
 #searchform
+	position static
+	display inline-block
 	float right
 	padding-top ((logo_height - searchform_height) / 2)
 	padding-right box_margin*2
+	padding-bottom box_margin*2
 
 	input
 		display inline
@@ -231,6 +235,8 @@ body
 		background darken(orange, 50%)
 
 #searchsubmit
+	position relative
+	top 5px
 	margin 0
 	margin-left -(searchform_height)
 	width searchform_height
