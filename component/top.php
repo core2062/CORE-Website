@@ -117,7 +117,7 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 		</div>
 	<?php else: ?>
-		<div class="header-short-pic"></div>
+		<div class="header-short-pic" ><img src="<?php echo bloginfo('template_url') . '/images/drivers-mentors-small.jpg'; ?>"/></div>
 	<?php endif; ?>
 
 	<div id="nav-wrapper">

@@ -234,13 +234,17 @@ body {
   margin: 0;
 }
 .header-short-pic {
-  z-index: 600;
-  height: 150px;
   width: 100%;
-  background: url("../images/drivers-mentors-small.jpg") bottom no-repeat;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  background-size: 100% 100%;
+  overflow-x: hidden;
+}
+.header-short-pic img {
+  z-index: 600;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .header-short-pic img {
+    min-width: 600px;
+  }
 }
 .current-page-ancestor,
 .current-menu-item {
