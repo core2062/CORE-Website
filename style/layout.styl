@@ -130,14 +130,19 @@ p, .wp-caption, .wp-caption-dd, .post-content, .tweet_list, .box
 	rem(font-size, font_size)
 	rem(line-height, font_size*(4/3))
 
-p
-	//atm, hyphenation isn't well supported... maybe use hyphenator.js?
+.sidebar p
+	//atm, hyphenation isn't well supported... using hyphenator.js
 	text-align justify
 	-webkit-hyphens auto
 	-webkit-hyphenate-limit-after 1
 	-webkit-hyphenate-limit-before 3
 	-moz-hyphens auto
 	hyphens:auto
+
+@media screen and (max-width: 600px)
+		p
+			text-align justify
+
 
 .post-content, .post-content p
 	line-height: 18px
@@ -150,6 +155,7 @@ p, .more-posts
 	a:hover
 		background-color: orange
 		color: white
+
 
 //Styles
 

@@ -99,7 +99,7 @@ p,
   line-height: 20px;
   line-height: 2rem;
 }
-p {
+.sidebar p {
   text-align: justify;
   -webkit-hyphens: auto;
   -webkit-hyphenate-limit-after: 1;
@@ -109,6 +109,11 @@ p {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+@media screen and (max-width: 600px) {
+  p {
+    text-align: justify;
+  }
 }
 .post-content,
 .post-content p {
