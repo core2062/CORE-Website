@@ -76,10 +76,10 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 		$output .= '<li' . $id . $value . $class_names .'>';
 
-		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+		$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
+		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
+		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
+		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) .'"' : '';
 
 		$item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';
@@ -115,9 +115,39 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 	<?php if(is_front_page()):?>
 		<div class="header-show">
 
+			<ul id="sb-slider" class="sb-slider">
+				
+				<li>
+					<img src="<?php echo bloginfo('template_url') . '/images/slide_1.jpg'; ?>" alt="image1"/>
+				</li>
+
+				<li>
+					<img src="<?php echo bloginfo('template_url') . '/images/slide_2.jpg'; ?>" alt="image2/">
+				</li>
+
+				<li>
+					<img src="<?php echo bloginfo('template_url') . '/images/slide_3.jpg'; ?>" alt="image3"/>
+				</li>
+
+				<li>
+					<img src="<?php echo bloginfo('template_url') . '/images/slide_4.jpg'; ?>" alt="image4"/>
+				</li>
+
+				<li>
+					<img src="<?php echo bloginfo('template_url') . '/images/slide_5.jpg'; ?>" alt="image5"/>
+				</li>
+
+				<li>
+					<img src="<?php echo bloginfo('template_url') . '/images/slide_6.jpg'; ?>" alt="image6"/>
+				</li>
+
+			</ul>
+
 		</div>
 	<?php else: ?>
-		<div class="header-short-pic" ><img src="<?php echo bloginfo('template_url') . '/images/drivers-mentors-small.jpg'; ?>"/></div>
+		<div class="header-short-pic">
+			<img src="<?php echo bloginfo('template_url') . '/images/drivers-mentors-small.jpg'; ?>"/>
+		</div>
 	<?php endif; ?>
 
 	<div id="nav-wrapper">

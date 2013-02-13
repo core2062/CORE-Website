@@ -9,7 +9,7 @@ $unique_content = ob_get_contents();
 ob_clean();
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<?php get_header(); ?>
 	<body>
@@ -35,9 +35,17 @@ ob_clean();
 	</body>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.tweet.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.hypher.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/modernizr.custom.46884.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.slicebox.js"></script>
 	<script type='text/javascript'>
 		$(function() {
 			$("#menu-main li:not(:has(ul))").addClass('no-children');
+		});
+
+		$('#sb-slider').slicebox({
+			orientation : 'r',
+			cuboidsRandom : true,
+			 autoplay : true
 		});
 
 		$('p').hyphenate('en-us');
