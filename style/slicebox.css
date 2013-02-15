@@ -8,6 +8,10 @@
 	padding: 0;
 }
 
+#sb-slider {
+	padding-bottom: 15px;
+}
+
 .sb-slider li {
 	margin: 0;
 	padding: 0;

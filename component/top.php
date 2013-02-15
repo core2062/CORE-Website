@@ -130,10 +130,6 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 				</li>
 
 				<li>
-					<img src="<?php echo bloginfo('template_url') . '/images/slide_4.jpg'; ?>" alt="image4"/>
-				</li>
-
-				<li>
 					<img src="<?php echo bloginfo('template_url') . '/images/slide_5.jpg'; ?>" alt="image5"/>
 				</li>
 
@@ -144,6 +140,7 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 			</ul>
 
 		</div>
+
 	<?php else: ?>
 		<div class="header-short-pic">
 			<img src="<?php echo bloginfo('template_url') . '/images/drivers-mentors-small.jpg'; ?>"/>

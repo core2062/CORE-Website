@@ -45,7 +45,8 @@ ob_clean();
 		$('#sb-slider').slicebox({
 			orientation : 'r',
 			cuboidsRandom : true,
-			 autoplay : true
+			 autoplay : true,
+			sequentialFactor : 200
 		});
 
 		$('p').hyphenate('en-us');
