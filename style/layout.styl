@@ -124,7 +124,7 @@ h4
 	rem(font-size, font_size)
 	rem(line-height, font_size*(4/3))
 
-p, .wp-caption, .wp-caption-dd, .post-content, .tweet_list, .box
+p, .wp-caption, .wp-caption-dd, .post-content, .tweet_list, .box, #nav-wrapper + label:after
 	font-family: "Calibri", Arial, Verdana, sans-serif
 	font_size = 15
 	rem(font-size, font_size)
@@ -283,11 +283,40 @@ body
 	background rgba(199, 199, 199, 0.75)
 
 #nav-wrapper
-	display inline-block
+	display none
+
+#nav-wrapper + label
+	display inline
 	width 100%
+	font-size 14px
+	color white
+
+menu_height = 40px
+
+@media screen and (max-width: 700px)
+	
+	#nav-wrapper:checked + label
+		height menu_height
+		overflow hidden
+		opacity 1
+		display block
+		position relative
+
+		&:after
+			position absolute
+			display block
+			text-align center
+			line-height menu_height
+			vertical-align center
+			top 0
+			z-index 999999
+			width 100%
+			height menu_height
+			content "▼ Click to view Navigation ▼"
+			background-color #57341E
+			border 1px solid #73523B
 
 #menu-main
-	menu_height = 40px
 	menu_font_size = 14px
 	arrow_width = 26px
 

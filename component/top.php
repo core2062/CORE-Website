@@ -147,11 +147,12 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 		</div>
 	<?php endif; ?>
 
-	<div id="nav-wrapper">
+	<input type="checkbox" id="nav-wrapper" checked/>
+	<label for="nav-wrapper">
 		<?php wp_nav_menu(array(
 			'container' => false,
 			'theme_location' => 'main-menu',
 			'walker'=> new Custom_Walker_Nav_Menu
 		));?>
-	</div>
+	</label>
 </div>
