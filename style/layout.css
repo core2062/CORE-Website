@@ -239,40 +239,6 @@ body {
   width: 100%;
   z-index: 500;
 }
-.header-show {
-  display: inline-block;
-  height: 320px;
-}
-@media screen and (max-width: 950px) {
-  .header-show .header-show {
-    width: 16.666666666666668%;
-  }
-}
-@media screen and (max-width: 800px) {
-  .header-show .header-show {
-    width: 20%;
-  }
-}
-@media screen and (max-width: 700px) {
-  .header-show .header-show {
-    width: 25%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .header-show .header-show {
-    width: 33.333333333333336%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .header-show .header-show {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 300px) {
-  .header-show .header-show {
-    width: 100%;
-  }
-}
 .header-show,
 .header-short-pic {
   width: 100%;
