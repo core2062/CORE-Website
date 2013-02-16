@@ -192,6 +192,11 @@ body {
   padding-right: 10px;
   padding-bottom: 10px;
 }
+@media screen and (max-width: 400px) {
+  #searchform {
+    padding-top: 17.5px;
+  }
+}
 #s {
   display: inline-block;
   color: #e2e2e2;
@@ -233,6 +238,10 @@ body {
 .header {
   width: 100%;
   z-index: 500;
+}
+.header-show {
+  display: inline-block;
+  height: 320px;
 }
 .header-show,
 .header-short-pic {

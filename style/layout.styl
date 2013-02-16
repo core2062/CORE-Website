@@ -223,6 +223,9 @@ body
 	padding-right box_margin*2
 	padding-bottom box_margin*2
 
+
+	@media screen and (max-width: 400px)
+		padding-top ((logo_height - searchform_height) / 4)
 #s
 	border_thickness = 1px
 	display inline-block
@@ -261,6 +264,10 @@ body
 .header
 	width 100%
 	z-index 500
+
+.header-show
+	display inline-block
+	height 320px
 
 .header-show, .header-short-pic
 	width 100%
