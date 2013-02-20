@@ -480,9 +480,9 @@ body {
   left: 100%;
 }
 .banner-bar {
-  height: 42px;
   background: #1f1f1f;
   margin: 5px;
+  display: absolute;
 }
 @media screen and (max-width: 600px) {
   .banner-bar {
@@ -502,11 +502,13 @@ body {
 }
 .banner-bar a.banner-title,
 .banner-bar a.learnmore {
-  padding: 0 20px;
-  position: absolute;
-  line-height: 42px;
-  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  position: relative;
+  line-height: normal;
   vertical-align: middle;
+  display: inline-block;
 }
 .banner-bar a.banner-title {
   left: 0;
@@ -514,8 +516,9 @@ body {
 .banner-bar a.learnmore {
   background: #ff731c;
   color: #fff;
-  right: 0;
   top: 0;
+  float: right;
+  padding-right: 5px;
 }
 .banner-bar a.learnmore:hover {
   background: #ff883e;

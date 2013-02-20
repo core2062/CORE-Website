@@ -42,7 +42,7 @@ ob_clean();
 			$("#menu-main li:not(:has(ul))").addClass('no-children');
 		});
 
-		$('#sb-slider').slicebox({
+		$('.sb-slider').slicebox({
 			orientation : 'r',
 			cuboidsRandom : true,
 			 autoplay : true,
