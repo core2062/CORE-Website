@@ -1,0 +1,67 @@
+@import 'nib/vendor'
+vendor-prefixes = webkit moz o ms official
+
+/* Slicebox Style */
+.sb-slider
+	margin 10px auto
+	position relative
+	overflow hidden
+	width 100%
+	list-style-type none
+	padding 0
+
+#sb-slider
+	padding-bottom 15px
+
+.sb-slider li
+	margin 0
+	padding 0
+	display none
+
+.sb-slider li > a
+	outline none
+
+.sb-slider li > a img
+	border none
+
+.sb-slider img
+	max-width 100%
+	display block
+
+.sb-description
+	padding 20px
+	bottom 10px
+	left 10px
+	right 10px
+	z-index 1000
+	position absolute
+	background #CBBFAE
+	background rgba(190,176,155,0.4)
+	border-left 4px solid rgba(255,255,255,0.7)
+	opacity(0)
+	color #fff
+	transition all 200ms
+
+.sb-slider li.sb-current .sb-description
+	opacity(1)
+
+.sb-slider li.sb-current .sb-description:hover
+	opacity(0.99)
+	background rgba(190,176,155, 0.7)
+
+.sb-perspective
+	position relative
+
+.sb-perspective > div
+	position absolute
+	transform-style preserve-3d
+	backface-visibility  hidden
+
+.sb-side
+	margin 0
+	display block
+	position absolute
+
+	-moz-backface-visibility  hidden
+
+	transform-style preserve-3d
