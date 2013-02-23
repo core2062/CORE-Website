@@ -299,7 +299,7 @@ body {
   font-size: 0;
   font-weight: bold;
   z-index: 2000;
-  line-height: 35px;
+  line-height: 36px;
   width: 100%;
   -webkit-box-sizing(): border-box;
   -moz-box-sizing(): border-box;
@@ -310,8 +310,6 @@ body {
   box-sizing: border-box;
   border-top: solid #73523b 1px;
   border-left: solid #73523b 1px;
-  padding-right: 1px;
-  padding-bottom: 1px;
 }
 @media screen and (max-width: 950px) {
   #menu-main > li {
@@ -374,6 +372,7 @@ body {
   z-index: 100;
   cursor: pointer;
   font-size: 12px;
+  line-height: 40px;
 }
 #menu-main div {
   display: none;

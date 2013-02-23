@@ -326,15 +326,15 @@ menu_height = 40px
 	font-size 0 // to remove space between <label> and <a>
 	font-weight bold
 	z-index 2000
-	line-height menu_height - 5px // idk why the -5 is needed
+	line-height menu_height - 4px
 	width 100%
 
 	//because of the borders around the nav bar elements
 	vendor(box-sizing, border-box)
 	border-top solid brown 1px
 	border-left solid brown 1px
-	padding-right 1px
-	padding-bottom 1px
+	//padding-right 1px
+	//padding-bottom 1px
 
 	//switch to a grid-style menu on small devices
 	@media screen and (max-width: 950px)
@@ -383,6 +383,7 @@ menu_height = 40px
 		z-index 100
 		cursor pointer
 		font-size menu_font_size - 2px
+		line-height menu_height
 
 	div
 		display none
