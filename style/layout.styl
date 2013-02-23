@@ -66,14 +66,8 @@ min_width = 200px // sorry, but any smaller is crazy
 .main-content.no-sidebar
 	width 100%
 
-media_query = 'screen and (max-width:' + (max_width + box_margin*4) + ')'
+media_query = 'screen and (max-width:' + max_width + ')'
 @media media_query
-	#page-wrap
-		// when screen is smaller, keep a nice margin on the side since it can't be centered anymore
-		margin-left box_margin*2
-		margin-right box_margin*2
-
-@media screen and (max-width: 700px)
 	#page-wrap
 		// when screen is too small, get rid of those margins readability is
 		// more important than the fancy background pattern (for most people)
@@ -332,7 +326,7 @@ menu_height = 40px
 	font-size 0 // to remove space between <label> and <a>
 	font-weight bold
 	z-index 2000
-	line-height menu_height
+	line-height menu_height - 5px // idk why the -5 is needed
 	width 100%
 
 	//because of the borders around the nav bar elements
@@ -507,9 +501,7 @@ menu_height = 40px
 			color orange
 
 		&.banner-title, &.learnmore
-			padding-top 10px
-			padding-bottom 10px
-			padding-left 5px
+			padding 10px
 			position relative
 			line-height normal
 			vertical-align middle
@@ -523,7 +515,6 @@ menu_height = 40px
 			color white
 			top 0
 			float right
-			padding-right 5px
 
 			&:hover
 				background lighten(orange, 15%)

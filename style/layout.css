@@ -31,13 +31,7 @@
 .main-content.no-sidebar {
   width: 100%;
 }
-@media screen and (max-width:1020px) {
-  #page-wrap {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-@media screen and (max-width: 700px) {
+@media screen and (max-width:1000px) {
   #page-wrap {
     margin-left: 0;
     margin-right: 0;
@@ -305,7 +299,7 @@ body {
   font-size: 0;
   font-weight: bold;
   z-index: 2000;
-  line-height: 40px;
+  line-height: 35px;
   width: 100%;
   -webkit-box-sizing(): border-box;
   -moz-box-sizing(): border-box;
@@ -502,9 +496,7 @@ body {
 }
 .banner-bar a.banner-title,
 .banner-bar a.learnmore {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 5px;
+  padding: 10px;
   position: relative;
   line-height: normal;
   vertical-align: middle;
@@ -518,7 +510,6 @@ body {
   color: #fff;
   top: 0;
   float: right;
-  padding-right: 5px;
 }
 .banner-bar a.learnmore:hover {
   background: #ff883e;
