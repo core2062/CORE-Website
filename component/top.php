@@ -114,11 +114,9 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 	<?php include (TEMPLATEPATH . '/searchform.php'); ?>
 	<?php if(is_front_page()):?>
 		<div class="header-show">
-
 			<ul id="sb-slider" class="sb-slider">
 				<?php dynamic_sidebar('slider-home'); ?>
 			</ul>
-
 		</div>
 
 	<?php else: ?>
