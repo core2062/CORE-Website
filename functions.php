@@ -11,17 +11,6 @@ function add_ie_html5_shim () {
 add_action('wp_head', 'add_ie_html5_shim');
   
 function core_widgets_init() {
-	/*
-	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'core' ),
-		'id' => 'sidebar-1',
-		'description' => __( 'Appears on posts and pages except the optional Homepage template, which uses its own set of widgets', 'core' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-	*/
 	register_sidebar( array(
 		'name' => __( 'Homepage Widgets', 'core' ),
 		'id' => 'sidebar-home',
@@ -30,8 +19,15 @@ function core_widgets_init() {
 		'after_title' => '</h2>',
 		'after_widget' => "</div></div>",
 	) );
+
+	register_sidebar( array(
+		'name' => __( 'Homepage Slider', 'core' ),
+		'id' => 'slider-home',
+		'before_widget' => '',
+		'after_widget' => '',
+	) );
 }
-add_action( 'widgets_init', 'core_widgets_init' );
+add_action('widgets_init', 'core_widgets_init');
 
 function register_my_menus() {
 	register_nav_menus(

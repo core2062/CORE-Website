@@ -116,27 +116,7 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 		<div class="header-show">
 
 			<ul id="sb-slider" class="sb-slider">
-				
-				<li>
-					<img src="<?php echo bloginfo('template_url') . '/images/slide_1.jpg'; ?>" alt="image1"/>
-				</li>
-
-				<li>
-					<img src="<?php echo bloginfo('template_url') . '/images/slide_2.jpg'; ?>" alt="image2/">
-				</li>
-
-				<li>
-					<img src="<?php echo bloginfo('template_url') . '/images/slide_3.jpg'; ?>" alt="image3"/>
-				</li>
-
-				<li>
-					<img src="<?php echo bloginfo('template_url') . '/images/slide_5.jpg'; ?>" alt="image5"/>
-				</li>
-
-				<li>
-					<img src="<?php echo bloginfo('template_url') . '/images/slide_6.jpg'; ?>" alt="image6"/>
-				</li>
-
+				<?php dynamic_sidebar('slider-home'); ?>
 			</ul>
 
 		</div>

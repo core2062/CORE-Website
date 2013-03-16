@@ -1,7 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Orbitron:700");
 #page-wrap {
   max-width: 1000px;
-  min-width: 200px;
+  min-width: 250px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -41,6 +41,11 @@
   }
   .main-content,
   .sidebar {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sidebar .wrapper {
     width: 100%;
   }
 }

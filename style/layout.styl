@@ -30,7 +30,7 @@ searchform_height = 30px
 slice_box_height = 275px
 header_pic_height = 150px
 max_width = 1000px
-min_width = 200px // sorry, but any smaller is crazy
+min_width = 250px // sorry, but any smaller is crazy
 
 //Layout
 
@@ -78,6 +78,12 @@ media_query = 'screen and (max-width:' + max_width + ')'
 		width 50%
 
 	.main-content, .sidebar
+		width 100%
+
+@media screen and (max-width: 400px)
+	.sidebar .wrapper
+		//make sidebars full width on small screens (they're wrapped to the
+		//bottom now anyway)
 		width 100%
 
 //TODO: remove CORE text on smaller screen sizes (only keep logo)
