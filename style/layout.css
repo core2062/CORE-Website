@@ -296,6 +296,7 @@ body {
 }
 #menu-main {
   position: relative;
+  background: #1f1f1f;
   background: rgba(31,31,31,0.75);
   margin: 0;
   padding: 0;
