@@ -232,7 +232,12 @@ body {
 .header-short,
 .header {
   background: #ff731c;
-  background: #ff731c radial-gradient(50% 0 45deg, circle closest-corner, rgba(255,255,255,0.5) 0%, transparent 100%) no-repeat;
+  background: -moz-radial-gradient(top, ellipse cover, rgba(255,255,255,0.2) 0%, transparent 100%), #ff731c;
+  background: -webkit-gradient(radial, center top, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0.2)), color-stop(100%, transparent)), #ff731c;
+  background: -webkit-radial-gradient(top, ellipse cover, rgba(255,255,255,0.2) 0%, transparent 100%), #ff731c;
+  background: -o-radial-gradient(top, ellipse cover, rgba(255,255,255,0.2) 0%, transparent 100%), #ff731c;
+  background: -ms-radial-gradient(top, ellipse cover, rgba(255,255,255,0.2) 0%, transparent 100%), #ff731c;
+  background: radial-gradient(ellipse at top, rgba(255,255,255,0.2) 0%, transparent 100%), #ff731c;
 }
 .header {
   width: 100%;
