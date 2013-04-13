@@ -28,7 +28,7 @@
 
 // Set constant path to the custom-post-widget plugin directory.
 define( 'CUSTOM_POST_WIDGET_DIR', plugin_dir_path( __FILE__ ) );
-define( 'CUSTOM_POST_WIDGET_URL', WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),'',plugin_basename(__FILE__)) );
+define( 'CUSTOM_POST_WIDGET_URL', WP_PLUGIN_URL.'/custom-post-widget/');
 
 // Launch the plugin.
 add_action( 'plugins_loaded', 'custom_post_widget_plugin_init' );
