@@ -1,11 +1,41 @@
 <?php
+
+// install & activate theme plugins
+require_once ABSPATH . 'wp-admin/includes/plugin.php';
+preg_match('/\/[^\/]+$/', TEMPLATEPATH, $theme_dir_name);
+$theme_dir_name = $theme_dir_name[0];
+
+$plugins = array(
+	"backupwordpress",
+	"capsman",
+	"cleverness-to-do-list",
+	"contact-form-7",
+	"custom-post-widget",
+	"disable-comments",
+	"google-custom-search",
+	"nextgen-gallery",
+	"scalable-vector-graphics-svg",
+	"simple-google-analytics",
+	"theme-updater",
+	"wp-document-revisions"
+);
+foreach ($plugins as $plugin){
+	if(!file_exists(ABSPATH . "wp-content/plugins/$plugin")){
+		symlink(
+			ABSPATH . "wp-content/themes$theme_dir_name/plugin/$plugin",
+			ABSPATH . "wp-content/plugins/$plugin"
+		);
+	}
+}
+
 // add ie conditional html5 shim to header
 function add_ie_html5_shim () {
 	global $is_IE;
 	if($is_IE){		
-		echo '<!--[if lt IE 9]>';
-		echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
-		echo '<![endif]-->';
+		echo '
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->';
 	}
 }
 add_action('wp_head', 'add_ie_html5_shim');
