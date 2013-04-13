@@ -32,7 +32,7 @@ define( 'WPCF7_VERSION', '3.4' );
 define( 'WPCF7_REQUIRED_WP_VERSION', '3.5' );
 
 if ( ! defined( 'WPCF7_PLUGIN_BASENAME' ) )
-	define( 'WPCF7_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+	define( 'WPCF7_PLUGIN_BASENAME', 'contact-form-7/contact-form-7.php' );
 
 if ( ! defined( 'WPCF7_PLUGIN_NAME' ) )
 	define( 'WPCF7_PLUGIN_NAME', trim( dirname( WPCF7_PLUGIN_BASENAME ), '/' ) );
@@ -41,7 +41,7 @@ if ( ! defined( 'WPCF7_PLUGIN_DIR' ) )
 	define( 'WPCF7_PLUGIN_DIR', untrailingslashit( dirname( __FILE__ ) ) );
 
 if ( ! defined( 'WPCF7_PLUGIN_URL' ) )
-	define( 'WPCF7_PLUGIN_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
+	define( 'WPCF7_PLUGIN_URL', untrailingslashit( plugins_url( '', WPCF7_PLUGIN_BASENAME) ) );
 
 if ( ! defined( 'WPCF7_PLUGIN_MODULES_DIR' ) )
 	define( 'WPCF7_PLUGIN_MODULES_DIR', WPCF7_PLUGIN_DIR . '/modules' );
@@ -60,7 +60,7 @@ if ( ! defined( 'WPCF7_USE_PIPE' ) )
 
 /* If you or your client hate to see about donation, set this value false. */
 if ( ! defined( 'WPCF7_SHOW_DONATION_LINK' ) )
-	define( 'WPCF7_SHOW_DONATION_LINK', true );
+	define( 'WPCF7_SHOW_DONATION_LINK', false );
 
 if ( ! defined( 'WPCF7_ADMIN_READ_CAPABILITY' ) )
 	define( 'WPCF7_ADMIN_READ_CAPABILITY', 'edit_posts' );
