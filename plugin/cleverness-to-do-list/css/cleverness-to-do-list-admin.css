@@ -1,0 +1,124 @@
+.todo-important, .widefat .todo-important td {
+	color: #CC0033;
+}
+
+.todo-low, .widefat .todo-low td {
+	color: #666666;
+}
+
+p.error {
+	margin: 5px 0 15px;
+	background-color: #FFEBE8;
+    border-color: #CC0000;
+	border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+	padding: 5px;
+}
+
+#todo-list th#checkbox-col, #todo-list-completed  th#checkbox-col {
+	width: 15px;
+}
+#todo-cats th#id-col, #todo-list th#id-col, #todo-list-completed th#id-col {
+	width: 5%;
+}
+#todo-cats th#vis-col {
+	width: 15%;
+}
+#todo-cats th#action-col, #todo-list th#action-col, #todo-list-completed th#action-col {
+	width: 8%;
+	min-width: 120px;
+}
+
+#cleverness_todo_priority, #cleverness_todo_deadline, #cat, #cleverness_todo_planner {
+	width: 220px;
+}
+
+#cleverness_todo_progress {
+	width: 30px;
+	margin-left: 5px;
+	margin-right: 0;
+	border: 0;
+	text-align: right;
+	padding: 0;
+}
+
+#cleverness-todo-progress-slider {
+	float: left;
+	width: 170px;
+	margin-top: 5px;
+	border-radius: 0;
+}
+
+#cleverness_todo input.floatleft {
+	float: left;
+	margin-right: 5px;
+}
+
+table#todo-list thead tr .header {
+	background: rgb(241, 241, 241) url(images/bg.gif);
+	background-image: url(images/bg.gif), -moz-linear-gradient(center top, #F9F9F9, #ECECEC);
+	background-image: url(images/bg.gif), -webkit-gradient(linear, left top, left bottom, from(#F9F9F9), to(#ECECEC));
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table#todo-list thead tr .headerSortUp {
+	background-image: url(images/asc.gif);
+	background-image: url(images/asc.gif), -moz-linear-gradient(center top, #F9F9F9, #ECECEC);
+	background-image: url(images/asc.gif), -webkit-gradient(linear, left top, left bottom, from(#F9F9F9), to(#ECECEC));
+}
+
+table#todo-list thead tr .headerSortDown {
+	background-image: url(images/desc.gif);
+	background-image: url(images/desc.gif), -moz-linear-gradient(center top, #F9F9F9, #ECECEC);
+	background-image: url(images/desc.gif), -webkit-gradient(linear, left top, left bottom, from(#F9F9F9), to(#ECECEC));
+}
+
+#ui-datepicker-div {
+	display: none;
+}
+
+#wp-clevernesstododescription-wrap {
+	width: 60%;
+	min-width: 500px;
+	overflow: auto;
+}
+
+#cleverness_todo h4 {
+	margin-top: 15px;
+	clear: both;
+}
+
+.todoitem {
+	margin-left: 20px;
+}
+
+.todoitem p {
+	margin: 0.2em 0;
+}
+
+div.todo-list {
+	clear: both;
+	margin: 8px 0;
+}
+
+#todo-list-completed th {
+	cursor: pointer;
+}
+
+#todo-list-completed #checkbox-col .icon {
+	background: url(images/ui-icons_888888_256x240.png);
+	display: block;
+	height: 16px;
+	width: 16px;
+}
+
+#todo-list-completed #checkbox-col .minus {
+	background-position: -48px -128px;
+}
+
+#todo-list-completed #checkbox-col .plus {
+	background-position: -16px -128px;
+}
