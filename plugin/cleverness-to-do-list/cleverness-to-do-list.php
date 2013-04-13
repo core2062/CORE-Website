@@ -30,7 +30,7 @@ function cleverness_todo_loader() {
 	if ( !defined( 'CTDL_FILE' ) )           define( 'CTDL_FILE', __FILE__ );
 	if ( !defined( 'CTDL_BASENAME' ) )       define( 'CTDL_BASENAME', plugin_basename( __FILE__ ) );
 	if ( !defined( 'CTDL_PLUGIN_DIR' ) )     define( 'CTDL_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-	if ( !defined( 'CTDL_PLUGIN_URL' ) )     define( 'CTDL_PLUGIN_URL', plugins_url( '', __FILE__ ) );
+	if ( !defined( 'CTDL_PLUGIN_URL' ) )     define( 'CTDL_PLUGIN_URL', plugins_url( '', 'cleverness-to-do-list/cleverness-to-do-list.php') );
 
 	$language_path = plugin_basename( dirname( __FILE__ ) .'/languages' );
 	load_plugin_textdomain( 'cleverness-to-do-list', '', $language_path );

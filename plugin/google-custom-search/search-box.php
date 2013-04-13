@@ -59,10 +59,6 @@ function display_search_box($display_results_option){
 	}else if($display_results_option == DISPLAY_RESULTS_AS_POP_UP){
 		if($number_of_widgets_using_pop_up_displays==0){
 ?>
-<!-- open dialog. For debug purposes
-        <p><a href="#" id="dialog_link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Open Dialog</a></p>
--->
-        <!-- ui-dialog -->
 
         <div id="dialog" title="<?php _e('Search Results') ?>">
             <p></p>

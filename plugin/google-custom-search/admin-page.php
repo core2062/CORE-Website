@@ -26,40 +26,6 @@ function gsc_update_form(){
 	return false;
 }
 
-function gsc_display_documentation_link(){
-	$content = '<h3>Need Help?</h3>';
-	$content .= '<a href="http://littlehandytips.com/plugins/google-custom-search/">Documentation</a> | ';
-	$content .= '<a href="http://forum.littlehandytips.com">Support Forum</a>';
-	$content .= '<h3>Feedback</h3>';
-	$content .= 'If you have any feedback for this plugin, such as how we can make it better, <br/>';
-	$content .= 'what features you like to see added or like to report any bugs, we\'ll love to hear from you.<br/><br/>';
-	$content .= 'Please leave your feedback in the comments section at <a href="http://littlehandytips.com/plugins/google-custom-search/">http://littlehandytips.com/plugins/google-custom-search/</a>.<br/>';
-	$content .= 'All feedback is greatly appreciated. Thank you!';
-	
-	return $content;
-}
-
-function gsc_display_donation_link(){
-	global $gsc_plugin_dir_path;
-	
-	$content = '<h3>Donation</h3>';
-	$content .= 'If you like our plugin and would like to support what we\'re doing, please make a donation via paypal using the link below.<br/>';
-	$content .= '<a href="http://littlehandytips.com/support/">';
-	$content .='<img title="Donation" src="' . $gsc_plugin_dir_path . '/paypal-donate-button.jpg" alt="Donation" border="0" /></a>';
-	$content .= '</a><br/>';
-	$content .= 'Thank You!';
-	return $content;
-}
-
-function gsc_display_promo_for_other_plugins(){
-	$content = "<h3>Have you checked out the other Little Handy Plugins?</h3>";
-	
-	//Google Custom Search
-	$content .= '<a href="http://littlehandytips.com/plugins/custom-about-author/"><img src="http://littlehandytips.com/wp-content/uploads/custom-about-author-ad-300x125.png"></a>';
-	
-	return $content;
-}
-
 ?>
 <div class="wrap">
 
@@ -110,13 +76,5 @@ With the search engine unique id you retrieved in Step 2. Enter it in the form.
 
 <h5>4) Add the Google Custom Search Widget</h5>
 Add the Google Custom Search Widget to a sidebar to activate it.
-<p>&nbsp;</p>
-<p>
-<b>For more information go to <a href="http://littlehandytips.com/plugins/google-custom-search/" target="_blank">Little Handy Tips</a>.</b>
-<?php
-		echo gsc_display_documentation_link();
-		echo gsc_display_donation_link();
-		echo gsc_display_promo_for_other_plugins();
-?>
-</p>
+
 </div> 

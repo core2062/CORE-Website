@@ -88,26 +88,6 @@
 						<input type="submit" class="button-primary" value="<?php Output::_e('Save Changes') ?>" />
 					</p>
 				</form>
-
-				<p>
-					<?php
-						Output::_e('If you need any support go to the plugin homepage and contact me !') ;
-						echo '<br/><br/>' ,
-							 '<a href="http://www.arobase62.fr/2011/03/23/simple-google-analytics/" target="_blank">http://www.arobase62.fr/2011/03/23/simple-google-analytics/</a>' ,
-							 '<br/><br/>' ;
-						Output::_e('This plugin is largely inspired by the Google Analytics Input plugin from Roy Duff ( http://wpable.com ).') ;
-						echo '<br/><br/>' ;
-						Output::_e('If you like this plugin, you can Donate :)') ;
-						echo '<br/>' ;
-					?>
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_s-xclick">
-						<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-						<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_GB/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online.">
-						<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/fr_FR/i/scr/pixel.gif" width="1" height="1">
-					</form>
-
-				</p>
 			</div>
 
 		<?php
