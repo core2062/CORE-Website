@@ -270,7 +270,10 @@ class CTDL_Lib {
 				}
 
 				if ( CTDL_Loader::$settings['email_assigned'] == '1' && CTDL_Loader::$settings['assign'] == '0' ) {
-					CTDL_Lib::email_user( $assign, $_POST['cleverness_todo_deadline'], $_POST['cat'] );
+					$deadline = ( isset( $_POST['cleverness_todo_deadline'] ) ? $_POST['cleverness_todo_deadline'] : 0 );
+					$cat = ( isset( $_POST['cat'] ) ? $_POST['cat'] : 0 );
+					$planner = ( isset( $_POST['cleverness_todo_planner'] ) ? $_POST['cleverness_todo_planner'] : 0 );
+					CTDL_Lib::email_user( $assign, $deadline, $cat, $planner );
 				}
 			} else {
 				// if user can't assign items, but settings are set to assign items and show only assigned items, then assign it to that user
@@ -295,8 +298,9 @@ class CTDL_Lib {
 	 * @param $assign
 	 * @param $deadline
 	 * @param int $category
+	 * @param int $planner
 	 */
-	protected static function email_user( $assign, $deadline, $category = 0 ) {
+	protected static function email_user( $assign, $deadline, $category = 0, $planner = 0 ) {
 		global $current_user;
 		get_currentuserinfo();
 		add_filter( 'wp_mail_content_type', create_function( '', 'return "text/html";' ) );
@@ -309,7 +313,7 @@ class CTDL_Lib {
 		if ( is_array( $assign ) ) {
 			foreach ( $assign as $assign_value ) {
 				if ( current_user_can( CTDL_Loader::$settings['assign_capability'] ) && $assign_value != '' && $assign_value != '-1' && $assign_value != '0' ) {
-					$headers = 'From: '.CTDL_Loader::$settings['email_from'].' <'.get_bloginfo( 'admin_email' ).'>'."\r\n\\";
+					$headers = 'From: '.CTDL_Loader::$settings['email_from'].' <'.CTDL_Loader::$settings['email_from_email'].'>'."\r\n\\";
 					$subject = CTDL_Loader::$settings['email_subject'];
 					if ( CTDL_Loader::$settings['email_category'] == 1 && $category != 0 && $category != -1 ) {
 						$subject .= ' - '.$category_name;
@@ -320,7 +324,12 @@ class CTDL_Lib {
 					$email_message .= "<br>".__( 'Priority', 'cleverness-to-do-list' ).': '.$priority_array[$priority]."<br>";
 					if ( CTDL_Loader::$settings['email_show_assigned_by'] == 1 ) $email_message .= "<br>".__( 'From', 'cleverness-to-do-list' ).': '.$current_user->display_name.' ('.$current_user->user_email.')'."<br>";
 					if ( $category != 0 && $category != -1 ) $email_message .= __( 'Category', 'cleverness-to-do-list' ).': '.$category_name."<br>";
-					if ( $deadline != '' ) $email_message .= __( 'Deadline:', 'cleverness-to-do-list' ).' '.date( CTDL_Loader::$settings['date_format'], strtotime( $deadline ) )."<br>";
+					if ( $deadline != '' && $deadline != 0 ) $email_message .= __( 'Deadline:', 'cleverness-to-do-list' ).' '.date( CTDL_Loader::$settings['date_format'],
+						strtotime( $deadline ) )."<br>";
+					if ( CTDL_Loader::$settings['post_planner'] == 1 && $planner != 0 ) {
+						$url = admin_url( 'post.php?post='.absint( $planner ).'&action=edit' );
+						$email_message .= esc_html__( 'Post Planner', 'post-planner' ).': <a href="'.$url.'">'.esc_html__( 'View', 'cleverness-to-do-list' )."</a><br>";
+					}
 					$email_message .= __( 'To-Do:', 'cleverness-to-do-list' ).' '.$todo_text."<br>";
 					wp_mail( $email, $subject, $email_message, $headers );
 				}
@@ -339,6 +348,10 @@ class CTDL_Lib {
 				if ( CTDL_Loader::$settings['email_show_assigned_by'] == 1 ) $email_message .= "<br>".__( 'From', 'cleverness-to-do-list' ).': '.$current_user->display_name.' ('.$current_user->user_email.')'."<br>";
 				if ( $category != 0 && $category != -1 ) $email_message .= __( 'Category', 'cleverness-to-do-list' ).': '.$category_name."<br>";
 				if ( $deadline != '' ) $email_message .= __( 'Deadline:', 'cleverness-to-do-list' ).' '.date( CTDL_Loader::$settings['date_format'], strtotime( $deadline ) )."<br>";
+				if ( CTDL_Loader::$settings['post_planner'] == 1 && $planner != 0 ) {
+					$url = admin_url( 'post.php?post='.absint( $planner ).'&action=edit' );
+					$email_message .= esc_html__( 'Post Planner URL', 'post-planner' ).': '.$url."<br>";
+				}
 				$email_message .= __( 'To-Do:', 'cleverness-to-do-list' ).' '.$todo_text."<br>";
 				wp_mail( $email, $subject, $email_message, $headers );
 			}
@@ -846,6 +859,7 @@ class CTDL_Lib {
 				'email_show_assigned_by'    => 0,
 				'show_id'                   => 0,
 				'show_date_added'           => 0,
+				'email_from_email'          => get_bloginfo( 'admin_email' ),
 			);
 
 			$permissions_options = array(
@@ -913,6 +927,7 @@ class CTDL_Lib {
 					'email_show_assigned_by'    => 0,
 					'show_id'                   => 0,
 					'show_date_added'           => 0,
+					'email_from_email'          => get_bloginfo( 'admin_email' ),
 				);
 
 				$permissions_options = array(
@@ -973,10 +988,10 @@ class CTDL_Lib {
 				update_option( 'CTDL_general', $general_options );
 			}
 
-			if ( version_compare( $version, '3.21', '<' ) ) {
-				$general_options          = get_option( 'CTDL_general' );
-				$general_options['autop'] = 1;
-				update_option( 'CTDL_general', $general_options );
+			if ( $version < 3.3 ) {
+				$advanced_options                     = get_option( 'CTDL_advanced' );
+				$advanced_options['email_from_email'] = get_bloginfo( 'admin_email' );
+				update_option( 'CTDL_advanced', $advanced_options );
 			}
 
 		}
