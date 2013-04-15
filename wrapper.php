@@ -35,7 +35,6 @@ ob_clean();
 	</body>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.tweet.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.hypher.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/modernizr.custom.46884.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.slicebox.js"></script>
 	<script type='text/javascript'>
 		$(function() {

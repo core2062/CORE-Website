@@ -27,8 +27,25 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style/reset.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style/layout.css" media="screen" />
+
+	<?php if(is_page_template('safety.php')){ ?>
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style/saftey.css" media="screen" />
+	<?php } else { ?>
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style/main.css" media="screen" />
+	<?php } ?>
+
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style/slicebox.css" media="screen" />
+
+
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/modernizr.custom.js"></script>
+	<script type="text/javascript">
+		Modernizr.load({
+			test: Modernizr.inlinesvg && Modernizr.svg,
+			nope: '<?php bloginfo('template_url'); ?>/js/svg.js'
+		});
+	</script>
+
 	<?php wp_head(); ?>
 </head>
