@@ -9,17 +9,18 @@ Author URI: http://www.arobase62.fr
 */
 
 
-	// Constantes
-	define('SGA_ROOT', dirname(plugin_basename(__FILE__))) ;
-	define('SGA_DIRPATH', plugin_dir_path(__FILE__)) ;
-	define('SGA_BASENAME', plugin_basename(__FILE__)) ;
-	define('SGA_PLUGIN_TITLE', 'Simple Google Analytics') ; // Titre
-	define('SGA_SETTINGS_AUTH', 'administrator') ;
-	
-	// Chargement dynamique des classes
-	@include('autoload.php') ;
+// Constantes
+define('SGA_BASENAME', plugin_basename(__FILE__));
+define('SGA_ROOT', dirname(SGA_BASENAME));
+define('SGA_DIRPATH', plugin_dir_path(__FILE__)) ;
+define('SGA_PLUGIN_TITLE', 'Simple Google Analytics') ; // Titre
+define('SGA_SETTINGS_AUTH', 'administrator') ;
 
-	// Lancement des actions, filtres, ...
-	new Actions ;
+
+// Chargement dynamique des classes
+@include('autoload.php') ;
+
+// Lancement des actions, filtres, ...
+new Actions ;
 	
 ?>

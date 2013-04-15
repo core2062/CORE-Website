@@ -22,7 +22,7 @@
 				<h2><?php Output::_e('Simple Google Analytics.') ; ?></h2>
 				<p>
 					<?php
-						Output::_e('Simple Google Analytics allows you to easilly add your Google Analytics code on all your pages.') ;
+						Output::_e('Simple Google Analytics allows you to easily add your Google Analytics code on all your pages.') ;
 						echo '<br/>' ;
 						Output::_e('Just add your ID, choose if you are on a sub-domain (setting in Google Analytics code), and enter the domain.') ;
 						echo '<br/>' ;
@@ -110,14 +110,13 @@
 			$ret .= '];' ;
 			
 			// Code Google
-			$ret .= '(function() {' . "\n" ;
-			$ret .= 'var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;' . "\n" ;
-			$ret .= 'ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';' . "\n" ;
-			$ret .= 'var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);' . "\n" ;
-			$ret .= '})();' . "\n" ;
-			$ret .= '</script>' ;
-			$ret .= "\n" . '<!-- Simple Google Analytics End -->' ;
-			$ret .= "\n" ;
+			$ret .= '
+			(function() {var ga = document.createElement(\'script\');
+				ga.type = \'text/javascript\'; ga.async = true;
+				ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';
+				var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);
+			})();';
+			$ret .= '</script>\n';
 			
 			return $ret ;
 		}
