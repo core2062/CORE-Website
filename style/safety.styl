@@ -1,0 +1,174 @@
+@import 'library.styl'
+
+body
+	background-image:url('../images/twinkle_twinkle.png')
+	font-family:'Iceland', cursive
+
+
+#containing_div
+	position:relative
+	width:85%
+	margin-right:auto
+	margin-left:auto
+	margin-bottom 20px
+
+.light_grad
+	background: #d1d1d1 /* Old browsers */
+	background: -moz-linear-gradient(top, #d1d1d1 0%, #b3b3b3 100%) /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1d1d1), color-stop(100%,#b3b3b3)) /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #d1d1d1 0%,#b3b3b3 100%) /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #d1d1d1 0%,#b3b3b3 100%) /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #d1d1d1 0%,#b3b3b3 100%) /* IE10+ */
+	background: linear-gradient(to bottom, #d1d1d1 0%,#b3b3b3 100%) /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#b3b3b3',GradientType=0 ) /* IE6-9 */
+
+.dark_grad
+	background: #191919 /* Old browsers */
+	background: -moz-linear-gradient(top, #191919 0%, #0f0f0f 100%) /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#191919), color-stop(100%,#0f0f0f)) /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #191919 0%,#0f0f0f 100%) /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #191919 0%,#0f0f0f 100%) /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #191919 0%,#0f0f0f 100%) /* IE10+ */
+	background: linear-gradient(to bottom, #191919 0%,#0f0f0f 100%) /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#0f0f0f',GradientType=0 ) /* IE6-9 */
+
+/*end of whole page stuff*/
+
+em
+	color:#ff5400
+	font-style:normal
+
+logo_width = 140px
+
+#logo
+	display: inline-block
+
+#header-container
+	display inline-block
+	vendor(box-sizing, border-box)
+	margin-left -(logo_width + 5px)
+	padding-left logo_width
+	margin-bottom 20px
+	width 100%
+
+#header
+	display inline-block
+	margin 20px 0
+	font-size: 30px
+	font-family: 'Orbitron', sans-serif
+	color:#D2D2D2
+
+#title_bar
+	@extend .light_grad
+	padding:.3em .3em .3em .4em
+	border-right:.5em solid #FF5400
+	border-left:.5em solid #FF5400
+	border-top:.01em solid #8C8C8C
+	border-bottom:.01em solid #8C8C8C
+	font-size:16px
+	color:#121212
+
+#menu-safety
+	min-height:2em
+	max-height:4em
+	margin-top:3em
+	margin-bottom:3.25em
+	padding-top:.5em
+	border-top:.2em solid #3D3D3D
+	border-bottom:.2em solid #3D3D3D
+
+.navbar_buttons
+	display:inline-block
+	margin-right:2.25em
+	max-height:1em
+	color:#D2D2D2
+	font-size:23
+	opacity:1
+
+	span
+		margin-left:1em
+		font-size:11px
+
+#nav-wrapper + label
+	margin-top 10px
+
+.menu li
+	@extend .light_grad
+	font-size 0
+
+	a, label
+		color:#121212
+		font-size:16px
+
+	label
+		font-size:10px
+
+#content_container
+	display:block
+	padding:1em
+	padding-bottom:.02em
+	background-color:#3D3D3D
+	box-shadow: inset 0 0 10px #191919
+	margin: 3em 0
+	margin-top 60px // for nav-bar
+
+h4
+	@extend .dark_grad
+	margin-bottom:.5em
+	padding:.1em
+	padding-left:.25em
+	border-left:.3em solid #FF5400
+	font-size: 26px
+	opacity:1
+
+	a
+		color:#D2D2D2
+
+	//author
+	.byline
+		color:#D2D2D2
+		display: block
+		margin 2px 0
+		font-size: 14px
+
+.box
+	margin-top:.4em
+	margin-bottom:2em
+	padding:.4em
+	background-color:#B3B3B3
+	border-style:.01em solid #3D3D3D
+
+	p
+		margin:.6em
+		padding:.4em
+		background-color:#D2D2D2
+		border:.01em solid #8C8C8C
+		border-bottom:.2em solid #3D3D3D
+		font-size:20
+		color:#0f0f0f
+		margin-top:0
+		margin-bottom:1em
+
+#footer
+	position:relative
+	height:1.25em
+	padding:.3em .3em .3em .4em
+	border-right:.5em solid #FF5400
+	border-left:.5em solid #FF5400
+	border-top:.01em solid #8C8C8C
+	border-bottom:.01em solid #8C8C8C
+	font-size:16
+	color:#121212
+
+	span
+		font-size:16px
+		color:#121212
+
+#cont1
+	position:absolute
+	left:1em
+
+#cont2
+	position:absolute
+	right:1em
+

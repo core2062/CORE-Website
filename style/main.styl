@@ -1,0 +1,413 @@
+@import 'library.styl'
+
+//Typography
+
+rem(property, pixels)
+	// first in pixels for bad browsers
+	add-property(property, (pixels * 1px))
+	add-property(property, (pixels * 0.1rem))
+
+html
+	font-size 62.5%
+
+h1, h2, h3, h5, h5, h6
+	font-weight: bold
+
+h1
+	font_size = 28
+	rem(font-size, font_size)
+	rem(line-height, font_size*(4/3))
+
+h2
+	font_size = 21
+	rem(font-size, font_size)
+	rem(line-height, font_size*(4/3))
+	color black
+	margin-bottom: 10px
+
+h3
+	font_size = 18
+	rem(font-size, font_size)
+	rem(line-height, font_size*(4/3))
+
+h4
+	font_size = 16
+	rem(font-size, font_size)
+	rem(line-height, font_size*(4/3))
+
+p, .wp-caption, .wp-caption-dd, .post-content, .tweet_list, .box, #nav-wrapper + label:after
+	font-family: "Calibri", Arial, Verdana, sans-serif
+	font_size = 15
+	rem(font-size, font_size)
+	rem(line-height, font_size*(4/3))
+
+#logo
+	display inline-block
+	margin 10px
+	padding-top 15px
+	height logo_height - 20px - 15px
+	background core_logo_img no-repeat
+	padding-left logo_height - 15px
+	color #000
+	font-family 'Orbitron', sans-serif
+	font-size 28px
+	text-align justify
+
+#searchform
+	position static
+	display inline-block
+	float right
+	padding-top ((logo_height - searchform_height) / 2)
+	padding-right box_margin*2
+	padding-bottom box_margin*2
+
+
+	@media screen and (max-width: 400px)
+		padding-top ((logo_height - searchform_height) / 4)
+#s
+	border_thickness = 1px
+	display inline-block
+	color #e2e2e2
+	border border_thickness solid brown
+	background search_img, darkened_orange
+	background-repeat no-repeat
+	background-position center right, top left
+	font-size 13px
+	font-family "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif
+	width 190px
+	height searchform_height - border_thickness * 2
+	padding 0
+	margin 0
+	padding-right searchform_height
+
+	&:hover, &:active
+		background search_img, darken(orange, 50%)
+		background-repeat no-repeat
+		background-position center right, top left
+
+#searchsubmit
+	opacity 0
+	position relative
+	margin 0
+	margin-left -(searchform_height)
+	width searchform_height
+	height searchform_height
+	padding 0
+	z-index 9999
+
+.header-short, .header
+	// Old browsers
+	background orange
+	//background radial-gradient(50% 0 45deg, circle closest-corner, rgba(255,255,255,.5) 0%, transparent 100%), orange
+	// FF3.6+
+	background -moz-radial-gradient(top, ellipse cover, rgba(255,255,255,0.20) 0%, transparent 100%), orange
+	// Chrome,Safari4+
+	background -webkit-gradient(radial, center top, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.20)), color-stop(100%,transparent)), orange
+	// Chrome10+,Safari5.1+
+	background -webkit-radial-gradient(top, ellipse cover, rgba(255,255,255,0.20) 0%,transparent 100%), orange
+	// Opera 12+
+	background -o-radial-gradient(top, ellipse cover, rgba(255,255,255,0.20) 0%,transparent 100%), orange
+	// IE10+
+	background -ms-radial-gradient(top, ellipse cover, rgba(255,255,255,0.20) 0%,transparent 100%), orange
+	// W3C
+	background radial-gradient(ellipse at top, rgba(255,255,255,0.20) 0%,transparent 100%), orange
+
+
+.header
+	width 100%
+	z-index 500
+
+.header-show, .header-short-pic
+	width 100%
+	margin 0
+
+.header-short-pic
+	width 100%
+	overflow-x hidden
+
+.header-short-pic img
+	z-index 600
+	width 100%
+
+@media screen and (max-width: 600px)
+	
+	.header-short-pic img
+		min-width 600px
+
+.current-page-ancestor, .current-menu-item
+	background rgba(199, 199, 199, 0.75)
+
+.banner-bar
+	background black
+	margin box_margin
+	display absolute
+
+	@media screen and (max-width: 600px)
+		display none
+
+	a
+		color white
+		font-size 14px
+		font-weight bold
+		text-decoration none
+		padding-top 14px
+		display inline-block
+
+		&:hover
+			color orange
+
+		&.banner-title, &.learnmore
+			padding 10px
+			position relative
+			line-height normal
+			vertical-align middle
+			display inline-block
+
+		&.banner-title
+			left 0
+
+		&.learnmore
+			background orange
+			color white
+			top 0
+			float right
+
+			&:hover
+				background lighten(orange, 15%)
+
+
+.about-intro
+	width 860px
+
+.about-side
+	font-size 85%
+	line-height 18px
+
+.clear
+	clear both
+
+.break
+	height 1px
+
+a.button
+	color white
+	background black
+	font-weight bold
+	font-size 16px
+	padding 5px 10px 4px 10px
+	text-decoration none
+	margin 10px 0
+	display inline-block
+
+	&:hover
+		background #fe7420
+
+a.blue
+	background #0066b3
+
+#breadcrumbs
+	color #dadada
+	margin-left 10px
+	font-size 14px
+	line-height 1.2em
+	position absolute
+	left 0
+
+	a
+		margin-left 1px
+		font-size 18px
+
+		&:hover
+			background none
+
+.text
+	margin 10px
+
+	p
+		margin-bottom 10px
+
+.titleblock
+	background black
+	position relative
+	margin box_margin
+	margin-bottom -(box_margin)
+	color white
+
+	h3, h4, a
+		padding 10px
+
+	a
+		color white
+		text-decoration none
+		padding 0
+
+		&:hover
+			text-decoration none
+			color orange
+
+.postpagetitle
+	display inline
+	position absolute
+	height 24px
+
+.bylinepage
+	float right
+	text-decoration none
+	vertical-align text-bottom
+	color white
+	margin-top 12px
+	font-size 12px
+	margin-right 5px
+
+.post-title
+	background #f0f0f0
+	vertical-align middle
+	position relative
+
+	a
+		display inline-block
+
+	@media screen and (max-width: 600px)
+
+		a
+			width 100%
+		
+	.byline
+		float right
+		right 6px
+		text-align right
+		margin-bottom 6px
+
+	@media screen and (max-width: 600px)
+		
+		.byline
+			float left
+			display inline-block
+			right 6px
+
+.post-content
+	padding box_margin*2
+
+	ul, li
+		list-style square
+		margin-left 10px
+
+	li
+		list-style inherit
+
+	p
+		display inline-block
+
+		a img
+			margin img_margin
+			margin-bottom 3px
+
+.more-posts
+	text-align center
+
+.arclist
+	display block
+
+.aligncenter
+	margin-left auto
+	margin-right auto
+
+input, textarea
+	background #e6e6e6
+	border 1px solid #a1a1a1// <- Good Stake Sauce times 3
+	font-size 14px
+	color black
+	padding 5px
+	margin 5px
+	font-family "Calibri", Arial
+
+input:hover, textarea:hover
+	background #f0f0f0
+	border 1px solid #7f7f7f
+
+input#submit
+	cursor pointer
+
+	&:hover
+		background black
+		color white
+
+label
+	font-size 12px
+	color #595959
+
+.box, .alert
+	background #f0f0f0
+	border 1px solid #d3d3d3
+	margin box_margin
+	padding box_margin*2
+
+.alert
+	min-height 45px
+
+	h4
+		font-size 18px
+		margin 3px 0 3px 40px
+
+	p
+		margin 10px
+		font-size 15px
+		color #383625
+
+.yellow
+	background #ffff9a caution_img no-repeat 10px 10px
+	border 1px solid #c3c376
+
+	h4
+		border-bottom 1px solid #c3c376
+
+.blue
+	background #bacddf message_img no-repeat 10px 10px
+	border 1px solid #82b2df
+
+.red
+	background #ecb4ae error_img no-repeat 10px 10px
+	border 1px solid #c9867f
+
+.green
+	background #b1e0a3 success_img no-repeat 10px 10px
+	border 1px solid #7ABD5E
+
+a.permlink
+	font-size 11px
+	font-style italic
+	color #a6a65d
+	float right
+
+.badge
+	float right
+	margin box_margin
+
+.footer
+	background orange
+	font-size 12px
+	padding 5px
+	text-align left
+	margin -(box_margin)
+	margin-top box_margin
+	
+	a
+		color black
+		text-decoration underline
+
+	span
+		float right
+
+#twitter_box
+	h2 img
+		width 20px //twitter logo
+
+	li
+		border-top dotted black 1px
+		margin-top 5px
+		padding-top 5px
+
+		&.tweet_first
+			border-top none
+			margin-top 0
+			padding-top 0
