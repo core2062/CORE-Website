@@ -4,8 +4,6 @@ $GLOBALS['template_name'] = 'safety';
 ob_start();
 ?>
 
-<?php query_posts('posts_per_page=3'); ?>
-
 <?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<h4>
 		<a href="<?php the_permalink() ?>" rel="bookmark" title="Click here to read more"><?php the_title(); ?></a>

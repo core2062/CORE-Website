@@ -189,14 +189,19 @@ h4 .byline {
   background-color: #b3b3b3;
   border-style: 0.01em solid #3d3d3d;
 }
-.box p {
+.box ul,
+.box p,
+.box img {
   margin: 0.6em;
   padding: 0.4em;
   background-color: #d2d2d2;
-  border: 0.01em solid #8c8c8c;
   border-bottom: 0.2em solid #3d3d3d;
   font-size: 20px;
   color: #0f0f0f;
+}
+.box ul li {
+  margin-left: 20px;
+  list-style-type: disc;
 }
 #footer {
   position: relative;
