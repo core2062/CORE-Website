@@ -144,9 +144,10 @@ p,
   background: rgba(199,199,199,0.75);
 }
 .banner-bar {
+  padding-right: 102px;
   background: #1f1f1f;
   margin: 5px;
-  display: absolute;
+  position: relative;
 }
 @media screen and (max-width: 600px) {
   .banner-bar {
@@ -155,33 +156,32 @@ p,
 }
 .banner-bar a {
   color: #fff;
+  vertical-align: middle;
   font-size: 14px;
   font-weight: bold;
-  text-decoration: none;
-  padding-top: 14px;
   display: inline-block;
+  padding: 10px;
 }
 .banner-bar a:hover {
   color: #ff731c;
 }
-.banner-bar a.banner-title,
-.banner-bar a.learnmore {
-  padding: 10px;
-  position: relative;
-  line-height: normal;
-  vertical-align: middle;
-  display: inline-block;
-}
-.banner-bar a.banner-title {
-  left: 0;
-}
-.banner-bar a.learnmore {
+.banner-bar .learnmore {
+  -webkit-box-sizing(): border-box;
+  -moz-box-sizing(): border-box;
+  -o-box-sizing(): border-box;
+  -ms-box-sizing(): border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
   background: #ff731c;
   color: #fff;
+  height: 100%;
   top: 0;
-  float: right;
+  right: 0;
 }
-.banner-bar a.learnmore:hover {
+.banner-bar .learnmore:hover {
+  color: #fff;
   background: #ff883e;
 }
 .about-intro {

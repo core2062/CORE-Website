@@ -17,7 +17,7 @@ ob_clean();
 			<?php include('component/top.php'); ?>
 			<div id="page">
 				<div class="banner-bar">
-					<a href="<?php bloginfo('url'); ?>" title="Click here to return home" class="banner-title">Community of Robotic Engineers - Robotics Team 2062 - Waukesha, Wisconsin</a>
+					<a href="<?php bloginfo('url'); ?>" title="Click here to return home" class="banner-title">Community Of Robotics Engineers - FIRST Robotics Team 2062 - Waukesha, Wisconsin</a>
 					<a class="learnmore" title="Click here to learn more!" href="/about">Learn More!</a>
 				</div>
 				<?php echo $unique_content;?>
@@ -38,7 +38,7 @@ ob_clean();
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.slicebox.js"></script>
 	<script type='text/javascript'>
 		$(function() {
-			$("#menu-main li:not(:has(ul))").addClass('no-children');
+			$(".menu li:not(:has(ul))").addClass('no-children');
 		});
 
 		$('.sb-slider').slicebox({

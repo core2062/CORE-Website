@@ -138,42 +138,39 @@ p, .wp-caption, .wp-caption-dd, .post-content, .tweet_list, .box, #nav-wrapper +
 	background rgba(199, 199, 199, 0.75)
 
 .banner-bar
+	learnmore_width = 102px
+
+	padding-right learnmore_width
 	background black
 	margin box_margin
-	display absolute
+	position relative
 
 	@media screen and (max-width: 600px)
 		display none
 
 	a
 		color white
+		vertical-align middle
 		font-size 14px
 		font-weight bold
-		text-decoration none
-		padding-top 14px
 		display inline-block
+		padding 10px
 
 		&:hover
 			color orange
 
-		&.banner-title, &.learnmore
-			padding 10px
-			position relative
-			line-height normal
-			vertical-align middle
-			display inline-block
+	.learnmore
+		vendor(box-sizing, border-box)
+		position absolute
+		background orange
+		color white
+		height 100%
+		top 0
+		right 0
 
-		&.banner-title
-			left 0
-
-		&.learnmore
-			background orange
+		&:hover
 			color white
-			top 0
-			float right
-
-			&:hover
-				background lighten(orange, 15%)
+			background lighten(orange, 15%)
 
 
 .about-intro

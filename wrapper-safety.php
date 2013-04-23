@@ -48,4 +48,9 @@ ob_clean();
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript">
+		$(function() {
+			$(".menu li:not(:has(ul))").addClass('no-children');
+		});
+	</script>
 </html>
