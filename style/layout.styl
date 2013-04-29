@@ -169,7 +169,7 @@ menu_height = 40px
 	arrow_width = 26px
 
 	position relative
-	background rgba(31, 31, 31, 1) // fallback
+	background rgb(31, 31, 31) // fallback
 	background rgba(31, 31, 31, 0.75)
 	margin 0
 	padding 0
@@ -193,11 +193,6 @@ menu_height = 40px
 		> li
 			width (100% / 6)
 
-		a
-			vendor(box-sizing, border-box)
-			margin-right -(arrow_width)
-			width 100%
-
 	@media screen and (max-width: 800px)
 		> li
 			width (100% / 5)
@@ -216,7 +211,7 @@ menu_height = 40px
 
 	@media screen and (max-width: 300px)
 		> li
-			width (100%)
+			width 100%
 
 	div, label
 		vertical-align top
@@ -227,11 +222,16 @@ menu_height = 40px
 		padding 0 ((arrow_width - 12px) / 2)
 
 	a
-		height auto
+		//display block
+		vendor(box-sizing, border-box)
+		margin-right -(arrow_width)
+		padding-right arrow_width + ((arrow_width - 12px) / 2)
+		min-width 100%
 		font-size menu_font_size
+		whitespace no-wrap
 
 	label, div
-		position relative
+		//position relative
 		z-index 100
 		cursor pointer
 		font-size menu_font_size - 2px
@@ -244,18 +244,11 @@ menu_height = 40px
 		cursor default
 		display inline-block
 
-		//this prevents firefox from being weird and making the <a>'s in the
-		//nav menu be 100% of the screen height
-		height menu_height
-
 		//almost like border collapsing... but more hackish
 		border-right solid brown 1px
 		border-bottom solid brown 1px
 		margin-right -1px
 		margin-bottom -1px
-
-		a
-			height auto
 
 		&.no-children
 			// class set w/ js (show arrows by default)
@@ -287,35 +280,21 @@ menu_height = 40px
 		background white
 		position absolute
 		display none
-		top top_level_height
-		min-width 200px
-		vendor(transition, unquote('height 600ms ease-in-out, width 600ms ease-in-out'))
-
-		a
-			width auto
-			white-space nowrap
-			margin 0
 
 		a, label
 			color #333
 
 		div, label
 			z-index 102
-			position absolute
-			right 0
+			//position absolute
+			//right 0
 
 		li
-			width auto
 			border none
 			display block
-
-			padding-right arrow_width
-
-			&.no-children
-				// class set w/ js
-				padding-right 0		
-
+			position relative
 			border-bottom 1px solid #c8c8c8
+			whitespace nowrap
 
 			&:first-child
 				border-top 1px solid #c8c8c8
@@ -332,27 +311,3 @@ menu_height = 40px
 		ul
 			top 0
 			left 100%
-
-
-.subnav ul li
-	a
-		display block
-		width 100%
-		border-bottom 1px dotted #666
-		line-height 28px
-		font-size .8em
-		font-weight bold
-		color black
-
-		&:hover
-			color black
-			background #B7CFDB
-
-	ul
-		margin-left 20px
-		border-left solid 2px #E4E4E4
-		padding-left 5px
-
-		li a
-			line-height 24px
-			font-size .7em

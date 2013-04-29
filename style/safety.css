@@ -117,11 +117,6 @@ em {
 }
 .menu li {
   border: none;
-  margin: 0;
-}
-.menu li li {
-  height: 25px;
-  line-height: 25px;
 }
 .menu li li a {
   color: #1f1f1f;
@@ -139,6 +134,7 @@ em {
 }
 .menu > li {
   margin: 0 15px;
+  width: auto;
 }
 .menu > li > a {
   font-size: 22px;
