@@ -87,24 +87,17 @@ logo_width = 140px
 		font-size:11px
 
 .menu
-	background none
+	padding 0
 	font-size 0
 	border none
+	background none
+	border-top: 3px solid #3D3D3D
+	border-bottom: 3px solid #3D3D3D
 
 	li
 		border none
 
-		li
-			@extend .light_grad
-
-			a
-				color black
-
-			&:hover
-				background orange
-
 		a, label
-			//color:#121212
 			font-weight 100
 			font-size:16px
 
@@ -123,11 +116,6 @@ logo_width = 140px
 
 			> a
 				color orange
-		
-#menu-safety
-	border-top: 3px solid #3D3D3D
-	border-bottom: 3px solid #3D3D3D
-	padding 5px 0
 
 #content_container
 	display:block
@@ -139,7 +127,7 @@ logo_width = 140px
 
 h4
 	@extend .dark_grad
-	margin-bottom:.5em
+	margin-bottom:0.25em
 	padding:.1em
 	padding-left:.25em
 	border-left:.3em solid #FF5400
@@ -157,8 +145,6 @@ h4
 		font-size: 14px
 
 .box
-	margin-top:.4em
-	margin-bottom:2em
 	padding:.4em
 	background-color:#B3B3B3
 	border-style:.01em solid #3D3D3D

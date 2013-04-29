@@ -12,8 +12,7 @@ body {
 }
 .light_grad,
 #title_bar,
-#nav-wrapper + label:after,
-.menu li li {
+#nav-wrapper + label:after {
   background: #d1d1d1;
 /* Old browsers */
   background: -moz-linear-gradient(top, #d1d1d1 0%, #b3b3b3 100%);
@@ -111,18 +110,15 @@ em {
   font-size: 11px;
 }
 .menu {
-  background: none;
+  padding: 0;
   font-size: 0;
   border: none;
+  background: none;
+  border-top: 3px solid #3d3d3d;
+  border-bottom: 3px solid #3d3d3d;
 }
 .menu li {
   border: none;
-}
-.menu li li a {
-  color: #1f1f1f;
-}
-.menu li li:hover {
-  background: #ff731c;
 }
 .menu li a,
 .menu li label {
@@ -145,11 +141,6 @@ em {
 .menu > li:hover > a {
   color: #ff731c;
 }
-#menu-safety {
-  border-top: 3px solid #3d3d3d;
-  border-bottom: 3px solid #3d3d3d;
-  padding: 5px 0;
-}
 #content_container {
   display: block;
   padding: 1em;
@@ -160,7 +151,7 @@ em {
   margin-top: 20px;
 }
 h4 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
   padding: 0.1em;
   padding-left: 0.25em;
   border-left: 0.3em solid #ff5400;
@@ -179,8 +170,6 @@ h4 .byline {
   font-size: 14px;
 }
 .box {
-  margin-top: 0.4em;
-  margin-bottom: 2em;
   padding: 0.4em;
   background-color: #b3b3b3;
   border-style: 0.01em solid #3d3d3d;
