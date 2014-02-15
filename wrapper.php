@@ -33,7 +33,7 @@ ob_clean();
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.tweet.js"></script>
+	<script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_url'); ?>/js/Tweet.js-Mod/twitter/jquery.tweet.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.hypher.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.slicebox.js"></script>
 	<script type='text/javascript'>
@@ -53,6 +53,7 @@ ob_clean();
 		jQuery(function($){
 			$("#twitter_box div").tweet({
 				username: "core2062",
+				modpath: "<?php bloginfo('template_url'); ?>/js/Tweet.js-Mod/twitter/",
 				count: 5,
 				loading_text: "loading tweets..."
 			});
