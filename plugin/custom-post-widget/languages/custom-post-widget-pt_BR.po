@@ -1,0 +1,213 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Post Widget v1.9.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/custom-post-widget\n"
+"POT-Creation-Date: 2011-02-25 20:06:24+00:00\n"
+"PO-Revision-Date: 2013-10-16 18:18-0300\n"
+"Last-Translator: Ronaldo Chevalier <rcriche@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ custom-post-widget
+#: post-widget.php:6
+msgid "Displays custom post content in a widget"
+msgstr "Mostrar Bloco de Conteúdo em um Widget"
+
+# @ custom-post-widget
+#: post-widget.php:7
+msgid "Content Block"
+msgstr "Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: post-widget.php:15
+msgid "Content Block to Display:"
+msgstr "Selecione o Conteúdo:"
+
+# @ custom-post-widget
+#: popup.php:43 post-widget.php:27
+msgid "No content blocks available"
+msgstr "Nenhum bloco de conteúdo disponível"
+
+# @ custom-post-widget
+#: post-widget.php:45
+msgid "Show Post Title"
+msgstr "Mostrar Título do Post"
+
+# @ custom-post-widget
+#: post-widget.php:58
+msgid "Find"
+msgstr "Procurar"
+
+# @ custom-post-widget
+#: post-widget.php:83
+msgctxt "post type general name"
+msgid "Content Blocks"
+msgstr "Blocos de Conteúdo"
+
+# @ custom-post-widget
+#: post-widget.php:84
+msgctxt "post type singular name"
+msgid "Content Block"
+msgstr "Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: post-widget.php:85
+msgctxt "post type plural name"
+msgid "Content Blocks"
+msgstr "Blocos de Conteúdo"
+
+# @ custom-post-widget
+#: post-widget.php:86
+msgctxt "block"
+msgid "Add Content Block"
+msgstr "Adicionar Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: post-widget.php:87
+msgid "Add New Content Block"
+msgstr "Adicionar Novo Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: post-widget.php:88
+msgid "Edit Content Block"
+msgstr "Editar Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: post-widget.php:89
+msgid "New Content Block"
+msgstr "Novo Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: post-widget.php:90
+msgid "View Content Block"
+msgstr "Ver Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: post-widget.php:91
+msgid "Search Content Blocks"
+msgstr "Procurar Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: post-widget.php:92
+msgid "No Content Blocks Found"
+msgstr "Nenhum Bloco de Conteúdo Encontrado"
+
+# @ custom-post-widget
+#: post-widget.php:93
+msgid "No Content Blocks found in Trash"
+msgstr "Nenhum Bloco de Conteúdo encontrado na lixeira"
+
+# @ custom-post-widget
+#: post-widget.php:136
+msgid "Custom field updated."
+msgstr "Campo Extra atualizado"
+
+# @ custom-post-widget
+#: post-widget.php:137
+msgid "Custom field deleted."
+msgstr "Campo Extra excluído"
+
+# @ custom-post-widget
+#: post-widget.php:135 post-widget.php:138
+msgid "Content Block updated."
+msgstr "Bloco de Conteúdo atualizado"
+
+# @ custom-post-widget
+#: post-widget.php:139
+#, php-format
+msgid "Content Block restored to revision from %s"
+msgstr "Bloco de Conteúdo restaurado da última revisão em  %s"
+
+# @ custom-post-widget
+#: post-widget.php:141
+msgid "Block saved."
+msgstr "Bloco de Conteúdo Salvo com Sucesso!"
+
+# @ custom-post-widget
+#: post-widget.php:143
+msgid "M j, Y @ G:i"
+msgstr "j, M Y @ H:M"
+
+# @ custom-post-widget
+#: popup.php:9
+msgid "Please select a Content Block"
+msgstr "Selecione um Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: popup.php:22 popup.php:48
+msgid "Insert Content Block"
+msgstr "Insira um Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: popup.php:25
+msgid "Select a Content Block below to add it to your post or page."
+msgstr "Selecione um Bloco de Conteúdo para adicionar em sua página ou post."
+
+# @ custom-post-widget
+#: popup.php:31
+msgid "Select a Content Block"
+msgstr "Selecione um Bloco de Conteúdo"
+
+# @ custom-post-widget
+#: popup.php:50
+msgid "Cancel"
+msgstr "Cancelar"
+
+# @ custom-post-widget
+#: post-widget.php:135
+#, php-format
+msgid "Content Block updated. <a href=\"%s\">Manage Widgets</a>"
+msgstr "Bloco de Conteúdo atualizado. <a href=\"%s\">Gerenciar Widgets</a>"
+
+# @ custom-post-widget
+#: post-widget.php:140
+#, php-format
+msgid "Content Block published. <a href=\"%s\">Manage Widgets</a>"
+msgstr "Bloco de Conteúdo publicado. <a href=\"%s\">Gerenciar Widgets</a>"
+
+# @ custom-post-widget
+#: post-widget.php:140
+msgid "Content Block published."
+msgstr "Bloco de Conteúdo publicado."
+
+# @ custom-post-widget
+#: post-widget.php:142
+#, php-format
+msgid "Content Block submitted. <a href=\"%s\">Manage Widgets</a>"
+msgstr "Bloco de Conteúdo enviado. <a href=\"%s\">Gerenciar Widgets</a>"
+
+# @ custom-post-widget
+#: post-widget.php:142
+msgid "Content Block submitted."
+msgstr "Bloco de Conteúdo enviado."
+
+# @ custom-post-widget
+#: post-widget.php:143
+#, php-format
+msgid "Content Block scheduled for: <strong>%1$s</strong>."
+msgstr "Bloco de Conteúdo agendado para: <strong>%1$s</strong>."
+
+# @ custom-post-widget
+#: post-widget.php:144
+#, php-format
+msgid "Content Block draft updated. <a href=\"%s\">Manage Widgets</a>"
+msgstr "Rascunho atualizado. <a href=\"%s\">Gerenciar Widgets</a>"
+
+# @ custom-post-widget
+#: post-widget.php:144
+msgid "Content Block draft updated."
+msgstr "Rascunho atualizado."
+
+# @ custom-post-widget
+#: post-widget.php:180 post-widget.php:181
+msgid "Add Content Block"
+msgstr "Adicionar Bloco de Conteúdo"

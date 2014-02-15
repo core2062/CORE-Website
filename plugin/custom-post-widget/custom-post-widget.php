@@ -1,16 +1,16 @@
 <?php
 /*
  Plugin Name: Custom Post Widget
- Plugin URI: http://www.vanderwijk.com/services/web-design/wordpress-custom-post-widget/
- Description: Show the content of a custom post of the type 'content_block' in a widget.
- Version: 2.0.2
+ Plugin URI: http://www.vanderwijk.com/wordpress/wordpress-custom-post-widget/
+ Description: Show the content of a custom post of the type 'content_block' in a widget or with a shortcode.
+ Version: 2.4.5
  Author: Johan van der Wijk
  Author URI: http://www.vanderwijk.com
  License: GPL2
 
- Release notes: Version 2.0 Added support for featured images
+ Release notes: Version 2.4.5 javaScript fix for inserting shortcode
  
- Copyright 2012 Johan van der Wijk (email: info@vanderwijk.com)
+ Copyright 2013 Johan van der Wijk (email: info@vanderwijk.com)
  
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License, version 2, as 
@@ -26,10 +26,6 @@
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 */
 
-// Set constant path to the custom-post-widget plugin directory.
-define( 'CUSTOM_POST_WIDGET_DIR', plugin_dir_path( __FILE__ ) );
-define( 'CUSTOM_POST_WIDGET_URL', WP_PLUGIN_URL.'/custom-post-widget/');
-
 // Launch the plugin.
 add_action( 'plugins_loaded', 'custom_post_widget_plugin_init' );
 
@@ -42,7 +38,8 @@ function custom_post_widget_plugin_init() {
 
 // Loads the widgets packaged with the plugin.
 function custom_post_widget_load_widgets() {
-	require_once( CUSTOM_POST_WIDGET_DIR . '/post-widget.php' );
+	require( 'post-widget.php' );
 	register_widget( 'custom_post_widget' );
 }
-?>
+
+require( 'meta-box.php' );

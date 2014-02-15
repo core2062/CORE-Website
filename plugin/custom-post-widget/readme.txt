@@ -4,30 +4,40 @@ Author URI: http://www.vanderwijk.com/
 Donate link: http://www.vanderwijk.com/wordpress/support/
 Tags: widget, sidebar, content block, block, custom, post, shortcode, wysiwyg, wpml, featured image
 Requires at least: 2.9.2
-Tested up to: 3.5
-Stable tag: 2.0.2
+Tested up to: 3.8
+Stable tag: 2.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin enables you to display the content of a custom post type called Content Block in a sidebar widget.
+This plugin enables you to edit and display Content Blocks in a sidebar widget or using a shortcode.
 
 == Description ==
 
-The Custom Post Widget allows you to display the contents of a specific custom post in a widget. The content blocks can be inserted in either a sidebar widget area or directy in the content using the shortcode functionality.
+The Custom Post Widget allows you to display the contents of a specific custom post in a widget.
 
 Even though you could use the text widget that comes with the default WordPress install, this plugin has some major benefits:
 
-* If you are using the standard WordPress text widgets to display content on various areas of your template, this content can only be edited by users with administrator access. If you would like editors to modify the widget content, you can use this plugin to provide them access to the content blocks that provide the content for the widget areas.
-* The Custom Post Widget plugin enables users to use the WYSIWYG editor for editing the content and adding images.
-* You can even use the featured image functionality to display them in a widget.
-* The Custom Post Widget is compatible with the WPML Multi-Language plugin and automatically shows the correct language in the widget area.
-* The Content Blocks can be included in posts and pages using the built-in shortcode functionality.
+* The Custom Post Widget plugin enables users to **use the WYSIWYG editor** for editing the content and adding images.
+* If you are using the standard WordPress text widgets to display content on various areas of your template, this content can only be edited by users with administrator access. If you would like **non-administrator accounts to modify the widget content**, you can use this plugin to provide them access to the custom posts that provide the content for the widget areas.
+* You can even use the **featured image functionality** to display them in a widget.
+* The Custom Post Widget is **compatible with the WPML** Multi-Language plugin and automatically shows the correct language in the widget area.
+* The Content Blocks can be included in posts and pages using the **built-in shortcode functionality**.
 
 This plugin creates a 'content_block' custom post type. You can choose to either display the title on the page or use it to describe the contents and widget position of the content block. Note that these content blocks can only be displayed in the context of the page. I have added 'public' => false to the custom post type which means that it is not accessible outside the page context.
 
 To add content to a widget, drag it to the required position in the sidebar and select the title of the custom post in the widget configuration.
 
-This plugin is ready for localization and Dutch, French, German, Polish and Russian language files are included.
+**Includes the following translations:**
+
+* German (de_DE) by [Caspar H&uuml;binger](http://glueckpress.com/)
+* French (fr_FR) by [Alexandre Simard](http://brocheafoin.biz/)
+* Dutch (nl_NL) by [Johan van der Wijk](http://vanderwijk.nl)
+* Polish (pl_PL) by [Kuba Skublicki](https://www.linkedin.com/in/kubecki)
+* Portuguese (pt_BR) by [Ronaldo Chevalier](http://www.hostmeta.com.br/)
+* Russian (ru_RU) by [Vitaliy Kaplya](http://www.dasayt.com/) 
+* Swedish (sv_SE) by [Andreas Larsson](http://krokedil.se)
+
+More translations are always welcome, please [contact me](http://www.vanderwijk.com/contact) to find out how you can help.
 
 You can find more information about this plugin and a screencast video which shows the plugin in action on the [plugin homepage](http://www.vanderwijk.com/wordpress/wordpress-custom-post-widget/).
 
@@ -41,7 +51,7 @@ You can find more information about this plugin and a screencast video which sho
 1. First you will have to upload the plugin to the `/wp-content/plugins/` folder.
 2. Then activate the plugin in the plugin panel.
 You will see that a new custom post type has been added called Content Block.
-3. Type some content for the widget. You can choose to either use the title to describe the of the content on the page, or to display it. Check 'Show Post Title' to display the title on the page.
+3. Type some content for the widget. You can choose to either use the title to describe the content on the page, or to display it. Check 'Show Post Title' to display the title on the page.
 4. Go to 'Appearance' > 'Widgets' and drag the Content Block widget to the required position in the sidebar.
 5. Select a Content Block from the drop-down list.
 6. Check the 'Show Post Title' checkbox if you would like to display the title of your Content Block
@@ -70,16 +80,53 @@ If your social media sharing plugin adds buttons to the widget areas you could c
 
 Currently the shortcode function only outputs the post content of the content block, future support for displaying the title and/or the attached featured image is being considered.
 
+= How can I make advanced changes to the widget layout? =
+
+You can create your own widget template and upload this to your theme folder. See [this support topic](http://wordpress.org/support/topic/patch-custom-widget-frontends?replies=1) for more information about this feature.
+
+= How can I embed a content block in my template file using php code? =
+
+You can use the do_shortcode function for this: `echo do_shortcode('[content_block id= ]');`
+
+See http://codex.wordpress.org/Function_Reference/do_shortcode for more information on this function.
+
 = The plugin is not working for me =
 
 Please create a support topic in the forum: http://wordpress.org/support/plugin/custom-post-widget
-DO NOT click the 'Broken' button in the compatibility area of the plugin directory before creating a support ticket. It is highly demotivating for me to see the plugin downloads drop dramatically without being given the chance to help you!
+DO NOT click the 'Broken' button in the compatibility area of the plugin directory before creating a support ticket. It is very demotivating for me to see the plugin downloads drop dramatically without being given the chance to help you!
 
 = I love your plugin! What can I do to help? =
 
-Creating and supporting this plugin takes up a lot of my free time, therefore I would highly appreciate it if you could take a couple of minutes to [write a review](http://wordpress.org/support/view/plugin-reviews/custom-post-widget). This will help other WordPress users to start using this plugin and keep me motivated to maintain and support it.
+Creating and supporting this plugin takes up a lot of my free time, therefore I would highly appreciate it if you could take a couple of minutes to [write a review](http://wordpress.org/support/view/plugin-reviews/custom-post-widget). This will help other WordPress users to start using this plugin and keep me motivated to maintain and support it. Also, if you have a twitter, Facebook or Google+ account, it would be fantastic if you could share the link to this plugin!
 
 == Changelog ==
+
+= 2.4.4 =
+Added unique ID to each content block that is inserted using the shortcode functionality
+
+= 2.4.3 =
+Changed the way the shortcode button above the editor is called.
+
+= 2.4 =
+You can now add a description to the content block to make it easier for content editors to find out where the block is displayed on the site. Thanks to Andreas Larsson the plugin now includes a Swedish translation.
+
+= 2.3.5 =
+Added the option to use your own widget template file as suggested by flynsarmy. See http://wordpress.org/support/topic/patch-custom-widget-frontends?replies=1 for more information.
+
+= 2.3.4 =
+Added pt_BR translation files as kindly provided by Ronaldo Chevalier.
+
+= 2.3.2 =
+Removed hardcoded plugins folder path
+
+= 2.3.1 =
+Removed call to CUSTOM_POST_WIDGET_DIR
+
+= 2.3 =
+Various bugfixes and improvements.
+
+= 2.0.3 =
+Replaced the deprecated `media_buttons_context` filter with `media_buttons`. Thanks to Baptiste Gaillard for letting me know about this.
 
 = 2.0.2 =
 Small fix for issue with the css filepath of the editor icon. Thanks to user zudobug for reporting this issue.
@@ -166,12 +213,3 @@ Fixed screenshots for plugin directory
 
 = 1.0 =
 First release
-
-
-== Upgrade Notice ==
-
-= 2.0 =
-You can now show the featured image for content block in the widget. Note that this new functionality might need some refinement.
-The language files for DE, FR, PL and RU are missing some translation strings because of new functionality that has been added tot the plugin. Any help in updating the translations is highly appreciated!
-
-
