@@ -37,20 +37,19 @@ ob_clean();
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.hypher.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.slicebox.js"></script>
 	<script type='text/javascript'>
-		$(function() {
-			$(".menu li:not(:has(ul))").addClass('no-children');
-		});
-
-		$('.sb-slider').slicebox({
-			orientation : 'r',
-			cuboidsRandom : true,
-			 autoplay : true,
-			sequentialFactor : 200
-		});
-
-		$('p').hyphenate('en-us');
-
 		jQuery(function($){
+			$(".menu li:not(:has(ul))").addClass('no-children');
+
+			$('.sb-slider').slicebox({
+				orientation : 'r',
+				cuboidsRandom : true,
+				 autoplay : true,
+				sequentialFactor : 200
+			});
+
+			$('p').hyphenate('en-us');
+
+
 			$("#twitter_box div").tweet({
 				username: "core2062",
 				modpath: "<?php bloginfo('template_url'); ?>/js/Tweet.js-Mod/twitter/",
