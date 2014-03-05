@@ -21,11 +21,11 @@ ob_clean();
 				<span id="header">
 					<em>C.O.R.E. 2062</em> Safety Database
 				</span>
-				<div id="title_bar">A source for all of your safety needs, wants, hopes, and dreams</div>
+				<div id="title_bar">A collection of the industrial safety practices used and supported by FRC team C.O.R.E. 2062</div>
 			</div>
 			<?php include('component/navbar.php'); ?>
-			<input type="checkbox" id="nav-wrapper" checked/>
-			<label for="nav-wrapper">
+			<input type="checkbox" id="safety-nav" checked/>
+			<label for="safety-nav">
 				<?php wp_nav_menu(array(
 					'container' => false,
 					'theme_location' => 'safety-menu',
@@ -38,10 +38,10 @@ ob_clean();
 			</div>
 			<div class="footer light_grad" id="footer">
 				<span class="footer footer_cont" id="cont1">
-					we'll put some stuff here eventually
+					FRC Team C.O.R.E. 2062
 				</span>
 				<span class="footer footer_cont" id="cont2">
-					some witty thing that you have to look for to find
+					Regionally and Internationally recognized for excellence in industrial safety by Underwriters Laboratories
 				</span>
 				<?php wp_footer(); ?>
 			</div>

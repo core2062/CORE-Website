@@ -228,6 +228,32 @@ a.blue {
 #breadcrumbs a:hover {
   background: none;
 }
+.menu{
+  position: relative;
+  background: #1f1f1f;
+  background: rgba(31,31,31,0.75);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-position: outside;
+  font-size: 0;
+  font-weight: bold;
+  z-index: 2000;
+  height:auto;
+  min-height: 43px;
+
+}
+.menu li{
+  
+}
+.menu > li:last-child{
+  background-color: #1F1F1F;
+  float:right;
+  border-right:none;
+  margin:auto;
+  text-align:center;
+  color:#FF883E;
+}
 .text {
   margin: 10px;
 }
@@ -366,7 +392,8 @@ label {
 .alert p {
   margin: 10px;
   font-size: 15px;
-  color: #383625;
+  /*color: #383625;*/
+  color: #000000;
 }
 .yellow {
   background: #ffff9a url("../images/caution.png") no-repeat 10px 10px;
@@ -376,8 +403,9 @@ label {
   border-bottom: 1px solid #c3c376;
 }
 .blue {
-  /*background: #bacddf url("../images/message.png") no-repeat 10px 10px;*/
-  border: 1px solid #82b2df;
+  /*background: #bacddf;
+  border: 1px solid #82b2df;*/
+  background-color: #C0C0C0;
 }
 .red {
   background: #ecb4ae url("../images/error.png") no-repeat 10px 10px;
@@ -398,7 +426,8 @@ a.permlink {
   margin: 5px;
 }
 .footer {
-  background: #ff731c;
+  /*background: #ff731c;*/
+  background: #808080;
   font-size: 12px;
   padding: 5px;
   text-align: left;

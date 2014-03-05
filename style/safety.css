@@ -14,20 +14,27 @@ body {
 #title_bar,
 #nav-wrapper + label:after,
 .menu li li {
-  background: #d1d1d1;
+  background-color: #D2D2D2;
+  border:.05em solid #8C8C8C;
+  border-bottom: .01em solid #999;
+/*  background: #d1d1d1;
 /* Old browsers */
-  background: -moz-linear-gradient(top, #d1d1d1 0%, #b3b3b3 100%);
+/*  background: -moz-linear-gradient(top, #d1d1d1 0%, #b3b3b3 100%);
 /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d1d1d1), color-stop(100%, #b3b3b3));
+/*  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d1d1d1), color-stop(100%, #b3b3b3));
 /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #d1d1d1 0%, #b3b3b3 100%);
+/*  background: -webkit-linear-gradient(top, #d1d1d1 0%, #b3b3b3 100%);
 /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #d1d1d1 0%, #b3b3b3 100%);
+/*  background: -o-linear-gradient(top, #d1d1d1 0%, #b3b3b3 100%);
 /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #d1d1d1 0%, #b3b3b3 100%);
+/*  background: -ms-linear-gradient(top, #d1d1d1 0%, #b3b3b3 100%);
 /* IE10+ */
-  background: linear-gradient(to bottom, #d1d1d1 0%, #b3b3b3 100%);
+/*  background: linear-gradient(to bottom, #d1d1d1 0%, #b3b3b3 100%);
 /* W3C */
+}
+#title_bar {
+  display: inline;
+  float: right;
 }
 .dark_grad,
 h4 {
@@ -83,6 +90,8 @@ em {
 }
 #title_bar {
   padding: 0.3em;
+  padding-right: 3em;
+  padding-left: 1em;
   border-right: 5px solid #ff5400;
   border-left: 5px solid #ff5400;
   font-size: 16px;
@@ -93,8 +102,10 @@ em {
     display: none;
   }
 }
-#nav-wrapper + label:after {
-  color: #1f1f1f;
+@media screen and (max-width: 950px) {
+  .menu li {
+    width: auto;
+  }
 }
 .navbar_buttons {
   display: inline-block;
@@ -111,9 +122,19 @@ em {
   font-size: 11px;
 }
 .menu {
+  height: auto;
+  display: block;
   background: none;
   font-size: 0;
-  border: none;
+  border-top: 3px solid #3d3d3d;
+  border-bottom: 3px solid #3d3d3d;
+  border-left: none;
+  border-right: none;
+  margin-top: 20px;
+}
+.menu a {
+  padding-right: 28px;
+  display: inline;
 }
 .menu li {
   border: none;
@@ -124,17 +145,46 @@ em {
 .menu li li:hover {
   background: #ff731c;
 }
+.menu li li {
+  border-bottom: 2px solid #575757;
+  border-top: 1px solid #575757;
+  border-left: 3px solid #ff731c;
+  border-right: 2px solid #575757;
+  font-size: 18px;
+}
+.sub-menu{
+  margin-top:-1px;
+}
 .menu li a,
 .menu li label {
   font-weight: 100;
-  font-size: 16px;
+  font-size: 16px; 
 }
 .menu li label {
   font-size: 10px;
 }
-.menu > li {
-  margin: 0 15px;
-  width: auto;
+.menu label {
+  float: none;
+}
+.menu > li:first-child {
+  float: left;
+  margin-right: 2% 
+}
+.menu > li:nth-child(2) {
+  margin-left: 8%;
+  margin-right: 2% 
+}
+.menu > li:nth-child(3) {
+  padding-right: 10px;
+  margin-left: 8%;
+  margin-right: 2% 
+}
+ .menu > li:last-child {
+  padding-right: 10px;
+  margin-left: 8%;
+}
+.menu ul li {
+  background-color: #d3d3d3;
 }
 .menu > li > a {
   font-size: 22px;
@@ -149,6 +199,46 @@ em {
   border-top: 3px solid #3d3d3d;
   border-bottom: 3px solid #3d3d3d;
   padding: 5px 0;
+}
+#safety-nav {
+  display: none;
+}
+#safety-nav + label {
+  display: inline;
+  width: 100%;
+  font-size: 14px;
+  color: #fff;
+}
+@media screen and (max-width: 700px) {
+  #safety-nav:checked + label {
+    height: 40px;
+    overflow: hidden;
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    display: block;
+    position: relative;
+  }
+  #safety-nav:checked + label:after {
+    position: absolute;
+    display: inline;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: center;
+    top: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 34px;
+    content: "▼ Click to view Navigation ▼";
+    background-color: black;
+    border-top: 3px solid #3d3d3d;
+    border-bottom: 3px solid #3d3d3d;
+  }
+  .menu > li {
+    display: block; 
+    float:none !important; 
+    margin: 0px 20px !important;
+  }
 }
 #content_container {
   display: block;
@@ -185,12 +275,11 @@ h4 .byline {
   background-color: #b3b3b3;
   border-style: 0.01em solid #3d3d3d;
 }
-.box ul,
-.box p,
-.box img {
+.box div {
   margin: 0.6em;
   padding: 0.4em;
   background-color: #d2d2d2;
+  border: .01em solid #8c8c8c;
   border-bottom: 0.2em solid #3d3d3d;
   font-size: 20px;
   color: #0f0f0f;

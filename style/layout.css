@@ -156,18 +156,7 @@ body {
   }
 }
 .menu {
-  position: relative;
-  background: #1f1f1f;
-  background: rgba(31,31,31,0.75);
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  list-style-position: outside;
-  font-size: 0;
-  font-weight: bold;
-  z-index: 2000;
   line-height: 36px;
-  width: 100%;
   -webkit-box-sizing(): border-box;
   -moz-box-sizing(): border-box;
   -o-box-sizing(): border-box;
@@ -178,6 +167,7 @@ body {
   border-top: solid #73523b 1px;
   border-left: solid #73523b 1px;
 }
+
 @media screen and (max-width: 950px) {
   .menu > li {
     width: 16.666666666666668%;
@@ -299,7 +289,7 @@ body {
   border-top: 1px solid #c8c8c8;
 }
 .menu ul li:hover {
-  background: #ffb98e;
+  background: #C8C8C8;
 }
 .menu ul li:hover > label,
 .menu ul li:hover > div label {
