@@ -454,21 +454,24 @@ a.permlink {
   margin-top: 0;
   padding-top: 0;
 }
-
-.wpcf7-textarea{
-
-width: 69.5vw;
-}
-
+/* CONTACT PAGE */
 .wpcf7-form-control {
-background: white;
-width: 71vw;
+  background: white;
+  width: 71vw;
 }
 
-input[type="submit"],
-textarea{
-width: 200px;
-padding: 15 px;
-position: relative;
+.wpcf7-text{
+  color: #ff731c;
 
+} 
+
+.wpcf7-submit{
+  width: 200px;
+  padding: 15px;
+  position: relative;
 }
+.wpcf7-textarea{
+  width: 71vw;
+  color: #ff731c;
+}
+/* CONTACT PAGE */
