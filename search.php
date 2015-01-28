@@ -5,16 +5,13 @@
 		<div id="page-wrap">
 			<?php include('component/top.php'); ?>
 			<div id="page">
-				<div class="banner-bar">
-					<p id="breadcrumbs"> <a href="http://localhost">C.O.R.E. Home</a> &raquo; <span class="normal">All Articles with <i>"<?php echo the_search_query();?>"</i> in it.</span></p>
-				</div>
 
-				<?php get_sidebar(); ?>	
+				<?php get_sidebar('search'); ?>	
 
 				<div class="main-content">
 					<?php if (have_posts()) : ?>
-						<div class="alert yellow">
-							<h4>Search Results</h4>
+						<div class="alert yellow databoxpage">
+							<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search Results</h4>
 							<p>Here are all of the articles with <i>"<?php echo the_search_query();?>"</i> in them. You can either read the articles here together as one larger article, or click on the title of an article to go to it's own page.</p>
 						</div>
 
