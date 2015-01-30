@@ -8,7 +8,7 @@
 
 				<?php get_sidebar('search'); ?>	
 
-				<div class="main-content">
+				<div class="main-content.no-sidebar">
 					<?php if (have_posts()) : ?>
 						<div class="alert yellow databoxpage">
 							<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search Results</h4>
