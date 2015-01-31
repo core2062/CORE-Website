@@ -472,4 +472,196 @@ a.permlink {
   color: #ff731c;
 }
 /* CONTACT PAGE */
+/*Sponsor Page*/
+.SponsorHeader {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 2px;
+  width: 100%;
+  border-top-style: solid;
+  border-top-color: #ff731c;
+  border-top-width: 8px;
+}
+.SponsorImage {
+  width: 25%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: gray;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.SponsorImage2{
+  width: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: gray;
+  text-align: center;
+}
+.Sponsor-Figure{
+  border-color: blue;
+}
+.SponsorImage{
+  border-width: 2px;
+}
+.DiamondSH{
+  color: #00FFFF;
+}
+.PlatnumSH{
+  color: #E5E4E2;
+}
+.GoldSH{
+  color: #FFCC00;
+}
+.SilverSH{
+  color: #B2B2B2;
+}
+.BronzeSH{
+  color: #CC5200;
+}
+.SponsorHeader1{
+
+}
+.SponsorHeader2{
+  position: relative;
+
+}
+.SponsorHeader3{
+
+}
+.SponsorHeader4{
+
+}
+.SponsorHeader5{
+
+}
+#SCORE{
+  position: right;
+  width: 25%;
+}
+#ScOrE{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  padding-left: 50px;
+  width: 68%;
+
+}
+#SDOW{
+  padding-top: 10px;
+  padding-right: 50px;
+  
+}
+#GE{
+  padding-top: 10px;
+  padding-left: 50px;
+  
+}
+#ROCK{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  padding-top: 70px;
+  padding-right: 70px;
+  
+}
+#CHAMP{
+  padding-top: 10px;
+  padding-left: 50px;
+
+}
+#TOSHIBA{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  padding-top: 10px;
+  padding-right: 50px;
+
+}
+#ISE{
+  padding-left: 50px;
+  
+}
+#MSOE{
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  width: 50%;
+  height: 50%;
+  padding-top: 50px;
+  padding-right: 50px;
+
+}
+#PM{
+  padding-left: 50px;
+}
+#TLX{
+  position: absolute;
+  right: 0px;
+  top: 41%;
+  width: 50%;
+  height: 50%;
+  padding-top: 60px;
+  padding-right: 50px;
+  
+}
+#SMC{
+  padding-left: 50px;
+
+}
+#ZEMAN{
+
+}
+#HONEYWELL{
+  padding-top: 10px;
+
+}
+#GEN{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding-top: 10px;
+
+}
+#KIW{
+
+}
+#IEW{
+  padding-top: 10px;
+
+}
+#PNS{
+
+}
+#DM{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 77%;
+  padding-top: 10px;
+
+}
+#ASOME{
+  position: absolute;
+  top: 63%;
+  right: 0px;
+
+}
+}
+#ISC{
+
+}
+.THING{
+  padding-right: 38px;
+  padding-left: 38px;
+}
+/*Sponsor Page*/
  
