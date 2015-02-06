@@ -33,16 +33,16 @@ ob_clean();
 				));?>
 			</label>
 
-			<div id="content_container" >
+			<div id="content_container">
 				<?php echo $unique_content;?>
 			</div>
 			<div class="footer light_grad" id="footer">
-				<span class="footer footer_cont" id="cont1">
+				<div class="footer footer_cont" id="cont1">
 					FRC Team C.O.R.E. 2062
-				</span>
-				<span class="footer footer_cont" id="cont2">
-					Regionally and Internationally recognized for excellence in industrial safety by Underwriters Laboratories
-				</span>
+				</div>
+				<div class="footer footer_cont" id="cont2">
+					Regionally and Internationally recognized for excellence in industrial safety by <a href="http://ul.com/" target="_blank">U.L.</a>
+				</div>
 				<?php wp_footer(); ?>
 			</div>
 			</div>

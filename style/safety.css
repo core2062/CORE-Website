@@ -290,7 +290,7 @@ h4 .byline {
 }
 #footer {
   position: relative;
-  height: 1.25em;
+  height: 3em;
   padding: 0.3em 0.3em 0.3em 0.4em;
   border-right: 0.5em solid #ff5400;
   border-left: 0.5em solid #ff5400;
@@ -304,10 +304,16 @@ h4 .byline {
   color: #121212;
 }
 #cont1 {
-  position: absolute;
-  left: 1em;
-}
+  /*position: absolute;
+  left: 1em;*/
+  text-align: center;
+
+ }
 #cont2 {
-  position: absolute;
-  right: 1em;
+  /*position: absolute;
+  right: 1em;*/
+  text-align: center;
+  padding-right: .01em;
+  padding-left: 1em;
+  padding-bottom: 1em;
 }
