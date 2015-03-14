@@ -1,7 +1,7 @@
 <?php ob_start(); ?>
 <div class="main-content">
 	<div class="alert blue">
-		<h4>Welcome! <a class="fancybox-youtube" style="color: #0066B3" href="https://www.youtube.com/watch?v=pR-sMD9QQgk"><strong>Build Season Week Five Update!</strong></a></h4>
+		<h4>Welcome! <a class="fancybox-youtube" style="color: #0066B3" href="https://www.youtube.com/watch?v=oAQ_uB-4BG8"><strong>Build Season Week Six Update!</strong></a></h4>
 		<p>
 			We are a group of high school students and adult volunteers that learn, explore, 
 			and celebrate science and technology. Through the international organization FIRST, For 

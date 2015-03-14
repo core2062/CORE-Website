@@ -508,37 +508,6 @@ a.permlink {
 .SponsorImage{
   border-width: 2px;
 }
-.DiamondSH{
-  color: #00FFFF;
-}
-.PlatnumSH{
-  color: #E5E4E2;
-}
-.GoldSH{
-  color: #FFCC00;
-}
-.SilverSH{
-  color: #B2B2B2;
-}
-.BronzeSH{
-  color: #CC5200;
-}
-.SponsorHeader1{
-
-}
-.SponsorHeader2{
-  position: relative;
-
-}
-.SponsorHeader3{
-
-}
-.SponsorHeader4{
-
-}
-.SponsorHeader5{
-
-}
 #SCORE{
   position: right;
   width: 25%;
@@ -551,12 +520,13 @@ a.permlink {
   padding-bottom: 2px;
   padding-left: 50px;
   width: 68%;
+  padding-right: 1px;
 
 }
 #SDOW{
   padding-top: 10px;
   padding-right: 50px;
-  
+ 
 }
 #GE{
   padding-top: 10px;
@@ -615,10 +585,6 @@ a.permlink {
 }
 #SMC{
   padding-left: 50px;
-
-}
-#ZEMAN{
-
 }
 #HONEYWELL{
   padding-top: 10px;
@@ -629,17 +595,9 @@ a.permlink {
   top: 0px;
   right: 0px;
   padding-top: 10px;
-
-}
-#KIW{
-
 }
 #IEW{
   padding-top: 10px;
-
-}
-#PNS{
-
 }
 #DM{
   position: absolute;
@@ -655,8 +613,10 @@ a.permlink {
   right: 0px;
 
 }
-}
-#ISC{
+#DEM{
+  position: absolute;
+  top: 39%;
+  padding-left: 100px;
 
 }
 .THING{
@@ -664,4 +624,8 @@ a.permlink {
   padding-left: 38px;
 }
 /*Sponsor Page*/
- 
+/*Mentor Page */
+.right{
+  position: absolute;
+  right: 50%;
+}
