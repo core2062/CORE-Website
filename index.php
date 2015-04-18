@@ -16,6 +16,13 @@
 			are hosted by our team. Along with VEX, we also hold FLL competitions and encourage members to mentor FLL teams. In both of these venues, and in many others, we display our robot and enlighten them about FRC. Through this, we excite, inspire and celebrate engineering.
 		</p>
 	</div>
+	<div class="alert blue">
+			<h4>Regional</h4>
+		<p>
+			C.O.R.E. 2062 is proud to announce that we have won both the Wisconsin and Midwest Regionals! We are thrilled to say that these victories have qualified us for the International Championship which will take place at the end of April.
+			<h4> <a class="fancybox-youtube" style="color: #0066B3" href="https://www.youtube.com/watch?v=MAB9Li4zmmE"><strong> <u>The Winning Match </u></strong></a></h4>
+		</p>
+	</div>
 	<div class="break"></div>
 
 	<div class="titleblock" title="Recent News">
