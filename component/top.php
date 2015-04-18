@@ -10,7 +10,7 @@
 
 	<?php else: ?>
 		<div class="header-short-pic">
-			<img src="<?php echo bloginfo('template_url') . '/images/drivers-mentors-small.jpg'; ?>"/>
+			<img src="http://core2062.com/wp-content/uploads/2015/04/rsz_img_2463.jpg"/>
 		</div>
 	<?php endif; ?>
 
