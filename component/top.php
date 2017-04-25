@@ -10,7 +10,7 @@
 
 	<?php else: ?>
 		<div class="header-short-pic">
-			<img src="http://core2062.com/wp-content/uploads/2015/04/rsz_img_2463.jpg"/>
+			<img src="http://core2062.com/wp-content/uploads/2017/04/710_3743-2.jpg"/>
 		</div>
 	<?php endif; ?>
 
