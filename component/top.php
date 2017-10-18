@@ -1,5 +1,5 @@
 <div class="<?php echo (is_front_page() ? "header" : "header-short"); ?>">
-	<a id="logo" href="<?php bloginfo('url'); ?>" title="Click here to go back to the main page.">C.O.R.E.<br/>2062</a>
+	<a id="logo" href="<?php bloginfo('url'); ?>" title="Click here to go back to the main page.">CORE<br/>2062</a>
 	<?php include (TEMPLATEPATH . '/searchform.php'); ?>
 	<?php if(is_front_page()):?>
 		<div class="header-show">
@@ -10,7 +10,7 @@
 
 	<?php else: ?>
 		<div class="header-short-pic">
-			<img src="http://core2062.com/wp-content/uploads/2015/04/rsz_img_2463.jpg"/>
+			<img src="http://core2062.com/wp-content/uploads/2017/04/710_3743-2-e1493165444437.jpg"/>
 		</div>
 	<?php endif; ?>
 
