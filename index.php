@@ -16,6 +16,7 @@
 			are hosted by our team. Along with VEX, we also hold FLL competitions and encourage members to mentor FLL teams. In both of these venues, and in many others, we display our robot and enlighten them about FRC. Through this, we excite, inspire and celebrate engineering.
 		</p>
 	</div>
+
 	<div class="break"></div>
 
 	<div class="titleblock" title="Recent News">
