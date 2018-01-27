@@ -23,7 +23,7 @@
 		<h3>Recent News</h3>
 	</div>
 	<div class="break"></div>
-	<?php query_posts('posts_per_page=3'); ?>
+	<?php query_posts('posts_per_page=4'); ?>
 
 	<?php include('component/posts.php'); ?>
 

@@ -1,3 +1,7 @@
-
 /* IE (all versions) */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /*this will only run in IE10 and IE11*/
+	#logo {
+		background-position: -50px 0px; /*this fixes a problem with the logo displaying in Internet Explorer*/
+	}
+}
 /* ----------------------------------------- */

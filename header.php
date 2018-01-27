@@ -36,7 +36,7 @@
 	<?php } else { ?>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style/main.css" media="screen" />
 	<?php } ?>
-
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style/ie.css" media="screen" />
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
