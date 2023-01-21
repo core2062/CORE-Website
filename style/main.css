@@ -1,14 +1,11 @@
 @import url("http://fonts.googleapis.com/css?family=Orbitron:700");
 @import url("http://fonts.googleapis.com/css?family=Libre+Franklin");
+
 html {
   font-size: 62.5%;
 }
-h1,
-h2,
-h3,
-h5,
-h5,
-h6 {
+
+h1, h2, h3, h5, h5, h6 {
   font-weight: bold;
 }
 h1 {
@@ -40,13 +37,7 @@ h4 {
 h4 a, h4 span {
 	font-weight: 900;
 }
-p,
-.wp-caption,
-.wp-caption-dd,
-.post-content,
-.tweet_list,
-.box,
-#nav-wrapper + label:after {
+p, .wp-caption, .wp-caption-dd, .post-content, .tweet_list, .box, #nav-wrapper + label:after {
   font-family: 'Libre Franklin', Calibri, Verdana, Arial, sans-serif;
   font-size: 15px;
   font-size: 1.5rem;
@@ -56,6 +47,9 @@ p,
 .banner-title, .titleblock, #menu-main, .learnmore {
 	font-family: 'Libre Franklin';
 }
+
+
+/* Logo */
 #logo {
   display: inline-block;
   margin: 10px;
@@ -68,6 +62,9 @@ p,
   font-size: 28px;
   text-align: justify;
 }
+
+
+/* Search Forms */
 #searchform {
   position: static;
   display: inline-block;
@@ -96,8 +93,7 @@ p,
   margin: 0;
   padding-right: 30px;
 }
-#s:hover,
-#s:active {
+#s:hover, #s:active {
   background: url("../images/search.png"), #8e3600;
   background-repeat: no-repeat;
   background-position: center right, top left;
@@ -114,8 +110,9 @@ p,
   padding: 0;
   z-index: 9999;
 }
-.header-short,
-.header {
+
+/* Header */
+.header-short, .header {
   background: #ff731c;
   background: -moz-radial-gradient(top, ellipse cover, rgba(255,255,255,0.2) 0%, transparent 100%), #ff731c;
   background: -webkit-gradient(radial, center top, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0.2)), color-stop(100%, transparent)), #ff731c;
@@ -128,8 +125,7 @@ p,
   width: 100%;
   z-index: 500;
 }
-.header-show,
-.header-short-pic {
+.header-show, .header-short-pic {
   width: 100%;
   margin: 0;
 }
@@ -146,8 +142,9 @@ p,
     min-width: 600px;
   }
 }
-.current-page-ancestor,
-.current-menu-item {
+
+
+.current-page-ancestor, .current-menu-item {
   background: rgba(199,199,199,0.75);
 }
 .banner-bar {
@@ -235,7 +232,9 @@ a.blue {
 #breadcrumbs a:hover {
   background: none;
 }
-.menu{
+
+
+.menu {
   position: relative;
   background: #1f1f1f;
   background: rgba(31,31,31,0.75);
@@ -250,10 +249,10 @@ a.blue {
   min-height: 43px;
 
 }
-.menu li{
+/*.menu li{
   
-}
-.menu > li:last-child{
+}*/
+.menu > li:last-child {
   background-color: #1F1F1F;
   float:right;
   border-right:none;
@@ -261,6 +260,8 @@ a.blue {
   text-align:center;
   color:#FF883E;
 }
+
+
 .text {
   margin: 10px;
 }
@@ -274,9 +275,7 @@ a.blue {
   margin-bottom: -5px;
   color: #fff;
 }
-.titleblock h3,
-.titleblock h4,
-.titleblock a {
+.titleblock h3, .titleblock h4, .titleblock a {
   padding: 10px;
 }
 .titleblock a {
@@ -288,6 +287,8 @@ a.blue {
   text-decoration: none;
   color: #ff731c;
 }
+
+
 .postpagetitle {
   display: inline;
   position: absolute;
@@ -331,8 +332,7 @@ a.blue {
 .post-content {
   padding: 10px;
 }
-.post-content ul,
-.post-content li {
+.post-content ul, .post-content li {
   list-style: square;
   margin-left: 10px;
 }
@@ -356,8 +356,9 @@ a.blue {
   margin-left: auto;
   margin-right: auto;
 }
-input,
-textarea {
+
+
+input, textarea {
   background: #e6e6e6;
   border: 1px solid #a1a1a1;
   font-size: 14px;
@@ -366,8 +367,7 @@ textarea {
   margin: 5px;
   font-family: "Calibri", Arial;
 }
-input:hover,
-textarea:hover {
+input:hover, textarea:hover {
   background: #f0f0f0;
   border: 1px solid #7f7f7f;
 }
@@ -378,12 +378,13 @@ input#submit:hover {
   background: #1f1f1f;
   color: #fff;
 }
+
+
 label {
   font-size: 12px;
   color: #595959;
 }
-.box,
-.alert {
+.box, .alert {
   background: #f0f0f0;
   border: 1px solid #d3d3d3;
   margin: 5px;
@@ -422,6 +423,8 @@ label {
   background: #b1e0a3 url("../images/success.png") no-repeat 10px 10px;
   border: 1px solid #7abd5e;
 }
+
+
 a.permlink {
   font-size: 11px;
   font-style: italic;
@@ -432,6 +435,9 @@ a.permlink {
   float: right;
   margin: 5px;
 }
+
+
+/* Footer */
 .footer {
   /*background: #ff731c;*/
   background: #808080;
@@ -448,6 +454,8 @@ a.permlink {
 .footer span {
   float: right;
 }
+
+
 #twitter_box h2 img {
   width: 20px;
 }
@@ -461,7 +469,9 @@ a.permlink {
   margin-top: 0;
   padding-top: 0;
 }
-/* CONTACT PAGE */
+
+
+/* Contact Page */
 .wpcf7-form-control {
   background: white;
   width: 48vw;
@@ -478,8 +488,9 @@ a.permlink {
   width: 48vw;
   color: #ff731c;
 }
-/* CONTACT PAGE */
-/*Sponsor Page*/
+
+
+/* Sponsor Page */
 .SponsorHeaderNew {
 	font-family: 'Orbitron', 'Libre Franklin', Calibri, Verdana, Arial, sans-serif;
 	text-decoration: underline;
@@ -492,6 +503,16 @@ a.permlink {
 .imageeven {
 	text-align: right;
 }
+
+
+/* Mentor Page */
+.right{
+  position: absolute;
+  right: 50%;
+}
+
+
+
 /*Defunct CSS -- do not use
 .SponsorHeader {
   font-family: 'Orbitron', sans-serif;
@@ -642,8 +663,3 @@ a.permlink {
   padding-right: 38px;
   padding-left: 38px;
 }*/
-/*Mentor Page */
-.right{
-  position: absolute;
-  right: 50%;
-}
